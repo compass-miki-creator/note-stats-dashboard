@@ -172,6 +172,11 @@
     .status-grow { background:rgba(62,193,156,.13); color:#1a9e78; }
     .status-idle { background:var(--surface-2); color:var(--text-muted); border:1px solid var(--border); }
     .full-card { margin-bottom:16px; }
+    .age-controls { display:flex; gap:6px; }
+    .age-tab { border:1px solid var(--border); background:var(--surface-2); color:var(--text-muted); border-radius:6px; padding:4px 10px; font-size:11px; font-weight:700; cursor:pointer; }
+    .age-tab:hover { color:var(--text-primary); }
+    .age-tab.active { color:#fff; background:var(--note-green); border-color:var(--note-green); }
+    .age-note { padding:10px 14px; color:var(--text-muted); font-size:11px; border-bottom:1px solid var(--border); }
 
     @media (max-width: 900px) { .analysis-grid { grid-template-columns:1fr; } }
     @media (max-width: 900px) { .kpi-strip { grid-template-columns: repeat(3, 1fr); } .pro-features { grid-template-columns: 1fr; } }
@@ -331,6 +336,39 @@
     </div>
   </div>
 
+  <div class="card full-card">
+    <div class="card-header">
+      <div>
+        <span class="card-title">⏱ 公開後同日数ランキング</span>
+        <span class="card-sub" id="ageSummary" style="margin-left:8px">publication_age_analysis.csv</span>
+      </div>
+      <div class="age-controls">
+        <button class="age-tab active" onclick="setAgeMilestone(1,this)">D1</button>
+        <button class="age-tab" onclick="setAgeMilestone(3,this)">D3</button>
+        <button class="age-tab" onclick="setAgeMilestone(7,this)">D7</button>
+      </div>
+    </div>
+    <div class="age-note">公開日をD0として、翌日・3日後・7日後の完全スナップショットを比較。取得欠損日は後日の値で補完せず除外します。</div>
+    <div class="card-body-flush tbl-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th class="no-sort" style="width:36px">#</th>
+            <th class="no-sort">タイトル</th>
+            <th class="no-sort">公開日</th>
+            <th class="td-right no-sort">PV</th>
+            <th class="td-right no-sort">スキ</th>
+            <th class="td-right no-sort">コメント</th>
+            <th class="td-right no-sort">η</th>
+          </tr>
+        </thead>
+        <tbody id="ageTable">
+          <tr><td colspan="7"><div class="empty"><div class="empty-text">公開後日数データ待ち</div></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
   <!-- Pro upgrade teaser -->
   <div class="pro-teaser">
     <div class="pro-teaser-header">
@@ -374,7 +412,7 @@
 
 const S = {
   articles: [], dailySummary: [], weeklySummary: [], monthlySummary: [],
-  periodRanking: [], trendAnalysis: [], assetArticles: [], followers: [], loadedFiles: new Set(),
+  periodRanking: [], trendAnalysis: [], assetArticles: [], publicationAge: [], followers: [], loadedFiles: new Set(),
   currentPeriod: 'weekly', charts: {},
   sortCol: 'views', sortDir: 'desc',
 };
@@ -445,13 +483,14 @@ function parseAndStore(name, text) {
   else if (k==='period_ranking')   S.periodRanking = data;
   else if (k==='trend_analysis')   S.trendAnalysis = data;
   else if (k==='asset_articles')   S.assetArticles = data;
+  else if (k==='publication_age_analysis') S.publicationAge = data;
   else if (k==='followers')        S.followers = data;
   S.loadedFiles.add(k);
   updateStatus();
 }
 
 // ── DATA LOADING ──────────────────────────────────────────────────────
-const CSV_FILES = ['articles','daily_summary','weekly_summary','monthly_summary','period_ranking','trend_analysis','asset_articles','followers'];
+const CSV_FILES = ['articles','daily_summary','weekly_summary','monthly_summary','period_ranking','trend_analysis','asset_articles','publication_age_analysis','followers'];
 async function loadFromRepo() {
   setStatus('loading','読込中...');
   let loaded = 0;
@@ -677,6 +716,7 @@ function renderSummary() {
   renderChart(labels,vData,lData);
   renderTable();
   renderAnalysis();
+  renderAgeAnalysis();
 }
 
 function renderChart(labels,vData,lData) {
@@ -808,6 +848,63 @@ function renderAnalysis(){
   } else {
     rankEl.innerHTML='<div class="empty"><div class="empty-text">period_ranking.csv を読み込むと表示されます</div></div>';
   }
+}
+
+let ageMilestone=1;
+function setAgeMilestone(day,el){
+  ageMilestone=day;
+  document.querySelectorAll('.age-tab').forEach(button=>button.classList.remove('active'));
+  el.classList.add('active');
+  renderAgeAnalysis();
+}
+
+function renderAgeAnalysis(){
+  const tbody=document.getElementById('ageTable');
+  const summary=document.getElementById('ageSummary');
+  if(!tbody||!summary)return;
+  if(!S.publicationAge.length){
+    summary.textContent='publication_age_analysis.csv';
+    tbody.innerHTML='<tr><td colspan="7"><div class="empty"><div class="empty-text">publication_age_analysis.csv を読み込むと表示されます</div></div></td></tr>';
+    return;
+  }
+
+  const prefix=`D${ageMilestone}`;
+  const counts={available:0,pending:0,missing:0,no_metadata:0};
+  S.publicationAge.forEach(row=>{
+    const status=row[`${prefix}_status`]||'no_metadata';
+    counts[status]=(counts[status]||0)+1;
+  });
+  summary.textContent=`${prefix}｜比較 ${counts.available}件・未到達 ${counts.pending}件・取得欠損 ${counts.missing}件`;
+
+  const rows=S.publicationAge
+    .filter(row=>row[`${prefix}_status`]==='available')
+    .map(row=>({
+      title:row.title||'',
+      url:row.note_url||'',
+      published:row.published_date||'',
+      views:n(row[`${prefix}_PV`]),
+      likes:n(row[`${prefix}_likes`]),
+      comments:n(row[`${prefix}_comments`]),
+    }))
+    .sort((a,b)=>b.views-a.views);
+
+  if(!rows.length){
+    tbody.innerHTML=`<tr><td colspan="7"><div class="empty"><div class="empty-text">${prefix}で比較できる記事はまだありません</div><div class="empty-sub">対象日が到来し、同日の取得が成功すると自動で追加されます</div></div></td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML=rows.slice(0,30).map((row,index)=>{
+    const eta=row.views>0?row.likes/row.views*100:0;
+    return `<tr>
+      <td class="rank-num ${index===0?'top1':index===1?'top2':index===2?'top3':''}">${index+1}</td>
+      <td>${row.url?`<a class="art-link art-title" href="${esc(row.url)}" target="_blank" rel="noopener" title="${esc(row.title)}">${esc(row.title)}</a>`:`<span class="art-title" title="${esc(row.title)}">${esc(row.title)}</span>`}</td>
+      <td class="td-muted">${esc(row.published)}</td>
+      <td class="td-right">${fmt(row.views)}</td>
+      <td class="td-right">${fmt(row.likes)}</td>
+      <td class="td-right">${row.comments?fmt(row.comments):'<span class="td-muted">—</span>'}</td>
+      <td class="td-right">${etaBadge(eta)}</td>
+    </tr>`;
+  }).join('');
 }
 
 // ── NAVIGATION ────────────────────────────────────────────────────────
