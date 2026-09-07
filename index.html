@@ -52,6 +52,22 @@
     .guide-desc { color:var(--text-secondary); font-size:12px; }
     .guide-formula { color:var(--text-muted); font-size:11px; margin-top:3px; }
     .category-note { padding:10px 14px; color:var(--text-muted); font-size:11px; border-bottom:1px solid var(--border); }
+    .category-row { cursor:pointer; }
+    .category-row.selected { background:rgba(62,193,156,.09); }
+    .category-name { display:flex; align-items:center; gap:7px; }
+    .category-arrow { color:var(--text-muted); font-size:10px; transition:transform .15s; }
+    .category-row.selected .category-arrow { transform:rotate(90deg); color:var(--note-green); }
+    .category-details { display:none; border-top:1px solid var(--border); background:var(--surface-2); }
+    .category-details.open { display:block; }
+    .category-details-head { padding:12px 14px; display:flex; align-items:center; justify-content:space-between; gap:12px; border-bottom:1px solid var(--border); }
+    .category-details-title { font-weight:700; }
+    .review-filter { display:flex; align-items:center; gap:6px; color:var(--text-secondary); font-size:11px; cursor:pointer; white-space:nowrap; }
+    .category-article-list { max-height:360px; overflow:auto; }
+    .category-article { display:grid; grid-template-columns:minmax(0,1fr) 90px 120px 70px; gap:10px; align-items:center; padding:10px 14px; border-bottom:1px solid var(--border); }
+    .category-article:last-child { border-bottom:none; }
+    .category-article-title { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:500; }
+    .category-pill { display:inline-block; width:max-content; max-width:100%; overflow:hidden; text-overflow:ellipsis; padding:2px 7px; border-radius:999px; background:var(--surface); border:1px solid var(--border); color:var(--text-secondary); font-size:10px; white-space:nowrap; }
+    .review-badge { color:#c08000; font-size:10px; font-weight:700; }
 
     .data-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 8px 24px; }
     .drop-zone { border: 1.5px dashed var(--border); border-radius: 8px; padding: 10px 18px; text-align: center; color: var(--text-muted); font-size: 12px; cursor: pointer; transition: all 0.15s; background: var(--surface-2); display: flex; align-items: center; justify-content: center; gap: 8px; }
@@ -346,12 +362,19 @@
       <span class="card-title">🧭 記事タイプ別分析 <span class="help-mark" title="同じカテゴリの記事を、公開後の同じ日数で公平に比較します。">?</span></span>
       <span class="card-sub" id="categorySummaryLabel">category_summary.csv</span>
     </div>
-    <div class="category-note">平均PVは記事1本あたり。スキ率・コメント率はカテゴリ内の合計反応数÷合計PV。件数が少ないカテゴリは参考値として見てください。</div>
+    <div class="category-note">平均PVは記事1本あたり。スキ率・コメント率はカテゴリ内の合計反応数÷合計PV。カテゴリ行を押すと、該当する記事と判定根拠を確認できます。</div>
     <div class="card-body-flush tbl-scroll"><table><thead><tr>
       <th class="no-sort">カテゴリ</th><th class="td-right no-sort">記事数</th>
       <th class="td-right no-sort">D1平均PV</th><th class="td-right no-sort">D7平均PV</th><th class="td-right no-sort">D30平均PV</th>
       <th class="td-right no-sort">D7スキ率</th><th class="td-right no-sort">D7コメント率</th><th class="td-right no-sort">後伸び率</th>
     </tr></thead><tbody id="categoryTable"><tr><td colspan="8"><div class="empty"><div class="empty-text">カテゴリ分析データ待ち</div></div></td></tr></tbody></table></div>
+    <div class="category-details" id="categoryDetails">
+      <div class="category-details-head">
+        <span class="category-details-title" id="categoryDetailsTitle">分類記事</span>
+        <label class="review-filter"><input type="checkbox" id="reviewOnly" onchange="renderCategoryDetails()"> 要確認だけ表示</label>
+      </div>
+      <div class="category-article-list" id="categoryArticleList"></div>
+    </div>
   </div>
 
   <div class="card full-card">
@@ -463,7 +486,7 @@
 const S = {
   articles: [], dailySummary: [], weeklySummary: [], monthlySummary: [],
   periodRanking: [], trendAnalysis: [], assetArticles: [], publicationAge: [], articleClassification: [], categorySummary: [], followers: [], loadedFiles: new Set(),
-  currentPeriod: 'weekly', charts: {},
+  currentPeriod: 'weekly', selectedCategory: '', charts: {},
   sortCol: 'views', sortDir: 'desc',
 };
 
@@ -1007,8 +1030,8 @@ function renderCategoryAnalysis(){
   const review=S.categorySummary.reduce((sum,row)=>sum+n(row.review_count),0);
   label.textContent=`自動分類 ${total}件・要確認 ${review}件`;
   const rows=[...S.categorySummary].sort((a,b)=>n(b.D7_avg_PV)-n(a.D7_avg_PV));
-  tbody.innerHTML=rows.map(row=>`<tr>
-    <td><strong>${esc(row.category_primary||'その他')}</strong></td>
+  tbody.innerHTML=rows.map(row=>{const category=row.category_primary||'その他'; return `<tr class="category-row ${S.selectedCategory===category?'selected':''}" onclick="toggleCategoryDetails('${encodeURIComponent(category)}')">
+    <td><span class="category-name"><span class="category-arrow">▶</span><strong>${esc(category)}</strong></span></td>
     <td class="td-right">${fmt(n(row.article_count))}</td>
     <td class="td-right">${metricOrDash(row.D1_avg_PV)} <span class="td-muted">(${fmt(n(row.D1_comparable))}件)</span></td>
     <td class="td-right">${metricOrDash(row.D7_avg_PV)} <span class="td-muted">(${fmt(n(row.D7_comparable))}件)</span></td>
@@ -1016,7 +1039,45 @@ function renderCategoryAnalysis(){
     <td class="td-right">${metricOrDash(row.D7_avg_like_rate,'%')}</td>
     <td class="td-right">${metricOrDash(row.D7_avg_comment_rate,'%')}</td>
     <td class="td-right">${metricOrDash(row.late_growth_rate,'%')} <span class="td-muted">(${fmt(n(row.growth_comparable))}件)</span></td>
-  </tr>`).join('');
+  </tr>`}).join('');
+  if(S.selectedCategory) renderCategoryDetails();
+}
+function toggleCategoryDetails(encodedCategory){
+  const category=decodeURIComponent(encodedCategory);
+  S.selectedCategory=S.selectedCategory===category?'':category;
+  const details=document.getElementById('categoryDetails');
+  if(!S.selectedCategory){
+    details.classList.remove('open');
+    document.getElementById('reviewOnly').checked=false;
+  }else{
+    details.classList.add('open');
+  }
+  renderCategoryAnalysis();
+}
+function renderCategoryDetails(){
+  const details=document.getElementById('categoryDetails');
+  const title=document.getElementById('categoryDetailsTitle');
+  const list=document.getElementById('categoryArticleList');
+  const reviewOnly=document.getElementById('reviewOnly').checked;
+  if(!S.selectedCategory){details.classList.remove('open');return;}
+  details.classList.add('open');
+  let articles=S.articleClassification.filter(row=>(row.category_primary||'その他')===S.selectedCategory);
+  if(reviewOnly) articles=articles.filter(row=>row.needs_review==='true');
+  title.textContent=`${S.selectedCategory}の記事 ${articles.length}件${reviewOnly?'（要確認）':''}`;
+  if(!articles.length){
+    list.innerHTML='<div class="empty"><div class="empty-text">条件に該当する記事はありません</div></div>';
+    return;
+  }
+  list.innerHTML=articles.sort((a,b)=>(a.title||'').localeCompare(b.title||'','ja')).map(row=>{
+    const confidence=Math.round(n(row.classification_confidence)*100);
+    const basis=row.matched_rule||'一致語なし';
+    return `<div class="category-article">
+      <div class="category-article-title" title="${esc(row.title)}">${esc(row.title)}</div>
+      <span class="category-pill" title="形式">${esc(row.content_format||'文章')}</span>
+      <span class="category-pill" title="判定根拠">根拠: ${esc(basis)}</span>
+      <span class="${row.needs_review==='true'?'review-badge':'td-muted'}">${row.needs_review==='true'?'要確認':`確度 ${confidence}%`}</span>
+    </div>`;
+  }).join('');
 }
 
 function toggleGuide(open){
