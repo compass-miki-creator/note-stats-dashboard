@@ -346,9 +346,10 @@
         <button class="age-tab active" onclick="setAgeMilestone(1,this)">D1</button>
         <button class="age-tab" onclick="setAgeMilestone(3,this)">D3</button>
         <button class="age-tab" onclick="setAgeMilestone(7,this)">D7</button>
+        <button class="age-tab" onclick="setAgeMilestone(30,this)">D30</button>
       </div>
     </div>
-    <div class="age-note">公開日をD0として、翌日・3日後・7日後の完全スナップショットを比較。取得欠損日は後日の値で補完せず除外します。</div>
+    <div class="age-note">公開日をD0として、翌日・3日後・7日後・30日後の完全スナップショットを比較。取得欠損日は後日の値で補完せず除外します。分類はD1 PVがD30 PVの60%以上なら初動型、それ未満なら後伸び型です。</div>
     <div class="card-body-flush tbl-scroll">
       <table>
         <thead>
@@ -359,14 +360,19 @@
             <th class="td-right no-sort">PV</th>
             <th class="td-right no-sort">スキ</th>
             <th class="td-right no-sort">コメント</th>
-            <th class="td-right no-sort">η</th>
+            <th class="td-right no-sort">η</th><th class="no-sort">伸び方</th>
           </tr>
         </thead>
         <tbody id="ageTable">
-          <tr><td colspan="7"><div class="empty"><div class="empty-text">公開後日数データ待ち</div></div></td></tr>
+          <tr><td colspan="8"><div class="empty"><div class="empty-text">公開後日数データ待ち</div></div></td></tr>
         </tbody>
       </table>
     </div>
+  </div>
+
+  <div class="analysis-grid">
+    <div class="card"><div class="card-header"><span class="card-title">📅 週次レポート</span><span class="card-sub" id="weeklyReportSummary">weekly_summary.csv</span></div><div class="mini-list" id="weeklyReportList"></div></div>
+    <div class="card"><div class="card-header"><span class="card-title">🗓 月次レポート</span><span class="card-sub" id="monthlyReportSummary">monthly_summary.csv</span></div><div class="mini-list" id="monthlyReportList"></div></div>
   </div>
 
   <!-- Pro upgrade teaser -->
@@ -547,8 +553,8 @@ const getDailyViews     = r => n(r['ビュー合計'] || r.views || 0);
 const getDailyLikes     = r => n(r['スキ合計']   || r.likes || 0);
 const getDailyComments  = r => n(r['コメント合計'] || r.comments || r.comment_count || 0);
 const getFollowCount    = r => n(r['フォロワー数'] || r.followers || r.follower_count || 0);
-const getWeekKey  = r => r['年']&&r['週'] ? `${r['年']}-W${String(r['週']).padStart(2,'0')}` : r.week||r.date||'';
-const getMonthKey = r => r['年']&&r['月'] ? `${r['年']}-${String(r['月']).padStart(2,'0')}` : r.month||'';
+const getWeekKey  = r => r['年']&&(r['週']||r['期間']) ? `${r['年']}-${String(r['週']||r['期間']).replace(/^W?/,'W')}` : r.week||r.date||'';
+const getMonthKey = r => r['年']&&(r['月']||r['期間']) ? `${r['年']}-${String(r['月']||r['期間']).padStart(2,'0')}` : r.month||'';
 
 function etaBadge(eta) {
   const v=parseFloat(eta)||0;
@@ -569,6 +575,7 @@ function sortedDaily() {
 function aggSummary(rows, keyFn) {
   const agg={};
   rows.forEach(r=>{
+    if(r['比較状態'] && r['比較状態']!=='available')return;
     const k=keyFn(r); if(!k)return;
     if(!agg[k])agg[k]={views:0,likes:0};
     agg[k].views+=n(r['期間増加PV']||0);
@@ -670,14 +677,14 @@ function getPeriodArticles() {
   if(p==='weekly'&&S.weeklySummary.length>0){
     const agg=aggSummary(S.weeklySummary,getWeekKey);
     const latestWeek=Object.keys(agg).sort().pop();
-    return S.weeklySummary.filter(r=>getWeekKey(r)===latestWeek)
+    return S.weeklySummary.filter(r=>getWeekKey(r)===latestWeek && (!r['比較状態']||r['比較状態']==='available'))
       .sort((a,b)=>n(b['期間増加PV'])-n(a['期間増加PV']))
       .map(r=>({title:r.title||'',url:r.url||'',views:n(r['期間増加PV']||0),likes:n(r['期間増加スキ']||0),comments:0,eta:0,published_at:''}));
   }
   if(p==='monthly'&&S.monthlySummary.length>0){
     const agg=aggSummary(S.monthlySummary,getMonthKey);
     const latestMonth=Object.keys(agg).sort().pop();
-    return S.monthlySummary.filter(r=>getMonthKey(r)===latestMonth)
+    return S.monthlySummary.filter(r=>getMonthKey(r)===latestMonth && (!r['比較状態']||r['比較状態']==='available'))
       .sort((a,b)=>n(b['期間増加PV'])-n(a['期間増加PV']))
       .map(r=>({title:r.title||'',url:'',views:n(r['期間増加PV']||0),likes:n(r['期間増加スキ']||0),comments:0,eta:0,published_at:''}));
   }
@@ -728,6 +735,7 @@ function renderSummary() {
   renderTable();
   renderAnalysis();
   renderAgeAnalysis();
+  renderPeriodReports();
 }
 
 function renderChart(labels,vData,lData) {
@@ -875,7 +883,7 @@ function renderAgeAnalysis(){
   if(!tbody||!summary)return;
   if(!S.publicationAge.length){
     summary.textContent='publication_age_analysis.csv';
-    tbody.innerHTML='<tr><td colspan="7"><div class="empty"><div class="empty-text">publication_age_analysis.csv を読み込むと表示されます</div></div></td></tr>';
+    tbody.innerHTML='<tr><td colspan="8"><div class="empty"><div class="empty-text">publication_age_analysis.csv を読み込むと表示されます</div></div></td></tr>';
     return;
   }
 
@@ -896,11 +904,12 @@ function renderAgeAnalysis(){
       views:n(row[`${prefix}_PV`]),
       likes:n(row[`${prefix}_likes`]),
       comments:n(row[`${prefix}_comments`]),
+      growthType:row.growth_type||'',
     }))
     .sort((a,b)=>b.views-a.views);
 
   if(!rows.length){
-    tbody.innerHTML=`<tr><td colspan="7"><div class="empty"><div class="empty-text">${prefix}で比較できる記事はまだありません</div><div class="empty-sub">対象日が到来し、同日の取得が成功すると自動で追加されます</div></div></td></tr>`;
+    tbody.innerHTML=`<tr><td colspan="8"><div class="empty"><div class="empty-text">${prefix}で比較できる記事はまだありません</div><div class="empty-sub">対象日が到来し、同日の取得が成功すると自動で追加されます</div></div></td></tr>`;
     return;
   }
 
@@ -914,8 +923,25 @@ function renderAgeAnalysis(){
       <td class="td-right">${fmt(row.likes)}</td>
       <td class="td-right">${row.comments?fmt(row.comments):'<span class="td-muted">—</span>'}</td>
       <td class="td-right">${etaBadge(eta)}</td>
+      <td>${esc(row.growthType||'—')}</td>
     </tr>`;
   }).join('');
+}
+
+function renderPeriodReport(rows, keyFn, listId, summaryId){
+  const list=document.getElementById(listId), summary=document.getElementById(summaryId);
+  if(!list||!summary)return;
+  if(!rows.length){list.innerHTML='<div class="empty"><div class="empty-text">レポートデータ待ち</div></div>';return;}
+  const latestKey=[...new Set(rows.map(keyFn).filter(Boolean))].sort().pop();
+  const periodRows=rows.filter(r=>keyFn(r)===latestKey);
+  const available=periodRows.filter(r=>r['比較状態']==='available');
+  summary.textContent=`${latestKey}｜比較 ${available.length}件・欠損 ${periodRows.length-available.length}件`;
+  if(!available.length){list.innerHTML='<div class="empty"><div class="empty-text">比較できる記事はありません</div><div class="empty-sub">境界日の実測値が揃うと自動集計されます</div></div>';return;}
+  list.innerHTML=available.sort((a,b)=>n(b['期間増加PV'])-n(a['期間増加PV'])).slice(0,10).map((r,i)=>`<div class="mini-row"><div class="mini-rank">${i+1}</div><div class="mini-title" title="${esc(r.title)}">${esc(r.title)}</div><div class="mini-num">+${fmt(n(r['期間増加PV']))}</div><div class="mini-sub">♡ +${fmt(n(r['期間増加スキ']))} / 💬 +${fmt(n(r['期間増加コメント']))}</div></div>`).join('');
+}
+function renderPeriodReports(){
+  renderPeriodReport(S.weeklySummary,getWeekKey,'weeklyReportList','weeklyReportSummary');
+  renderPeriodReport(S.monthlySummary,getMonthKey,'monthlyReportList','monthlyReportSummary');
 }
 
 // ── NAVIGATION ────────────────────────────────────────────────────────
