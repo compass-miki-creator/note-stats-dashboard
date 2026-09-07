@@ -38,6 +38,20 @@
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
     .theme-btn { background: none; border: 1px solid var(--border); border-radius: 8px; padding: 5px 12px; cursor: pointer; color: var(--text-secondary); font-size: 12px; font-weight: 500; transition: all 0.15s; }
     .theme-btn:hover { background: var(--surface-2); color: var(--text-primary); }
+    .guide-btn { background:var(--surface-2); border:1px solid var(--border); border-radius:8px; padding:5px 12px; cursor:pointer; color:var(--text-secondary); font-size:12px; font-weight:600; }
+    .guide-btn:hover { color:var(--note-green); border-color:var(--note-green); }
+    .help-mark { display:inline-grid; place-items:center; width:16px; height:16px; margin-left:4px; border:1px solid var(--border); border-radius:50%; color:var(--text-muted); font-size:10px; cursor:help; text-transform:none; }
+    .modal-backdrop { display:none; position:fixed; inset:0; z-index:500; background:rgba(0,0,0,.55); padding:24px; align-items:center; justify-content:center; }
+    .modal-backdrop.open { display:flex; }
+    .guide-modal { width:min(760px,100%); max-height:85vh; overflow:auto; background:var(--surface); border:1px solid var(--border); border-radius:12px; box-shadow:var(--shadow-md); }
+    .guide-head { position:sticky; top:0; background:var(--surface); padding:16px 20px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+    .guide-body { padding:18px 20px; }
+    .guide-item { padding:12px 0; border-bottom:1px solid var(--border); }
+    .guide-item:last-child { border-bottom:none; }
+    .guide-term { font-weight:700; margin-bottom:3px; }
+    .guide-desc { color:var(--text-secondary); font-size:12px; }
+    .guide-formula { color:var(--text-muted); font-size:11px; margin-top:3px; }
+    .category-note { padding:10px 14px; color:var(--text-muted); font-size:11px; border-bottom:1px solid var(--border); }
 
     .data-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 8px 24px; }
     .drop-zone { border: 1.5px dashed var(--border); border-radius: 8px; padding: 10px 18px; text-align: center; color: var(--text-muted); font-size: 12px; cursor: pointer; transition: all 0.15s; background: var(--surface-2); display: flex; align-items: center; justify-content: center; gap: 8px; }
@@ -198,6 +212,7 @@
       <span class="status-dot" id="statusDot"></span>
       <span id="statusText">データ未読込</span>
     </div>
+    <button class="guide-btn" onclick="toggleGuide(true)">？ 指標ガイド</button>
     <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙 ダーク</button>
   </div>
 </header>
@@ -247,7 +262,7 @@
       <div class="kpi-diff flat" id="kpiCommentsDiff">前期間比 —</div>
     </div>
     <div class="kpi-card">
-      <div class="kpi-label">η スキ率</div>
+      <div class="kpi-label">η スキ率 <span class="help-mark" title="スキ数÷PV×100。読まれた回数に対して、どのくらいスキされたかを見る指標です。">?</span></div>
       <div class="kpi-value" id="kpiEta">—</div>
       <div class="kpi-diff flat" id="kpiEtaDiff">前期間比 —</div>
     </div>
@@ -324,6 +339,19 @@
         <div class="empty"><div class="empty-text">資産記事データ待ち</div></div>
       </div>
     </div>
+  </div>
+
+  <div class="card full-card">
+    <div class="card-header">
+      <span class="card-title">🧭 記事タイプ別分析 <span class="help-mark" title="同じカテゴリの記事を、公開後の同じ日数で公平に比較します。">?</span></span>
+      <span class="card-sub" id="categorySummaryLabel">category_summary.csv</span>
+    </div>
+    <div class="category-note">平均PVは記事1本あたり。スキ率・コメント率はカテゴリ内の合計反応数÷合計PV。件数が少ないカテゴリは参考値として見てください。</div>
+    <div class="card-body-flush tbl-scroll"><table><thead><tr>
+      <th class="no-sort">カテゴリ</th><th class="td-right no-sort">記事数</th>
+      <th class="td-right no-sort">D1平均PV</th><th class="td-right no-sort">D7平均PV</th><th class="td-right no-sort">D30平均PV</th>
+      <th class="td-right no-sort">D7スキ率</th><th class="td-right no-sort">D7コメント率</th><th class="td-right no-sort">後伸び率</th>
+    </tr></thead><tbody id="categoryTable"><tr><td colspan="8"><div class="empty"><div class="empty-text">カテゴリ分析データ待ち</div></div></td></tr></tbody></table></div>
   </div>
 
   <div class="card full-card">
@@ -408,6 +436,22 @@
 
 </div>
 
+<div class="modal-backdrop" id="guideModal" onclick="if(event.target===this)toggleGuide(false)">
+  <div class="guide-modal" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+    <div class="guide-head"><strong id="guideTitle">指標の見方</strong><button class="theme-btn" onclick="toggleGuide(false)">閉じる</button></div>
+    <div class="guide-body">
+      <div class="guide-item"><div class="guide-term">η（スキ率）</div><div class="guide-desc">PVの多さではなく、読まれた後に「スキ」された割合を見る数字です。</div><div class="guide-formula">スキ数 ÷ PV × 100</div></div>
+      <div class="guide-item"><div class="guide-term">コメント率</div><div class="guide-desc">読まれた回数に対して、会話や反応がどの程度生まれたかを見る数字です。</div><div class="guide-formula">コメント数 ÷ PV × 100</div></div>
+      <div class="guide-item"><div class="guide-term">D1・D3・D7・D30</div><div class="guide-desc">公開日をD0として、翌日・3日後・7日後・30日後に実際に記録された累計値です。公開時期の違う記事を同じ条件で比べます。</div></div>
+      <div class="guide-item"><div class="guide-term">比較可能件数</div><div class="guide-desc">対象日まで到達し、その日の記録も存在する記事数です。平均値の信頼性を見るため、数字と一緒に確認します。</div></div>
+      <div class="guide-item"><div class="guide-term">未到達・取得欠損</div><div class="guide-desc">未到達は対象日がまだ来ていない記事、取得欠損は対象日の記録がない記事です。どちらも推定せず計算から除外します。</div></div>
+      <div class="guide-item"><div class="guide-term">初動型・後伸び型／後伸び率</div><div class="guide-desc">D1のPVがD30の60%以上なら初動型、60%未満なら後伸び型です。後伸び率は、分類可能な記事のうち後伸び型だった割合です。</div></div>
+      <div class="guide-item"><div class="guide-term">前期間比・期間増加</div><div class="guide-desc">選択期間の最初と最後の実測値の差です。全期間の大きさと、最近の勢いを混同しないために使います。</div></div>
+      <div class="guide-item"><div class="guide-term">記事タイプ別分析</div><div class="guide-desc">タイトルと連載名のルールで自動分類した比較です。「その他」や要確認が多い場合は、分類ルールを育てる余地があります。</div></div>
+    </div>
+  </div>
+</div>
+
 <script>
 // ── CSV column definitions ──────────────────────────────────────────────
 // articles.csv      : date, key, title, published_at, read_count, like_count, comment_count, age_days
@@ -418,7 +462,7 @@
 
 const S = {
   articles: [], dailySummary: [], weeklySummary: [], monthlySummary: [],
-  periodRanking: [], trendAnalysis: [], assetArticles: [], publicationAge: [], followers: [], loadedFiles: new Set(),
+  periodRanking: [], trendAnalysis: [], assetArticles: [], publicationAge: [], articleClassification: [], categorySummary: [], followers: [], loadedFiles: new Set(),
   currentPeriod: 'weekly', charts: {},
   sortCol: 'views', sortDir: 'desc',
 };
@@ -490,13 +534,15 @@ function parseAndStore(name, text) {
   else if (k==='trend_analysis')   S.trendAnalysis = data;
   else if (k==='asset_articles')   S.assetArticles = data;
   else if (k==='publication_age_analysis') S.publicationAge = data;
+  else if (k==='article_classification') S.articleClassification = data;
+  else if (k==='category_summary') S.categorySummary = data;
   else if (k==='followers')        S.followers = data;
   S.loadedFiles.add(k);
   updateStatus();
 }
 
 // ── DATA LOADING ──────────────────────────────────────────────────────
-const CSV_FILES = ['articles','daily_summary','weekly_summary','monthly_summary','period_ranking','trend_analysis','asset_articles','publication_age_analysis','followers'];
+const CSV_FILES = ['articles','daily_summary','weekly_summary','monthly_summary','period_ranking','trend_analysis','asset_articles','publication_age_analysis','article_classification','category_summary','followers'];
 async function loadFromRepo() {
   setStatus('loading','読込中...');
   let loaded = 0;
@@ -736,6 +782,7 @@ function renderSummary() {
   renderAnalysis();
   renderAgeAnalysis();
   renderPeriodReports();
+  renderCategoryAnalysis();
 }
 
 function renderChart(labels,vData,lData) {
@@ -943,6 +990,42 @@ function renderPeriodReports(){
   renderPeriodReport(S.weeklySummary,getWeekKey,'weeklyReportList','weeklyReportSummary');
   renderPeriodReport(S.monthlySummary,getMonthKey,'monthlyReportList','monthlyReportSummary');
 }
+
+function metricOrDash(value, suffix=''){
+  return value===undefined || value===null || value==='' ? '<span class="td-muted">—</span>' : `${Number(value).toLocaleString('ja-JP',{maximumFractionDigits:2})}${suffix}`;
+}
+function renderCategoryAnalysis(){
+  const tbody=document.getElementById('categoryTable');
+  const label=document.getElementById('categorySummaryLabel');
+  if(!tbody||!label)return;
+  if(!S.categorySummary.length){
+    label.textContent='category_summary.csv';
+    tbody.innerHTML='<tr><td colspan="8"><div class="empty"><div class="empty-text">category_summary.csv を読み込むと表示されます</div></div></td></tr>';
+    return;
+  }
+  const total=S.categorySummary.reduce((sum,row)=>sum+n(row.article_count),0);
+  const review=S.categorySummary.reduce((sum,row)=>sum+n(row.review_count),0);
+  label.textContent=`自動分類 ${total}件・要確認 ${review}件`;
+  const rows=[...S.categorySummary].sort((a,b)=>n(b.D7_avg_PV)-n(a.D7_avg_PV));
+  tbody.innerHTML=rows.map(row=>`<tr>
+    <td><strong>${esc(row.category_primary||'その他')}</strong></td>
+    <td class="td-right">${fmt(n(row.article_count))}</td>
+    <td class="td-right">${metricOrDash(row.D1_avg_PV)} <span class="td-muted">(${fmt(n(row.D1_comparable))}件)</span></td>
+    <td class="td-right">${metricOrDash(row.D7_avg_PV)} <span class="td-muted">(${fmt(n(row.D7_comparable))}件)</span></td>
+    <td class="td-right">${metricOrDash(row.D30_avg_PV)} <span class="td-muted">(${fmt(n(row.D30_comparable))}件)</span></td>
+    <td class="td-right">${metricOrDash(row.D7_avg_like_rate,'%')}</td>
+    <td class="td-right">${metricOrDash(row.D7_avg_comment_rate,'%')}</td>
+    <td class="td-right">${metricOrDash(row.late_growth_rate,'%')} <span class="td-muted">(${fmt(n(row.growth_comparable))}件)</span></td>
+  </tr>`).join('');
+}
+
+function toggleGuide(open){
+  const modal=document.getElementById('guideModal');
+  if(!modal)return;
+  modal.classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+document.addEventListener('keydown',event=>{if(event.key==='Escape')toggleGuide(false);});
 
 // ── NAVIGATION ────────────────────────────────────────────────────────
 function switchPeriod(period, el) {
