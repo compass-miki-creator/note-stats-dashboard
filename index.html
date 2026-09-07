@@ -619,9 +619,20 @@ function getPeriodData() {
   } else {
     const daily=sortedDaily();
     daily.forEach(r=>{labels.push(normDate(getDateKey(r)));vData.push(getDailyViews(r));lData.push(getDailyLikes(r));});
-    curr={views:vData.reduce((s,v)=>s+v,0),likes:lData.reduce((s,v)=>s+v,0),comments:0};
-    const h=Math.floor(daily.length/2);
-    prev={views:daily.slice(0,h).reduce((s,r)=>s+getDailyViews(r),0),likes:daily.slice(0,h).reduce((s,r)=>s+getDailyLikes(r),0),comments:0};
+    // daily_summary のビュー・スキは各取得日時点の累積値。
+    // 全期間KPIでは日別行を合算せず、最新スナップショットを表示する。
+    const latest=daily[daily.length-1];
+    const previous=daily.length>1?daily[daily.length-2]:null;
+    curr={
+      views:latest?getDailyViews(latest):0,
+      likes:latest?getDailyLikes(latest):0,
+      comments:0
+    };
+    prev={
+      views:previous?getDailyViews(previous):0,
+      likes:previous?getDailyLikes(previous):0,
+      comments:0
+    };
   }
   // コメントKPIは articles.csv の最新スナップショットから合計する。
   // daily_summary.csv にコメント列がなくても表示できるようにする。
