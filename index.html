@@ -52,6 +52,14 @@
     .guide-desc { color:var(--text-secondary); font-size:12px; }
     .guide-formula { color:var(--text-muted); font-size:11px; margin-top:3px; }
     .category-note { padding:10px 14px; color:var(--text-muted); font-size:11px; border-bottom:1px solid var(--border); }
+    .classification-quality { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; padding:12px 14px; border-bottom:1px solid var(--border); }
+    .quality-item { background:var(--surface-2); border:1px solid var(--border); border-radius:8px; padding:9px 11px; }
+    .quality-label { color:var(--text-muted); font-size:10px; }
+    .quality-value { margin-top:2px; font-weight:800; font-size:16px; }
+    .axis-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; padding:12px 14px; border-bottom:1px solid var(--border); }
+    .axis-box { border:1px solid var(--border); border-radius:8px; padding:10px; min-width:0; }
+    .axis-title { font-size:11px; font-weight:700; margin-bottom:6px; }
+    .axis-counts { color:var(--text-secondary); font-size:10px; line-height:1.65; max-height:110px; overflow:auto; }
     .category-row { cursor:pointer; }
     .category-row.selected { background:rgba(62,193,156,.09); }
     .category-name { display:flex; align-items:center; gap:7px; }
@@ -63,11 +71,44 @@
     .category-details-title { font-weight:700; }
     .review-filter { display:flex; align-items:center; gap:6px; color:var(--text-secondary); font-size:11px; cursor:pointer; white-space:nowrap; }
     .category-article-list { max-height:360px; overflow:auto; }
-    .category-article { display:grid; grid-template-columns:minmax(0,1fr) 90px 120px 70px; gap:10px; align-items:center; padding:10px 14px; border-bottom:1px solid var(--border); }
+    .category-article { display:grid; grid-template-columns:minmax(0,1fr) 90px 110px 120px 70px; gap:10px; align-items:center; padding:10px 14px; border-bottom:1px solid var(--border); }
     .category-article:last-child { border-bottom:none; }
     .category-article-title { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:500; }
+    .category-reason { color:var(--text-muted); font-size:10px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin-top:2px; }
     .category-pill { display:inline-block; width:max-content; max-width:100%; overflow:hidden; text-overflow:ellipsis; padding:2px 7px; border-radius:999px; background:var(--surface); border:1px solid var(--border); color:var(--text-secondary); font-size:10px; white-space:nowrap; }
     .review-badge { color:#c08000; font-size:10px; font-weight:700; }
+    .experiment-intro { padding:12px 16px; border-bottom:1px solid var(--border); color:var(--text-secondary); font-size:12px; line-height:1.7; }
+    .experiment-intro strong { color:var(--text-primary); }
+    .proposal-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; padding:14px; }
+    .proposal-card { border:1px solid var(--border); border-radius:10px; background:var(--surface-2); overflow:hidden; min-width:0; }
+    .proposal-card.observation { border-color:rgba(74,144,217,.45); }
+    .proposal-main { padding:14px; }
+    .proposal-type { display:inline-flex; align-items:center; gap:5px; padding:3px 8px; border-radius:999px; background:rgba(62,193,156,.13); color:#1a9e78; font-size:10px; font-weight:800; }
+    .proposal-card.observation .proposal-type { background:rgba(74,144,217,.13); color:var(--note-blue); }
+    .proposal-target { margin-top:9px; font-size:15px; font-weight:800; overflow-wrap:anywhere; }
+    .proposal-purpose { margin-top:5px; color:var(--text-secondary); font-size:12px; min-height:36px; }
+    .proposal-facts { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:12px; }
+    .proposal-fact { padding:8px; border:1px solid var(--border); border-radius:7px; background:var(--surface); min-width:0; }
+    .proposal-fact-label { color:var(--text-muted); font-size:9px; font-weight:700; }
+    .proposal-fact-value { margin-top:2px; font-size:11px; font-weight:700; overflow-wrap:anywhere; }
+    .proposal-tags { display:flex; flex-wrap:wrap; gap:5px; margin-top:10px; }
+    .proposal-tag { padding:2px 7px; border:1px solid var(--border); border-radius:999px; color:var(--text-secondary); background:var(--surface); font-size:9px; }
+    .proposal-warning { margin-top:9px; padding:7px 9px; border-radius:7px; background:rgba(255,193,7,.13); color:#a36f00; font-size:10px; line-height:1.5; }
+    .proposal-details { border-top:1px solid var(--border); }
+    .proposal-details summary { padding:10px 14px; color:var(--note-green); font-size:11px; font-weight:700; cursor:pointer; list-style-position:inside; }
+    .proposal-detail-body { padding:0 14px 14px; }
+    .proposal-detail-row { padding:8px 0; border-top:1px solid var(--border); }
+    .proposal-detail-label { color:var(--text-muted); font-size:9px; font-weight:700; }
+    .proposal-detail-value { margin-top:2px; color:var(--text-secondary); font-size:11px; line-height:1.65; overflow-wrap:anywhere; }
+    .proposal-type-status { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; padding:12px 14px; border-top:1px solid var(--border); }
+    .proposal-type-item { display:flex; justify-content:space-between; gap:7px; padding:7px 9px; border:1px solid var(--border); border-radius:7px; font-size:10px; }
+    .proposal-type-item span:last-child { color:var(--text-muted); white-space:nowrap; }
+    @media (max-width: 800px) {
+      .classification-quality, .axis-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .category-article { grid-template-columns:minmax(0,1fr) 90px; }
+      .proposal-grid { grid-template-columns:1fr; }
+      .proposal-type-status { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
 
     .data-bar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 8px 24px; }
     .drop-zone { border: 1.5px dashed var(--border); border-radius: 8px; padding: 10px 18px; text-align: center; color: var(--text-muted); font-size: 12px; cursor: pointer; transition: all 0.15s; background: var(--surface-2); display: flex; align-items: center; justify-content: center; gap: 8px; }
@@ -362,7 +403,14 @@
       <span class="card-title">🧭 記事タイプ別分析 <span class="help-mark" title="同じカテゴリの記事を、公開後の同じ日数で公平に比較します。">?</span></span>
       <span class="card-sub" id="categorySummaryLabel">category_summary.csv</span>
     </div>
-    <div class="category-note">平均PVは記事1本あたり。スキ率・コメント率はカテゴリ内の合計反応数÷合計PV。カテゴリ行を押すと、該当する記事と判定根拠を確認できます。</div>
+    <div class="category-note">主テーマだけでD1・D7・D30を比較します。形式・投稿目的・シリーズは別軸なので混同しません。平均PVは記事1本あたり、反応率はカテゴリ内の合計反応数÷合計PVです。</div>
+    <div class="classification-quality" id="classificationQuality">
+      <div class="quality-item"><div class="quality-label">分類記事</div><div class="quality-value">—</div></div>
+      <div class="quality-item"><div class="quality-label">主テーマ「その他」率</div><div class="quality-value">—</div></div>
+      <div class="quality-item"><div class="quality-label">要確認</div><div class="quality-value">—</div></div>
+      <div class="quality-item"><div class="quality-label">監査再現率</div><div class="quality-value">—</div></div>
+    </div>
+    <div class="axis-grid" id="classificationAxes"></div>
     <div class="card-body-flush tbl-scroll"><table><thead><tr>
       <th class="no-sort">カテゴリ</th><th class="td-right no-sort">記事数</th>
       <th class="td-right no-sort">D1平均PV</th><th class="td-right no-sort">D7平均PV</th><th class="td-right no-sort">D30平均PV</th>
@@ -375,6 +423,18 @@
       </div>
       <div class="category-article-list" id="categoryArticleList"></div>
     </div>
+  </div>
+
+  <div class="card full-card" id="experimentLab">
+    <div class="card-header">
+      <span class="card-title">🧪 創作実験室 <span class="help-mark" title="伸びる記事の予測ではなく、まだ分からないことを減らす次の実験候補です。">?</span></span>
+      <span class="card-sub" id="experimentSummary">experiment_proposals.csv</span>
+    </div>
+    <div class="experiment-intro"><strong>Phase 4の分類結果から、次に何を試すと新しい情報が得られるかを表示します。</strong> 高反応だけでなく、低反応・試行不足・未知・観測待ちも正式な候補です。0件の日も正常です。</div>
+    <div class="proposal-grid" id="proposalGrid">
+      <div class="empty"><div class="empty-text">実験提案データ待ち</div></div>
+    </div>
+    <div class="proposal-type-status" id="proposalTypeStatus"></div>
   </div>
 
   <div class="card full-card">
@@ -470,7 +530,13 @@
       <div class="guide-item"><div class="guide-term">未到達・取得欠損</div><div class="guide-desc">未到達は対象日がまだ来ていない記事、取得欠損は対象日の記録がない記事です。どちらも推定せず計算から除外します。</div></div>
       <div class="guide-item"><div class="guide-term">初動型・後伸び型／後伸び率</div><div class="guide-desc">D1のPVがD30の60%以上なら初動型、60%未満なら後伸び型です。後伸び率は、分類可能な記事のうち後伸び型だった割合です。</div></div>
       <div class="guide-item"><div class="guide-term">前期間比・期間増加</div><div class="guide-desc">選択期間の最初と最後の実測値の差です。全期間の大きさと、最近の勢いを混同しないために使います。</div></div>
-      <div class="guide-item"><div class="guide-term">記事タイプ別分析</div><div class="guide-desc">タイトルと連載名のルールで自動分類した比較です。「その他」や要確認が多い場合は、分類ルールを育てる余地があります。</div></div>
+      <div class="guide-item"><div class="guide-term">4つの分類軸</div><div class="guide-desc">主テーマ（何について）、形式（どう表現）、投稿目的（なぜ投稿）、シリーズ（どの連載）を分けています。D1・D7・D30の比較には主テーマを使います。</div></div>
+      <div class="guide-item"><div class="guide-term">分類confidence／要確認</div><div class="guide-desc">confidenceは判定材料の強さの目安です。要確認は材料不足で人の確認が必要な記事。「その他」は確認したうえで既存テーマに当てはまらない記事です。</div></div>
+      <div class="guide-item"><div class="guide-term">主テーマ「その他」率</div><div class="guide-desc">全分類記事のうち、確認済みで「その他」とした記事の割合です。「要確認」は別に数えます。</div><div class="guide-formula">category_primary=その他の記事数 ÷ 全分類記事数 × 100</div></div>
+      <div class="guide-item"><div class="guide-term">創作実験室</div><div class="guide-desc">次に伸びる記事を当てる画面ではありません。今あるデータで未確認の条件を見つけ、次の実験で分かることを増やすための候補です。「観察継続／今日は出さない」も正式な提案です。</div></div>
+      <div class="guide-item"><div class="guide-term">証拠強度</div><div class="guide-desc">比較できる記事数の目安です。0件は未知、1〜4件は探索・参考、5件以上は暫定比較可能、10件以上は蓄積が進んだ状態です。確定や成功を意味しません。</div></div>
+      <div class="guide-item"><div class="guide-term">単一記事依存</div><div class="guide-desc">グループの増加量の50%以上を1記事が占める状態です。カテゴリ全体が強いと断定せず、その記事だけに重なった条件を切り分けます。</div></div>
+      <div class="guide-item"><div class="guide-term">交絡要因</div><div class="guide-desc">企画参加、活動報告、受賞など、テーマや形式以外に反応へ影響した可能性がある条件です。通常記事と単純比較しません。</div></div>
     </div>
   </div>
 </div>
@@ -485,7 +551,7 @@
 
 const S = {
   articles: [], dailySummary: [], weeklySummary: [], monthlySummary: [],
-  periodRanking: [], trendAnalysis: [], assetArticles: [], publicationAge: [], articleClassification: [], categorySummary: [], followers: [], loadedFiles: new Set(),
+  periodRanking: [], trendAnalysis: [], assetArticles: [], publicationAge: [], articleClassification: [], categorySummary: [], classificationAxisSummary: [], classificationQuality: [], experimentCandidates: [], experimentProposals: [], followers: [], loadedFiles: new Set(),
   currentPeriod: 'weekly', selectedCategory: '', charts: {},
   sortCol: 'views', sortDir: 'desc',
 };
@@ -546,9 +612,10 @@ function parseCSVRows(text) {
   return rows;
 }
 function parseAndStore(name, text) {
-  const data = parseCSV(text);
-  if (!data.length) return;
   const k = name.replace(/-/g,'_').toLowerCase();
+  const data = parseCSV(text);
+  const allowEmpty = k==='experiment_candidates' || k==='experiment_proposals';
+  if (!data.length && !allowEmpty) return;
   if      (k==='articles')         S.articles = data;
   else if (k==='daily_summary')    S.dailySummary = data;
   else if (k==='weekly_summary')   S.weeklySummary = data;
@@ -559,13 +626,17 @@ function parseAndStore(name, text) {
   else if (k==='publication_age_analysis') S.publicationAge = data;
   else if (k==='article_classification') S.articleClassification = data;
   else if (k==='category_summary') S.categorySummary = data;
+  else if (k==='classification_axis_summary') S.classificationAxisSummary = data;
+  else if (k==='classification_quality') S.classificationQuality = data;
+  else if (k==='experiment_candidates') S.experimentCandidates = data;
+  else if (k==='experiment_proposals') S.experimentProposals = data;
   else if (k==='followers')        S.followers = data;
   S.loadedFiles.add(k);
   updateStatus();
 }
 
 // ── DATA LOADING ──────────────────────────────────────────────────────
-const CSV_FILES = ['articles','daily_summary','weekly_summary','monthly_summary','period_ranking','trend_analysis','asset_articles','publication_age_analysis','article_classification','category_summary','followers'];
+const CSV_FILES = ['articles','daily_summary','weekly_summary','monthly_summary','period_ranking','trend_analysis','asset_articles','publication_age_analysis','article_classification','category_summary','classification_axis_summary','classification_quality','experiment_candidates','experiment_proposals','followers'];
 async function loadFromRepo() {
   setStatus('loading','読込中...');
   let loaded = 0;
@@ -806,6 +877,7 @@ function renderSummary() {
   renderAgeAnalysis();
   renderPeriodReports();
   renderCategoryAnalysis();
+  renderExperimentLab();
 }
 
 function renderChart(labels,vData,lData) {
@@ -1017,10 +1089,42 @@ function renderPeriodReports(){
 function metricOrDash(value, suffix=''){
   return value===undefined || value===null || value==='' ? '<span class="td-muted">—</span>' : `${Number(value).toLocaleString('ja-JP',{maximumFractionDigits:2})}${suffix}`;
 }
+function renderClassificationOverview(){
+  const quality=document.getElementById('classificationQuality');
+  const axes=document.getElementById('classificationAxes');
+  if(!quality||!axes)return;
+  const q=S.classificationQuality[0]||{};
+  const total=n(q.total_articles)||S.articleClassification.length;
+  const other=q.other_count!==undefined?n(q.other_count):S.articleClassification.filter(r=>r.category_primary==='その他').length;
+  const review=q.review_count!==undefined?n(q.review_count):S.articleClassification.filter(r=>r.needs_review==='true').length;
+  const otherRate=q.other_rate!==undefined?n(q.other_rate):(total?other/total*100:0);
+  const reproduction=q.audit_reproduction_rate;
+  quality.innerHTML=`
+    <div class="quality-item"><div class="quality-label">分類記事</div><div class="quality-value">${fmt(total)}件</div></div>
+    <div class="quality-item"><div class="quality-label">主テーマ「その他」率（目標10%未満）</div><div class="quality-value">${total?otherRate.toFixed(2):'—'}%</div></div>
+    <div class="quality-item"><div class="quality-label">要確認（その他とは別）</div><div class="quality-value">${fmt(review)}件</div></div>
+    <div class="quality-item"><div class="quality-label">監査再現率（目標95%以上）</div><div class="quality-value">${reproduction===''||reproduction===undefined?'—':n(reproduction).toFixed(1)+'%'}</div></div>`;
+
+  let rows=S.classificationAxisSummary;
+  if(!rows.length&&S.articleClassification.length){
+    rows=[];
+    ['category_primary','content_format','content_purpose','series_name'].forEach(axis=>{
+      const counts={};
+      S.articleClassification.forEach(r=>{const value=r[axis]||'（該当なし）';counts[value]=(counts[value]||0)+1;});
+      Object.entries(counts).forEach(([value,count])=>rows.push({axis,value,article_count:count}));
+    });
+  }
+  const labels={category_primary:'主テーマ',content_format:'表現形式',content_purpose:'投稿目的',series_name:'シリーズ'};
+  axes.innerHTML=Object.keys(labels).map(axis=>{
+    const values=rows.filter(r=>r.axis===axis).sort((a,b)=>n(b.article_count)-n(a.article_count));
+    return `<div class="axis-box"><div class="axis-title">${labels[axis]}</div><div class="axis-counts">${values.length?values.map(r=>`${esc(r.value)} ${fmt(n(r.article_count))}件`).join('<br>'):'データ待ち'}</div></div>`;
+  }).join('');
+}
 function renderCategoryAnalysis(){
   const tbody=document.getElementById('categoryTable');
   const label=document.getElementById('categorySummaryLabel');
   if(!tbody||!label)return;
+  renderClassificationOverview();
   if(!S.categorySummary.length){
     label.textContent='category_summary.csv';
     tbody.innerHTML='<tr><td colspan="8"><div class="empty"><div class="empty-text">category_summary.csv を読み込むと表示されます</div></div></td></tr>';
@@ -1070,13 +1174,101 @@ function renderCategoryDetails(){
   }
   list.innerHTML=articles.sort((a,b)=>(a.title||'').localeCompare(b.title||'','ja')).map(row=>{
     const confidence=Math.round(n(row.classification_confidence)*100);
-    const basis=row.matched_rule||'一致語なし';
+    const basis=row.classification_reason||row.matched_rule||'判定理由なし';
+    const series=row.series_name||'シリーズなし';
     return `<div class="category-article">
-      <div class="category-article-title" title="${esc(row.title)}">${esc(row.title)}</div>
-      <span class="category-pill" title="形式">${esc(row.content_format||'文章')}</span>
-      <span class="category-pill" title="判定根拠">根拠: ${esc(basis)}</span>
+      <div><div class="category-article-title" title="${esc(row.title)}">${esc(row.title)}</div><div class="category-reason" title="${esc(basis)}">${esc(basis)}</div></div>
+      <span class="category-pill" title="表現形式">${esc(row.content_format||'エッセイ')}</span>
+      <span class="category-pill" title="投稿目的">${esc(row.content_purpose||'通常記事')}</span>
+      <span class="category-pill" title="シリーズ">${esc(series)}</span>
       <span class="${row.needs_review==='true'?'review-badge':'td-muted'}">${row.needs_review==='true'?'要確認':`確度 ${confidence}%`}</span>
     </div>`;
+  }).join('');
+}
+
+const PROPOSAL_TYPES=[
+  '再現性検証','再実験','サンプル補充実験','未知探索',
+  '再編集・別媒体実験','観察継続／今日は出さない'
+];
+function jsonItems(value){
+  if(!value)return[];
+  try{
+    const parsed=JSON.parse(value);
+    return Array.isArray(parsed)?parsed.filter(Boolean):[];
+  }catch(_){return String(value).split(/[、,]/).map(v=>v.trim()).filter(Boolean);}
+}
+function proposalTarget(row){
+  const parts=[];
+  if(row.target_category)parts.push(`テーマ：${row.target_category}`);
+  if(row.target_format)parts.push(`形式：${row.target_format}`);
+  if(row.target_purpose)parts.push(`目的：${row.target_purpose}`);
+  if(row.target_series)parts.push(`シリーズ：${row.target_series}`);
+  return row.target_article_title||parts.join('｜')||'対象条件を探索中';
+}
+function proposalIcon(type){
+  return ({'再現性検証':'🔁','再実験':'🧪','サンプル補充実験':'🧩','未知探索':'🔭','再編集・別媒体実験':'✂️','観察継続／今日は出さない':'⏳'})[type]||'🧪';
+}
+function detailRow(label,value){
+  if(value===undefined||value===null||String(value).trim()==='')return'';
+  return `<div class="proposal-detail-row"><div class="proposal-detail-label">${esc(label)}</div><div class="proposal-detail-value">${esc(value)}</div></div>`;
+}
+function renderExperimentLab(){
+  const grid=document.getElementById('proposalGrid');
+  const status=document.getElementById('proposalTypeStatus');
+  const summary=document.getElementById('experimentSummary');
+  if(!grid||!status||!summary)return;
+
+  const proposals=S.experimentProposals.slice(0,3);
+  const candidates=S.experimentCandidates.length?S.experimentCandidates:S.experimentProposals;
+  const phase5Loaded=S.loadedFiles.has('experiment_proposals')||S.loadedFiles.has('experiment_candidates');
+  summary.textContent=phase5Loaded?`本日の提案 ${proposals.length}件｜候補 ${candidates.length}件`:'experiment_proposals.csv';
+
+  if(!phase5Loaded){
+    grid.innerHTML='<div class="empty"><div class="empty-text">実験提案データ待ち</div><div class="empty-sub">experiment_candidates.csv と experiment_proposals.csv を読み込むと表示されます</div></div>';
+  }else if(!proposals.length){
+    grid.innerHTML='<div class="empty"><div class="empty-icon">🌙</div><div class="empty-text">本日の実験提案は0件です</div><div class="empty-sub">量を埋めるための提案は生成しません。0件でも正常です。</div></div>';
+  }else{
+    grid.innerHTML=proposals.map(row=>{
+      const metrics=jsonItems(row.observation_metrics);
+      const fixed=jsonItems(row.fixed_variables);
+      const confounders=jsonItems(row.confounders);
+      const tags=[row.target_category,row.target_format,row.target_purpose,row.target_series].filter(Boolean);
+      const topShare=n(row.top1_share);
+      const singleWarning=topShare>=50?`⚠️ 単一記事依存：上位1記事が ${topShare.toFixed(1)}% を占めます。`:'';
+      const continuation=row.continuation_warning||'';
+      const observation=row.proposal_type==='観察継続／今日は出さない';
+      return `<article class="proposal-card ${observation?'observation':''}">
+        <div class="proposal-main">
+          <span class="proposal-type">${proposalIcon(row.proposal_type)} ${esc(row.proposal_type)}</span>
+          <div class="proposal-target">${esc(proposalTarget(row))}</div>
+          <div class="proposal-purpose">${esc(row.experiment_goal||'実験目的を確認中')}</div>
+          <div class="proposal-facts">
+            <div class="proposal-fact"><div class="proposal-fact-label">今回変える条件</div><div class="proposal-fact-value">${esc(row.changed_variable||'—')}</div></div>
+            <div class="proposal-fact"><div class="proposal-fact-label">証拠強度</div><div class="proposal-fact-value">${esc(row.evidence_strength||'—')}</div></div>
+            <div class="proposal-fact"><div class="proposal-fact-label">比較可能件数</div><div class="proposal-fact-value">${fmt(n(row.comparable_samples))}件</div></div>
+            <div class="proposal-fact"><div class="proposal-fact-label">観測指標</div><div class="proposal-fact-value">${esc(metrics.join(' / ')||'—')}</div></div>
+          </div>
+          ${tags.length?`<div class="proposal-tags">${tags.map(value=>`<span class="proposal-tag">${esc(value)}</span>`).join('')}</div>`:''}
+          ${singleWarning?`<div class="proposal-warning">${esc(singleWarning)}</div>`:''}
+          ${continuation?`<div class="proposal-warning">⚠️ ${esc(continuation)}</div>`:''}
+        </div>
+        <details class="proposal-details"><summary>詳細な根拠を見る</summary><div class="proposal-detail-body">
+          ${detailRow('観測された事実',row.observed_fact)}
+          ${detailRow('まだ分からないこと',row.unknown_question)}
+          ${detailRow('仮説',row.hypothesis)}
+          ${detailRow('固定する条件',fixed.join(' / ')||'—')}
+          ${detailRow('交絡要因',confounders.join(' / ')||'なし')}
+          ${detailRow('提案理由',row.proposal_reason)}
+          ${detailRow('評価タイミング',row.evaluation_date)}
+          ${detailRow('実験後に分かること',row.expected_learning)}
+        </div></details>
+      </article>`;
+    }).join('');
+  }
+
+  status.innerHTML=PROPOSAL_TYPES.map(type=>{
+    const count=candidates.filter(row=>row.proposal_type===type).length;
+    return `<div class="proposal-type-item"><span>${proposalIcon(type)} ${esc(type)}</span><span>${count?`候補 ${count}件`:'現在該当なし'}</span></div>`;
   }).join('');
 }
 
