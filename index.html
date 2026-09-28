@@ -252,6 +252,14 @@
     @media (max-width: 900px) { .analysis-grid { grid-template-columns:1fr; } }
     @media (max-width: 900px) { .kpi-strip { grid-template-columns: repeat(3, 1fr); } .pro-features { grid-template-columns: 1fr; } }
     @media (max-width: 600px) { .kpi-strip { grid-template-columns: 1fr 1fr; } .page { padding: 14px 16px; } .header { padding: 0 16px; } .logo-sub, .lite-chip { display: none; } }
+
+    /* ===== V2 OPERATIONS VIEW ===== */
+    .v2-shell{max-width:1200px;margin:20px auto 0;padding:0 24px}
+    .v2-hero{background:linear-gradient(135deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:14px}
+    .v2-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap}.v2-title{font-size:20px;font-weight:800}.v2-sub{color:var(--text-muted);font-size:11px;margin-top:5px}.v2-badge{font-size:10px;font-weight:800;color:var(--note-green);border:1px solid rgba(62,193,156,.35);background:rgba(62,193,156,.08);border-radius:999px;padding:5px 9px}
+    .v2-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}.v2-kpi{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px}.v2-kpi-label{font-size:10px;color:var(--text-muted);font-weight:700}.v2-kpi-value{font-size:22px;font-weight:800;margin-top:4px;font-variant-numeric:tabular-nums}.v2-kpi-note{font-size:10px;color:var(--text-secondary);margin-top:3px}
+    .v2-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-bottom:14px}.v2-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden}.v2-card-head{padding:12px 14px;border-bottom:1px solid var(--border);font-weight:800;font-size:13px}.v2-card-body{padding:14px}.v2-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.v2-metric{background:var(--surface-2);border-radius:8px;padding:10px}.v2-metric span{display:block}.v2-metric .l{font-size:9px;color:var(--text-muted);font-weight:700}.v2-metric .v{font-size:16px;font-weight:800;margin-top:3px}.v2-list{display:flex;flex-direction:column;gap:8px}.v2-item{padding:9px 10px;background:var(--surface-2);border-radius:8px;font-size:11px;line-height:1.55}.v2-item strong{color:var(--text-primary)}.v2-empty{color:var(--text-muted);font-size:11px}.v2-raw details{border-top:1px solid var(--border)}.v2-raw summary{cursor:pointer;padding:11px 14px;color:var(--text-muted);font-size:11px}.v2-raw pre{margin:0;padding:14px;max-height:420px;overflow:auto;font-size:10px;line-height:1.5;background:var(--surface-2);white-space:pre-wrap;overflow-wrap:anywhere}.legacy-label{max-width:1200px;margin:22px auto 0;padding:0 24px;color:var(--text-muted);font-size:11px;font-weight:800;letter-spacing:.04em}
+    @media(max-width:800px){.v2-kpis{grid-template-columns:repeat(2,1fr)}.v2-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -281,7 +289,7 @@
        ondragover="handleDragOver(event)"
        ondragleave="handleDragLeave(event)"
        ondrop="handleDrop(event)">
-    <input type="file" id="fileInput" multiple accept=".csv" onchange="handleFileSelect(event)">
+    <input type="file" id="fileInput" multiple accept=".csv,.json" onchange="handleFileSelect(event)">
     <span class="dz-icon">📁</span>
     <span>CSVファイルをドロップ <span style="color:var(--border)">|</span> または <strong style="color:var(--note-green)">クリックして選択</strong>
     <span style="color:var(--text-muted)">— GitHub Pages では自動読込</span></span>
@@ -297,6 +305,26 @@
     <div class="period-tab" onclick="switchPeriod('all', this)">全期間</div>
   </div>
 </div>
+
+
+<!-- V2 OPERATIONS VIEW -->
+<section class="v2-shell" id="v2Shell">
+  <div class="v2-hero">
+    <div class="v2-head"><div><div class="v2-title">V2｜これからの運営を見る</div><div class="v2-sub" id="v2Period">v2_analysis.json を読み込み中…</div></div><span class="v2-badge" id="v2Badge">V2 ANALYSIS</span></div>
+    <div class="v2-kpis">
+      <div class="v2-kpi"><div class="v2-kpi-label">累計インプレッション</div><div class="v2-kpi-value" id="v2Imp">—</div><div class="v2-kpi-note" id="v2ImpGrowth">期間増加 —</div></div>
+      <div class="v2-kpi"><div class="v2-kpi-label">累計PV</div><div class="v2-kpi-value" id="v2Pv">—</div><div class="v2-kpi-note" id="v2PvGrowth">期間増加 —</div></div>
+      <div class="v2-kpi"><div class="v2-kpi-label">累計スキ</div><div class="v2-kpi-value" id="v2Like">—</div><div class="v2-kpi-note" id="v2LikeGrowth">期間増加 —</div></div>
+      <div class="v2-kpi"><div class="v2-kpi-label">累計コメント</div><div class="v2-kpi-value" id="v2Comment">—</div><div class="v2-kpi-note" id="v2CommentGrowth">期間増加 —</div></div>
+    </div>
+  </div>
+  <div class="v2-grid">
+    <div class="v2-card"><div class="v2-card-head">📈 今回の変化</div><div class="v2-card-body"><div class="v2-metrics" id="v2Rates"></div></div></div>
+    <div class="v2-card"><div class="v2-card-head">🧭 観測条件</div><div class="v2-card-body"><div class="v2-list" id="v2Context"></div></div></div>
+  </div>
+  <div class="v2-card v2-raw"><div class="v2-card-head">🔎 V2分析データ</div><div class="v2-card-body"><div class="v2-list" id="v2Highlights"><div class="v2-empty">読み込み待ち</div></div></div><details><summary>JSON全体を確認する</summary><pre id="v2Raw"></pre></details></div>
+</section>
+<div class="legacy-label">DETAILS｜従来の分析ビュー</div>
 
 <!-- PAGE CONTENT -->
 <div class="page">
@@ -554,6 +582,7 @@ const S = {
   periodRanking: [], trendAnalysis: [], assetArticles: [], publicationAge: [], articleClassification: [], categorySummary: [], classificationAxisSummary: [], classificationQuality: [], experimentCandidates: [], experimentProposals: [], followers: [], loadedFiles: new Set(),
   currentPeriod: 'weekly', selectedCategory: '', charts: {},
   sortCol: 'views', sortDir: 'desc',
+  v2Analysis: null,
 };
 
 // ── CSV PARSER ────────────────────────────────────────────────────────
@@ -646,6 +675,10 @@ async function loadFromRepo() {
       if (res.ok) { parseAndStore(f, await res.text()); loaded++; }
     } catch(_){}
   }
+  try {
+    const v2res = await fetch('./data/v2_analysis.json', {cache:'no-store'});
+    if (v2res.ok) { S.v2Analysis = await v2res.json(); renderV2(); }
+  } catch(e) { console.warn('V2 analysis load skipped', e); }
   if (loaded > 0) {
     renderSummary();
     setStatus('loaded', `${loaded}ファイル読込済`);
@@ -662,8 +695,12 @@ function handleDrop(e){ e.preventDefault(); handleDragLeave(); processFiles(e.da
 function handleFileSelect(e){ processFiles(e.target.files); }
 function processFiles(files) {
   Array.from(files).forEach(file=>{
-    if(!file.name.endsWith('.csv'))return;
     const reader=new FileReader();
+    if(file.name.toLowerCase()==='v2_analysis.json'){
+      reader.onload=e2=>{ try{ S.v2Analysis=JSON.parse(e2.target.result); renderV2(); }catch(err){ alert('v2_analysis.json を読み込めませんでした'); } };
+      reader.readAsText(file,'UTF-8'); return;
+    }
+    if(!file.name.endsWith('.csv'))return;
     reader.onload=e2=>{ parseAndStore(file.name.replace('.csv',''), e2.target.result); renderSummary(); };
     reader.readAsText(file,'UTF-8');
   });
@@ -852,6 +889,35 @@ function getFollowerStats() {
 }
 
 // ── RENDER ────────────────────────────────────────────────────────────
+function renderV2(){
+  const d=S.v2Analysis;if(!d)return;
+  const sum=d.summary||{}, totals=sum.latest_totals||{}, growth=sum.current_period_growth||{}, rates=sum.rates||{};
+  const set=(id,val)=>{const el=document.getElementById(id);if(el)el.textContent=val;};
+  const number=v=>v==null?'—':Number(v).toLocaleString('ja-JP');
+  const plus=v=>v==null?'—':`${Number(v)>=0?'+':''}${Number(v).toLocaleString('ja-JP')}`;
+  set('v2Imp',number(totals.impression_count)); set('v2Pv',number(totals.page_view_count)); set('v2Like',number(totals.like_count)); set('v2Comment',number(totals.comment_count));
+  set('v2ImpGrowth','期間増加 '+plus(growth.impression_count)); set('v2PvGrowth','期間増加 '+plus(growth.page_view_count)); set('v2LikeGrowth','期間増加 '+plus(growth.like_count)); set('v2CommentGrowth','期間増加 '+plus(growth.comment_count));
+  const p=sum.period||{}; set('v2Period',`${p.start||'—'} → ${p.end||'—'} ｜ ${sum.comparison_type||'比較'} ｜ snapshot ${sum.available_snapshot_days??'—'}日`);
+  set('v2Badge',`V2 / ${d.generated_at?d.generated_at.slice(0,10):'latest'}`);
+  const rateLabels={pv_per_impression_percent:'PV / Impression',like_per_pv_percent:'スキ / PV',comment_per_pv_percent:'コメント / PV'};
+  const rateBox=document.getElementById('v2Rates');
+  rateBox.innerHTML=Object.entries(rates).map(([k,v])=>`<div class="v2-metric"><span class="l">${esc(rateLabels[k]||humanKey(k))}</span><span class="v">${typeof v==='number'?v.toLocaleString('ja-JP'):esc(String(v))}${k.includes('percent')?'%':''}</span></div>`).join('')||'<div class="v2-empty">率データなし</div>';
+  const ctx=document.getElementById('v2Context');
+  ctx.innerHTML=[['比較期間',`${p.start||'—'} → ${p.end||'—'}`],['比較タイプ',sum.comparison_type||'—'],['利用可能スナップショット',`${sum.available_snapshot_days??'—'}日`],['生成日時',d.generated_at||'—']].map(([a,b])=>`<div class="v2-item"><strong>${a}</strong><br>${esc(String(b))}</div>`).join('');
+  const known=new Set(['generated_at','version','summary']); const extra=Object.entries(d).filter(([k])=>!known.has(k));
+  const hi=document.getElementById('v2Highlights');
+  if(!extra.length){hi.innerHTML='<div class="v2-empty">追加分析セクションはまだありません。summaryを正常に読み込んでいます。</div>';}else{
+    hi.innerHTML=extra.map(([k,v])=>`<div class="v2-item"><strong>${esc(humanKey(k))}</strong><br>${esc(summarizeV2(v))}</div>`).join('');
+  }
+  document.getElementById('v2Raw').textContent=JSON.stringify(d,null,2);
+}
+function humanKey(k){return String(k).replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase());}
+function summarizeV2(v){
+  if(v==null)return '—'; if(Array.isArray(v))return `${v.length}件`+(v.length&&typeof v[0]!=='object'?`：${v.slice(0,5).join(' / ')}`:'');
+  if(typeof v==='object'){const keys=Object.keys(v);return `${keys.length}項目：${keys.slice(0,6).map(humanKey).join(' / ')}`;}
+  return String(v);
+}
+
 function renderSummary() {
   const {curr,prev,labels,vData,lData}=getPeriodData();
   const eta=curr.views>0?(curr.likes/curr.views*100):0;
