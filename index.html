@@ -679,6 +679,15 @@ async function loadFromRepo() {
     const v2res = await fetch('./data/v2_analysis.json', {cache:'no-store'});
     if (v2res.ok) { S.v2Analysis = await v2res.json(); renderV2(); }
   } catch(e) { console.warn('V2 analysis load skipped', e); }
+  try {
+  const activityRes = await fetch('./data/activity_log.json', {cache:'no-store'});
+  if (activityRes.ok) {
+    S.activityLog = await activityRes.json();
+  }
+} catch(e) {
+  console.warn('Activity log load skipped', e);
+}
+  
   if (loaded > 0) {
     renderSummary();
     setStatus('loaded', `${loaded}ファイル読込済`);
