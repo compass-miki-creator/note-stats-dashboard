@@ -4,7 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KITAcore Note Analytics — Lite</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js">
+// ── ACTIVITY LOG ──────────────────────────────────────────────────────
+function renderActivityLog(){
+  const list=document.getElementById('activityLogList'), summary=document.getElementById('activitySummary');
+  if(!list||!summary)return;
+  if(!Array.isArray(S.activityLog)||!S.activityLog.length){ summary.textContent='activity_log.json'; list.innerHTML='<div class="empty"><div class="empty-text">activity_log.json を読み込むと表示されます</div></div>'; return; }
+  const rows=[...S.activityLog].sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
+  summary.textContent=`${rows.length}日分｜最新 ${rows[0]?.date||'—'}`;
+  const labels=[['comment_activity','💬 コメント'],['like_activity','♡ スキ'],['reply_activity','↩ 返信'],['external_share','🔗 外部シェア']];
+  list.innerHTML=rows.map(row=>{
+    const tags=labels.filter(([key])=>row[key]!==undefined&&row[key]!==null&&String(row[key]).trim()!=='').map(([key,label])=>`<span class="activity-tag"><strong>${label}</strong> ${esc(row[key])}</span>`);
+    if(row.community_event!==undefined&&row.community_event!==null&&String(row.community_event).trim()!==''){ const ev=(row.community_event===true||row.community_event==='あり')?'あり':(row.community_event===false||row.community_event==='なし')?'なし':String(row.community_event); tags.push(`<span class="activity-tag ${ev==='あり'?'activity-event':''}"><strong>🎪 コミュニティ</strong> ${esc(ev)}</span>`); }
+    return `<div class="activity-row"><div class="activity-date">${esc(row.date||'日付なし')}</div><div><div class="activity-tags">${tags.join('')}</div>${row.note?`<div class="activity-note">${esc(row.note)}</div>`:''}</div></div>`;
+  }).join('');
+}
+
+</script>
   <style>
     :root {
       --note-green: #3EC19C; --note-green-hover: #35a886; --note-blue: #4a90d9; --pro-color: #ff7043;
@@ -253,6 +269,19 @@
     @media (max-width: 900px) { .kpi-strip { grid-template-columns: repeat(3, 1fr); } .pro-features { grid-template-columns: 1fr; } }
     @media (max-width: 600px) { .kpi-strip { grid-template-columns: 1fr 1fr; } .page { padding: 14px 16px; } .header { padding: 0 16px; } .logo-sub, .lite-chip { display: none; } }
 
+    /* ===== ACTIVITY LOG ===== */
+    .activity-card { margin-bottom:16px; }
+    .activity-summary { color:var(--text-muted); font-size:11px; }
+    .activity-list { display:flex; flex-direction:column; }
+    .activity-row { display:grid; grid-template-columns:100px minmax(0,1fr); gap:14px; padding:13px 16px; border-bottom:1px solid var(--border); }
+    .activity-row:last-child { border-bottom:none; }
+    .activity-date { font-weight:800; font-size:12px; white-space:nowrap; }
+    .activity-tags { display:flex; flex-wrap:wrap; gap:6px; }
+    .activity-tag { display:inline-flex; align-items:center; gap:4px; padding:3px 8px; border:1px solid var(--border); border-radius:999px; background:var(--surface-2); color:var(--text-secondary); font-size:10px; }
+    .activity-note { margin-top:7px; color:var(--text-secondary); font-size:12px; line-height:1.65; }
+    .activity-event { color:var(--note-green); font-weight:700; }
+    @media(max-width:600px){.activity-row{grid-template-columns:1fr;gap:7px}}
+
     /* ===== V2 OPERATIONS VIEW ===== */
     .v2-shell{max-width:1200px;margin:20px auto 0;padding:0 24px}
     .v2-hero{background:linear-gradient(135deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:14px}
@@ -401,6 +430,12 @@
         </tbody>
       </table>
     </div>
+  </div>
+
+  <!-- Activity log -->
+  <div class="card activity-card">
+    <div class="card-header"><span class="card-title">🌱 活動ログ</span><span class="activity-summary" id="activitySummary">activity_log.json</span></div>
+    <div class="activity-list" id="activityLogList"><div class="empty"><div class="empty-text">活動ログデータ待ち</div></div></div>
   </div>
 
   <!-- Analysis panels -->
@@ -683,6 +718,7 @@ async function loadFromRepo() {
   const activityRes = await fetch('./data/activity_log.json', {cache:'no-store'});
   if (activityRes.ok) {
     S.activityLog = await activityRes.json();
+    renderActivityLog();
   }
 } catch(e) {
   console.warn('Activity log load skipped', e);
@@ -705,11 +741,16 @@ function handleFileSelect(e){ processFiles(e.target.files); }
 function processFiles(files) {
   Array.from(files).forEach(file=>{
     const reader=new FileReader();
-    if(file.name.toLowerCase()==='v2_analysis.json'){
+    const lowerName=file.name.toLowerCase();
+    if(lowerName==='v2_analysis.json'){
       reader.onload=e2=>{ try{ S.v2Analysis=JSON.parse(e2.target.result); renderV2(); }catch(err){ alert('v2_analysis.json を読み込めませんでした'); } };
       reader.readAsText(file,'UTF-8'); return;
     }
-    if(!file.name.endsWith('.csv'))return;
+    if(lowerName==='activity_log.json'){
+      reader.onload=e2=>{ try{ S.activityLog=JSON.parse(e2.target.result); renderActivityLog(); }catch(err){ alert('activity_log.json を読み込めませんでした'); } };
+      reader.readAsText(file,'UTF-8'); return;
+    }
+    if(!lowerName.endsWith('.csv'))return;
     reader.onload=e2=>{ parseAndStore(file.name.replace('.csv',''), e2.target.result); renderSummary(); };
     reader.readAsText(file,'UTF-8');
   });
