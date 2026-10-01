@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-09-29T18:10:38Z",
+  "generated_at": "2026-09-30T18:03:32Z",
   "version": 1,
   "summary": {
-    "available_snapshot_days": 10,
+    "available_snapshot_days": 11,
     "comparison_type": "7_day",
     "period": {
-      "start": "2026-09-22",
-      "end": "2026-09-29"
+      "start": "2026-09-23",
+      "end": "2026-09-30"
     },
     "latest_totals": {
-      "impression_count": 1050459,
-      "page_view_count": 45144,
-      "like_count": 32156,
-      "comment_count": 5035
+      "impression_count": 1055868,
+      "page_view_count": 45373,
+      "like_count": 32314,
+      "comment_count": 5063
     },
     "current_period_growth": {
-      "impression_count": 29003,
-      "page_view_count": 1332,
-      "like_count": 801,
-      "comment_count": 224
+      "impression_count": 32416,
+      "page_view_count": 1501,
+      "like_count": 900,
+      "comment_count": 247
     },
     "rates": {
-      "pv_per_impression_percent": 4.59,
-      "like_per_pv_percent": 60.14,
-      "comment_per_pv_percent": 16.82
+      "pv_per_impression_percent": 4.63,
+      "like_per_pv_percent": 59.96,
+      "comment_per_pv_percent": 16.46
     },
     "previous_period_growth": null,
     "period_comparison": null
   },
   "articles": {
-    "article_count": 215,
+    "article_count": 216,
     "rankings": {
       "impression_count": [
         {
@@ -39,18 +39,18 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-25",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 4128,
-            "page_view_count": 191,
-            "like_count": 97,
+            "impression_count": 4290,
+            "page_view_count": 192,
+            "like_count": 98,
             "comment_count": 46
           },
           "latest_totals": {
-            "impression_count": 5033,
-            "page_view_count": 241,
-            "like_count": 148,
+            "impression_count": 5195,
+            "page_view_count": 242,
+            "like_count": 149,
             "comment_count": 49
           }
         },
@@ -61,63 +61,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-24",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 4015,
-            "page_view_count": 180,
+            "impression_count": 4167,
+            "page_view_count": 182,
             "like_count": 101,
             "comment_count": 25
           },
           "latest_totals": {
-            "impression_count": 5280,
-            "page_view_count": 247,
+            "impression_count": 5432,
+            "page_view_count": 249,
             "like_count": 162,
             "comment_count": 29
-          }
-        },
-        {
-          "note_key": "n8b0d4f5fb74d",
-          "title": "🌱 スキのタネ研究所だよりVol.007",
-          "published_at": "2026-09-20T11:14:41.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
-          },
-          "growth": {
-            "impression_count": 1729,
-            "page_view_count": 133,
-            "like_count": 65,
-            "comment_count": 45
-          },
-          "latest_totals": {
-            "impression_count": 4809,
-            "page_view_count": 340,
-            "like_count": 209,
-            "comment_count": 67
-          }
-        },
-        {
-          "note_key": "n7152f7a4e5a0",
-          "title": "✨誕生日って、何を祝っているんだろう🎂",
-          "published_at": "2026-09-17T03:06:22.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
-          },
-          "growth": {
-            "impression_count": 1220,
-            "page_view_count": 52,
-            "like_count": 32,
-            "comment_count": 12
-          },
-          "latest_totals": {
-            "impression_count": 5699,
-            "page_view_count": 364,
-            "like_count": 270,
-            "comment_count": 48
           }
         },
         {
@@ -127,41 +83,63 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-28",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1190,
-            "page_view_count": 86,
-            "like_count": 50,
-            "comment_count": 23
+            "impression_count": 1826,
+            "page_view_count": 106,
+            "like_count": 57,
+            "comment_count": 25
           },
           "latest_totals": {
-            "impression_count": 2638,
-            "page_view_count": 163,
-            "like_count": 117,
-            "comment_count": 31
+            "impression_count": 3274,
+            "page_view_count": 183,
+            "like_count": 124,
+            "comment_count": 33
           }
         },
         {
-          "note_key": "n37180fe24b18",
-          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
-          "published_at": "2026-06-09T12:52:27.000Z",
+          "note_key": "n481f98f6ed66",
+          "title": "✨ハッピーライティングマラソンお題#67｜本の中で、ずっと心に残っている言葉はありますか？",
+          "published_at": "2026-09-29T10:35:12.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-29",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1022,
-            "page_view_count": 24,
-            "like_count": 25,
-            "comment_count": 0
+            "impression_count": 1782,
+            "page_view_count": 114,
+            "like_count": 74,
+            "comment_count": 16
           },
           "latest_totals": {
-            "impression_count": 25604,
-            "page_view_count": 1256,
-            "like_count": 783,
-            "comment_count": 133
+            "impression_count": 2834,
+            "page_view_count": 171,
+            "like_count": 128,
+            "comment_count": 25
+          }
+        },
+        {
+          "note_key": "n8b0d4f5fb74d",
+          "title": "🌱 スキのタネ研究所だよりVol.007",
+          "published_at": "2026-09-20T11:14:41.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-09-23",
+            "end": "2026-09-30"
+          },
+          "growth": {
+            "impression_count": 1371,
+            "page_view_count": 105,
+            "like_count": 39,
+            "comment_count": 44
+          },
+          "latest_totals": {
+            "impression_count": 4894,
+            "page_view_count": 340,
+            "like_count": 210,
+            "comment_count": 67
           }
         },
         {
@@ -171,19 +149,63 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-27",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1007,
-            "page_view_count": 76,
-            "like_count": 35,
-            "comment_count": 22
+            "impression_count": 1245,
+            "page_view_count": 88,
+            "like_count": 38,
+            "comment_count": 24
           },
           "latest_totals": {
-            "impression_count": 2509,
-            "page_view_count": 185,
-            "like_count": 117,
-            "comment_count": 36
+            "impression_count": 2747,
+            "page_view_count": 197,
+            "like_count": 120,
+            "comment_count": 38
+          }
+        },
+        {
+          "note_key": "n7152f7a4e5a0",
+          "title": "✨誕生日って、何を祝っているんだろう🎂",
+          "published_at": "2026-09-17T03:06:22.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-09-23",
+            "end": "2026-09-30"
+          },
+          "growth": {
+            "impression_count": 1116,
+            "page_view_count": 39,
+            "like_count": 20,
+            "comment_count": 8
+          },
+          "latest_totals": {
+            "impression_count": 5770,
+            "page_view_count": 365,
+            "like_count": 270,
+            "comment_count": 48
+          }
+        },
+        {
+          "note_key": "n37180fe24b18",
+          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
+          "published_at": "2026-06-09T12:52:27.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-09-23",
+            "end": "2026-09-30"
+          },
+          "growth": {
+            "impression_count": 1090,
+            "page_view_count": 25,
+            "like_count": 25,
+            "comment_count": 0
+          },
+          "latest_totals": {
+            "impression_count": 25764,
+            "page_view_count": 1258,
+            "like_count": 786,
+            "comment_count": 133
           }
         },
         {
@@ -192,18 +214,18 @@
           "published_at": "2026-09-15T11:12:58.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-23",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 958,
-            "page_view_count": 38,
-            "like_count": 15,
+            "impression_count": 913,
+            "page_view_count": 43,
+            "like_count": 11,
             "comment_count": 9
           },
           "latest_totals": {
-            "impression_count": 7156,
-            "page_view_count": 484,
+            "impression_count": 7239,
+            "page_view_count": 491,
             "like_count": 250,
             "comment_count": 69
           }
@@ -214,42 +236,20 @@
           "published_at": "2026-09-11T11:36:43.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-23",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 660,
+            "impression_count": 635,
             "page_view_count": 14,
             "like_count": 6,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 6191,
+            "impression_count": 6242,
             "page_view_count": 472,
             "like_count": 260,
             "comment_count": 96
-          }
-        },
-        {
-          "note_key": "nc5f5689d029b",
-          "title": "秋のぷちふく｜まだ食べてないので💦妄想で栗を食べました🌰",
-          "published_at": "2026-09-09T11:21:50.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
-          },
-          "growth": {
-            "impression_count": 459,
-            "page_view_count": 4,
-            "like_count": 4,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 5359,
-            "page_view_count": 239,
-            "like_count": 173,
-            "comment_count": 42
           }
         }
       ],
@@ -261,18 +261,18 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-25",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 4128,
-            "page_view_count": 191,
-            "like_count": 97,
+            "impression_count": 4290,
+            "page_view_count": 192,
+            "like_count": 98,
             "comment_count": 46
           },
           "latest_totals": {
-            "impression_count": 5033,
-            "page_view_count": 241,
-            "like_count": 148,
+            "impression_count": 5195,
+            "page_view_count": 242,
+            "like_count": 149,
             "comment_count": 49
           }
         },
@@ -283,41 +283,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-24",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 4015,
-            "page_view_count": 180,
+            "impression_count": 4167,
+            "page_view_count": 182,
             "like_count": 101,
             "comment_count": 25
           },
           "latest_totals": {
-            "impression_count": 5280,
-            "page_view_count": 247,
+            "impression_count": 5432,
+            "page_view_count": 249,
             "like_count": 162,
             "comment_count": 29
           }
         },
         {
-          "note_key": "n8b0d4f5fb74d",
-          "title": "🌱 スキのタネ研究所だよりVol.007",
-          "published_at": "2026-09-20T11:14:41.000Z",
+          "note_key": "n481f98f6ed66",
+          "title": "✨ハッピーライティングマラソンお題#67｜本の中で、ずっと心に残っている言葉はありますか？",
+          "published_at": "2026-09-29T10:35:12.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-29",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1729,
-            "page_view_count": 133,
-            "like_count": 65,
-            "comment_count": 45
+            "impression_count": 1782,
+            "page_view_count": 114,
+            "like_count": 74,
+            "comment_count": 16
           },
           "latest_totals": {
-            "impression_count": 4809,
-            "page_view_count": 340,
-            "like_count": 209,
-            "comment_count": 67
+            "impression_count": 2834,
+            "page_view_count": 171,
+            "like_count": 128,
+            "comment_count": 25
           }
         },
         {
@@ -327,19 +327,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-28",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1190,
-            "page_view_count": 86,
-            "like_count": 50,
-            "comment_count": 23
+            "impression_count": 1826,
+            "page_view_count": 106,
+            "like_count": 57,
+            "comment_count": 25
           },
           "latest_totals": {
-            "impression_count": 2638,
-            "page_view_count": 163,
-            "like_count": 117,
-            "comment_count": 31
+            "impression_count": 3274,
+            "page_view_count": 183,
+            "like_count": 124,
+            "comment_count": 33
+          }
+        },
+        {
+          "note_key": "n8b0d4f5fb74d",
+          "title": "🌱 スキのタネ研究所だよりVol.007",
+          "published_at": "2026-09-20T11:14:41.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-09-23",
+            "end": "2026-09-30"
+          },
+          "growth": {
+            "impression_count": 1371,
+            "page_view_count": 105,
+            "like_count": 39,
+            "comment_count": 44
+          },
+          "latest_totals": {
+            "impression_count": 4894,
+            "page_view_count": 340,
+            "like_count": 210,
+            "comment_count": 67
           }
         },
         {
@@ -349,41 +371,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-27",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1007,
-            "page_view_count": 76,
-            "like_count": 35,
-            "comment_count": 22
+            "impression_count": 1245,
+            "page_view_count": 88,
+            "like_count": 38,
+            "comment_count": 24
           },
           "latest_totals": {
-            "impression_count": 2509,
-            "page_view_count": 185,
-            "like_count": 117,
-            "comment_count": 36
-          }
-        },
-        {
-          "note_key": "n7152f7a4e5a0",
-          "title": "✨誕生日って、何を祝っているんだろう🎂",
-          "published_at": "2026-09-17T03:06:22.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
-          },
-          "growth": {
-            "impression_count": 1220,
-            "page_view_count": 52,
-            "like_count": 32,
-            "comment_count": 12
-          },
-          "latest_totals": {
-            "impression_count": 5699,
-            "page_view_count": 364,
-            "like_count": 270,
-            "comment_count": 48
+            "impression_count": 2747,
+            "page_view_count": 197,
+            "like_count": 120,
+            "comment_count": 38
           }
         },
         {
@@ -392,20 +392,42 @@
           "published_at": "2026-09-15T11:12:58.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-23",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 958,
-            "page_view_count": 38,
-            "like_count": 15,
+            "impression_count": 913,
+            "page_view_count": 43,
+            "like_count": 11,
             "comment_count": 9
           },
           "latest_totals": {
-            "impression_count": 7156,
-            "page_view_count": 484,
+            "impression_count": 7239,
+            "page_view_count": 491,
             "like_count": 250,
             "comment_count": 69
+          }
+        },
+        {
+          "note_key": "n7152f7a4e5a0",
+          "title": "✨誕生日って、何を祝っているんだろう🎂",
+          "published_at": "2026-09-17T03:06:22.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-09-23",
+            "end": "2026-09-30"
+          },
+          "growth": {
+            "impression_count": 1116,
+            "page_view_count": 39,
+            "like_count": 20,
+            "comment_count": 8
+          },
+          "latest_totals": {
+            "impression_count": 5770,
+            "page_view_count": 365,
+            "like_count": 270,
+            "comment_count": 48
           }
         },
         {
@@ -414,18 +436,18 @@
           "published_at": "2026-05-16T12:13:50.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-23",
+            "end": "2026-09-30"
           },
           "growth": {
             "impression_count": 0,
-            "page_view_count": 26,
+            "page_view_count": 28,
             "like_count": 0,
             "comment_count": 0
           },
           "latest_totals": {
             "impression_count": 3611,
-            "page_view_count": 561,
+            "page_view_count": 563,
             "like_count": 187,
             "comment_count": 37
           }
@@ -436,42 +458,20 @@
           "published_at": "2026-06-09T12:52:27.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-23",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1022,
-            "page_view_count": 24,
+            "impression_count": 1090,
+            "page_view_count": 25,
             "like_count": 25,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 25604,
-            "page_view_count": 1256,
-            "like_count": 783,
+            "impression_count": 25764,
+            "page_view_count": 1258,
+            "like_count": 786,
             "comment_count": 133
-          }
-        },
-        {
-          "note_key": "n07e979554cab",
-          "title": "✨KITA沼にハマって！note運営が変わったAIツール活用術🧰",
-          "published_at": "2026-09-05T11:15:54.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
-          },
-          "growth": {
-            "impression_count": 298,
-            "page_view_count": 17,
-            "like_count": 2,
-            "comment_count": 2
-          },
-          "latest_totals": {
-            "impression_count": 6827,
-            "page_view_count": 298,
-            "like_count": 164,
-            "comment_count": 50
           }
         }
       ],
@@ -483,17 +483,17 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-24",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 4015,
-            "page_view_count": 180,
+            "impression_count": 4167,
+            "page_view_count": 182,
             "like_count": 101,
             "comment_count": 25
           },
           "latest_totals": {
-            "impression_count": 5280,
-            "page_view_count": 247,
+            "impression_count": 5432,
+            "page_view_count": 249,
             "like_count": 162,
             "comment_count": 29
           }
@@ -505,41 +505,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-25",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 4128,
-            "page_view_count": 191,
-            "like_count": 97,
+            "impression_count": 4290,
+            "page_view_count": 192,
+            "like_count": 98,
             "comment_count": 46
           },
           "latest_totals": {
-            "impression_count": 5033,
-            "page_view_count": 241,
-            "like_count": 148,
+            "impression_count": 5195,
+            "page_view_count": 242,
+            "like_count": 149,
             "comment_count": 49
           }
         },
         {
-          "note_key": "n8b0d4f5fb74d",
-          "title": "🌱 スキのタネ研究所だよりVol.007",
-          "published_at": "2026-09-20T11:14:41.000Z",
+          "note_key": "n481f98f6ed66",
+          "title": "✨ハッピーライティングマラソンお題#67｜本の中で、ずっと心に残っている言葉はありますか？",
+          "published_at": "2026-09-29T10:35:12.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-29",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1729,
-            "page_view_count": 133,
-            "like_count": 65,
-            "comment_count": 45
+            "impression_count": 1782,
+            "page_view_count": 114,
+            "like_count": 74,
+            "comment_count": 16
           },
           "latest_totals": {
-            "impression_count": 4809,
-            "page_view_count": 340,
-            "like_count": 209,
-            "comment_count": 67
+            "impression_count": 2834,
+            "page_view_count": 171,
+            "like_count": 128,
+            "comment_count": 25
           }
         },
         {
@@ -549,19 +549,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-28",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1190,
-            "page_view_count": 86,
-            "like_count": 50,
-            "comment_count": 23
+            "impression_count": 1826,
+            "page_view_count": 106,
+            "like_count": 57,
+            "comment_count": 25
           },
           "latest_totals": {
-            "impression_count": 2638,
-            "page_view_count": 163,
-            "like_count": 117,
-            "comment_count": 31
+            "impression_count": 3274,
+            "page_view_count": 183,
+            "like_count": 124,
+            "comment_count": 33
+          }
+        },
+        {
+          "note_key": "n8b0d4f5fb74d",
+          "title": "🌱 スキのタネ研究所だよりVol.007",
+          "published_at": "2026-09-20T11:14:41.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-09-23",
+            "end": "2026-09-30"
+          },
+          "growth": {
+            "impression_count": 1371,
+            "page_view_count": 105,
+            "like_count": 39,
+            "comment_count": 44
+          },
+          "latest_totals": {
+            "impression_count": 4894,
+            "page_view_count": 340,
+            "like_count": 210,
+            "comment_count": 67
           }
         },
         {
@@ -571,41 +593,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-27",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1007,
-            "page_view_count": 76,
-            "like_count": 35,
-            "comment_count": 22
+            "impression_count": 1245,
+            "page_view_count": 88,
+            "like_count": 38,
+            "comment_count": 24
           },
           "latest_totals": {
-            "impression_count": 2509,
-            "page_view_count": 185,
-            "like_count": 117,
-            "comment_count": 36
-          }
-        },
-        {
-          "note_key": "n7152f7a4e5a0",
-          "title": "✨誕生日って、何を祝っているんだろう🎂",
-          "published_at": "2026-09-17T03:06:22.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
-          },
-          "growth": {
-            "impression_count": 1220,
-            "page_view_count": 52,
-            "like_count": 32,
-            "comment_count": 12
-          },
-          "latest_totals": {
-            "impression_count": 5699,
-            "page_view_count": 364,
-            "like_count": 270,
-            "comment_count": 48
+            "impression_count": 2747,
+            "page_view_count": 197,
+            "like_count": 120,
+            "comment_count": 38
           }
         },
         {
@@ -614,20 +614,42 @@
           "published_at": "2026-06-09T12:52:27.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-23",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1022,
-            "page_view_count": 24,
+            "impression_count": 1090,
+            "page_view_count": 25,
             "like_count": 25,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 25604,
-            "page_view_count": 1256,
-            "like_count": 783,
+            "impression_count": 25764,
+            "page_view_count": 1258,
+            "like_count": 786,
             "comment_count": 133
+          }
+        },
+        {
+          "note_key": "n7152f7a4e5a0",
+          "title": "✨誕生日って、何を祝っているんだろう🎂",
+          "published_at": "2026-09-17T03:06:22.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-09-23",
+            "end": "2026-09-30"
+          },
+          "growth": {
+            "impression_count": 1116,
+            "page_view_count": 39,
+            "like_count": 20,
+            "comment_count": 8
+          },
+          "latest_totals": {
+            "impression_count": 5770,
+            "page_view_count": 365,
+            "like_count": 270,
+            "comment_count": 48
           }
         },
         {
@@ -636,42 +658,20 @@
           "published_at": "2026-09-15T11:12:58.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-23",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 958,
-            "page_view_count": 38,
-            "like_count": 15,
+            "impression_count": 913,
+            "page_view_count": 43,
+            "like_count": 11,
             "comment_count": 9
           },
           "latest_totals": {
-            "impression_count": 7156,
-            "page_view_count": 484,
+            "impression_count": 7239,
+            "page_view_count": 491,
             "like_count": 250,
             "comment_count": 69
-          }
-        },
-        {
-          "note_key": "n307f36568762",
-          "title": "今日も読みに行きたくなる✨noteの先輩ふたりへ❤️",
-          "published_at": "2026-09-10T11:54:25.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
-          },
-          "growth": {
-            "impression_count": 316,
-            "page_view_count": 8,
-            "like_count": 8,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 5567,
-            "page_view_count": 331,
-            "like_count": 187,
-            "comment_count": 38
           }
         },
         {
@@ -680,17 +680,17 @@
           "published_at": "2026-09-11T11:36:43.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-23",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 660,
+            "impression_count": 635,
             "page_view_count": 14,
             "like_count": 6,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 6191,
+            "impression_count": 6242,
             "page_view_count": 472,
             "like_count": 260,
             "comment_count": 96
@@ -705,18 +705,18 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-25",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 4128,
-            "page_view_count": 191,
-            "like_count": 97,
+            "impression_count": 4290,
+            "page_view_count": 192,
+            "like_count": 98,
             "comment_count": 46
           },
           "latest_totals": {
-            "impression_count": 5033,
-            "page_view_count": 241,
-            "like_count": 148,
+            "impression_count": 5195,
+            "page_view_count": 242,
+            "like_count": 149,
             "comment_count": 49
           }
         },
@@ -726,19 +726,19 @@
           "published_at": "2026-09-20T11:14:41.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-23",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1729,
-            "page_view_count": 133,
-            "like_count": 65,
-            "comment_count": 45
+            "impression_count": 1371,
+            "page_view_count": 105,
+            "like_count": 39,
+            "comment_count": 44
           },
           "latest_totals": {
-            "impression_count": 4809,
+            "impression_count": 4894,
             "page_view_count": 340,
-            "like_count": 209,
+            "like_count": 210,
             "comment_count": 67
           }
         },
@@ -749,17 +749,17 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-24",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 4015,
-            "page_view_count": 180,
+            "impression_count": 4167,
+            "page_view_count": 182,
             "like_count": 101,
             "comment_count": 25
           },
           "latest_totals": {
-            "impression_count": 5280,
-            "page_view_count": 247,
+            "impression_count": 5432,
+            "page_view_count": 249,
             "like_count": 162,
             "comment_count": 29
           }
@@ -771,19 +771,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-28",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1190,
-            "page_view_count": 86,
-            "like_count": 50,
-            "comment_count": 23
+            "impression_count": 1826,
+            "page_view_count": 106,
+            "like_count": 57,
+            "comment_count": 25
           },
           "latest_totals": {
-            "impression_count": 2638,
-            "page_view_count": 163,
-            "like_count": 117,
-            "comment_count": 31
+            "impression_count": 3274,
+            "page_view_count": 183,
+            "like_count": 124,
+            "comment_count": 33
           }
         },
         {
@@ -793,41 +793,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-09-27",
-            "end": "2026-09-29"
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1007,
-            "page_view_count": 76,
-            "like_count": 35,
-            "comment_count": 22
+            "impression_count": 1245,
+            "page_view_count": 88,
+            "like_count": 38,
+            "comment_count": 24
           },
           "latest_totals": {
-            "impression_count": 2509,
-            "page_view_count": 185,
-            "like_count": 117,
-            "comment_count": 36
+            "impression_count": 2747,
+            "page_view_count": 197,
+            "like_count": 120,
+            "comment_count": 38
           }
         },
         {
-          "note_key": "n7152f7a4e5a0",
-          "title": "✨誕生日って、何を祝っているんだろう🎂",
-          "published_at": "2026-09-17T03:06:22.000Z",
+          "note_key": "n481f98f6ed66",
+          "title": "✨ハッピーライティングマラソンお題#67｜本の中で、ずっと心に残っている言葉はありますか？",
+          "published_at": "2026-09-29T10:35:12.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-29",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 1220,
-            "page_view_count": 52,
-            "like_count": 32,
-            "comment_count": 12
+            "impression_count": 1782,
+            "page_view_count": 114,
+            "like_count": 74,
+            "comment_count": 16
           },
           "latest_totals": {
-            "impression_count": 5699,
-            "page_view_count": 364,
-            "like_count": 270,
-            "comment_count": 48
+            "impression_count": 2834,
+            "page_view_count": 171,
+            "like_count": 128,
+            "comment_count": 25
           }
         },
         {
@@ -836,20 +836,42 @@
           "published_at": "2026-09-15T11:12:58.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-23",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 958,
-            "page_view_count": 38,
-            "like_count": 15,
+            "impression_count": 913,
+            "page_view_count": 43,
+            "like_count": 11,
             "comment_count": 9
           },
           "latest_totals": {
-            "impression_count": 7156,
-            "page_view_count": 484,
+            "impression_count": 7239,
+            "page_view_count": 491,
             "like_count": 250,
             "comment_count": 69
+          }
+        },
+        {
+          "note_key": "n7152f7a4e5a0",
+          "title": "✨誕生日って、何を祝っているんだろう🎂",
+          "published_at": "2026-09-17T03:06:22.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-09-23",
+            "end": "2026-09-30"
+          },
+          "growth": {
+            "impression_count": 1116,
+            "page_view_count": 39,
+            "like_count": 20,
+            "comment_count": 8
+          },
+          "latest_totals": {
+            "impression_count": 5770,
+            "page_view_count": 365,
+            "like_count": 270,
+            "comment_count": 48
           }
         },
         {
@@ -858,17 +880,17 @@
           "published_at": "2026-09-05T11:15:54.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-23",
+            "end": "2026-09-30"
           },
           "growth": {
-            "impression_count": 298,
-            "page_view_count": 17,
+            "impression_count": 306,
+            "page_view_count": 15,
             "like_count": 2,
             "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 6827,
+            "impression_count": 6869,
             "page_view_count": 298,
             "like_count": 164,
             "comment_count": 50
@@ -880,42 +902,20 @@
           "published_at": "2026-08-07T11:18:35.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
+            "start": "2026-09-23",
+            "end": "2026-09-30"
           },
           "growth": {
             "impression_count": 55,
             "page_view_count": 5,
-            "like_count": 3,
+            "like_count": 1,
             "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 5335,
+            "impression_count": 5339,
             "page_view_count": 228,
             "like_count": 145,
             "comment_count": 28
-          }
-        },
-        {
-          "note_key": "n384ab7af0e9a",
-          "title": "🌸200記事で気づいたこと✨noteは私にとって「循環する場所」✨",
-          "published_at": "2026-09-11T11:36:43.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-09-22",
-            "end": "2026-09-29"
-          },
-          "growth": {
-            "impression_count": 660,
-            "page_view_count": 14,
-            "like_count": 6,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 6191,
-            "page_view_count": 472,
-            "like_count": 260,
-            "comment_count": 96
           }
         }
       ]
@@ -924,12 +924,12 @@
   "insights": [
     {
       "type": "period_summary",
-      "text": "期間中にインプレッション +29,003、PV +1,332、スキ +801、コメント +224。"
+      "text": "期間中にインプレッション +32,416、PV +1,501、スキ +900、コメント +247。"
     },
     {
       "type": "top_article",
       "note_key": "n10876a624703",
-      "text": "期間中もっともPVが伸びた記事は「「零ぴちゅさん企画」うちのオリキャラに本音を聞いてみた。……ところでレンって誰？｜#オリキャラ本音」で +191PV。"
+      "text": "期間中もっともPVが伸びた記事は「「零ぴちゅさん企画」うちのオリキャラに本音を聞いてみた。……ところでレンって誰？｜#オリキャラ本音」で +192PV。"
     }
   ]
 }
