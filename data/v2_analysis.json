@@ -1,60 +1,60 @@
 {
-  "generated_at": "2026-10-08T18:57:01Z",
+  "generated_at": "2026-10-09T18:27:26Z",
   "version": 1,
   "summary": {
-    "available_snapshot_days": 19,
+    "available_snapshot_days": 20,
     "comparison_type": "7_day",
     "period": {
-      "start": "2026-10-01",
-      "end": "2026-10-08"
+      "start": "2026-10-02",
+      "end": "2026-10-09"
     },
     "latest_totals": {
-      "impression_count": 1095633,
-      "page_view_count": 46544,
-      "like_count": 33004,
-      "comment_count": 5222
+      "impression_count": 1097958,
+      "page_view_count": 46638,
+      "like_count": 33060,
+      "comment_count": 5234
     },
     "current_period_growth": {
-      "impression_count": 184846,
-      "page_view_count": 7980,
-      "like_count": 4544,
-      "comment_count": 1104
+      "impression_count": 34117,
+      "page_view_count": 932,
+      "like_count": 570,
+      "comment_count": 129
     },
     "rates": {
-      "pv_per_impression_percent": 4.32,
-      "like_per_pv_percent": 56.94,
-      "comment_per_pv_percent": 13.83
+      "pv_per_impression_percent": 2.73,
+      "like_per_pv_percent": 61.16,
+      "comment_per_pv_percent": 13.84
     },
     "previous_period_growth": {
-      "impression_count": -116965,
-      "page_view_count": -5557,
-      "like_count": -3079,
-      "comment_count": -760
+      "impression_count": 30985,
+      "page_view_count": 1352,
+      "like_count": 799,
+      "comment_count": 194
     },
     "period_comparison": {
       "impression_count": {
-        "current": 184846,
-        "previous": -116965,
-        "difference": 301811,
-        "change_percent": -258.0
+        "current": 34117,
+        "previous": 30985,
+        "difference": 3132,
+        "change_percent": 10.1
       },
       "page_view_count": {
-        "current": 7980,
-        "previous": -5557,
-        "difference": 13537,
-        "change_percent": -243.6
+        "current": 932,
+        "previous": 1352,
+        "difference": -420,
+        "change_percent": -31.1
       },
       "like_count": {
-        "current": 4544,
-        "previous": -3079,
-        "difference": 7623,
-        "change_percent": -247.6
+        "current": 570,
+        "previous": 799,
+        "difference": -229,
+        "change_percent": -28.7
       },
       "comment_count": {
-        "current": 1104,
-        "previous": -760,
-        "difference": 1864,
-        "change_percent": -245.3
+        "current": 129,
+        "previous": 194,
+        "difference": -65,
+        "change_percent": -33.5
       }
     }
   },
@@ -68,42 +68,196 @@
           "published_at": "2026-09-25T11:02:41.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
+            "start": "2026-10-02",
+            "end": "2026-10-09"
           },
           "growth": {
-            "impression_count": 17890,
-            "page_view_count": 260,
-            "like_count": 154,
-            "comment_count": 49
+            "impression_count": 12727,
+            "page_view_count": 12,
+            "like_count": 4,
+            "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 18023,
+            "impression_count": 18169,
             "page_view_count": 262,
             "like_count": 157,
             "comment_count": 49
           }
         },
         {
-          "note_key": "n622aaf25efb6",
-          "title": "✨5秒の「スキ」本気で遊んだら、スキ動画賞をいただきました🏆✨",
-          "published_at": "2026-09-01T11:24:45.000Z",
+          "note_key": "nfe44ff8f59ff",
+          "title": "🌱 スキのタネ研究所だよりVol.００８",
+          "published_at": "2026-10-03T22:46:22.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
+            "start": "2026-10-04",
+            "end": "2026-10-09"
           },
           "growth": {
-            "impression_count": 8956,
-            "page_view_count": 451,
-            "like_count": 243,
-            "comment_count": 109
+            "impression_count": 2894,
+            "page_view_count": 203,
+            "like_count": 101,
+            "comment_count": 30
           },
           "latest_totals": {
-            "impression_count": 8993,
-            "page_view_count": 451,
-            "like_count": 243,
-            "comment_count": 109
+            "impression_count": 4792,
+            "page_view_count": 327,
+            "like_count": 212,
+            "comment_count": 41
+          }
+        },
+        {
+          "note_key": "n70c428071c28",
+          "title": "1枚の画像から30秒のショートムービーは作れる？WeryAIで『境界の図書館』の続きを作ってみた｜PR",
+          "published_at": "2026-09-30T10:50:06.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 2515,
+            "page_view_count": 81,
+            "like_count": 54,
+            "comment_count": 10
+          },
+          "latest_totals": {
+            "impression_count": 6919,
+            "page_view_count": 301,
+            "like_count": 209,
+            "comment_count": 44
+          }
+        },
+        {
+          "note_key": "nd0f01f8c31bd",
+          "title": "私を世界の文化にたとえたら✨5か国になった｜UTAKOちゃんの世界文化DNA診断やってみた🌍",
+          "published_at": "2026-10-07T10:41:15.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-07",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 2162,
+            "page_view_count": 142,
+            "like_count": 76,
+            "comment_count": 41
+          },
+          "latest_totals": {
+            "impression_count": 3569,
+            "page_view_count": 241,
+            "like_count": 157,
+            "comment_count": 49
+          }
+        },
+        {
+          "note_key": "n481f98f6ed66",
+          "title": "✨ハッピーライティングマラソンお題#67｜本の中で、ずっと心に残っている言葉はありますか？",
+          "published_at": "2026-09-29T10:35:12.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 1674,
+            "page_view_count": 69,
+            "like_count": 25,
+            "comment_count": 13
+          },
+          "latest_totals": {
+            "impression_count": 5371,
+            "page_view_count": 283,
+            "like_count": 181,
+            "comment_count": 47
+          }
+        },
+        {
+          "note_key": "na57710065283",
+          "title": "「夏の余白」から生まれた曲「Summer Fades」🌊",
+          "published_at": "2026-09-28T11:03:26.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 1004,
+            "page_view_count": 27,
+            "like_count": 18,
+            "comment_count": 4
+          },
+          "latest_totals": {
+            "impression_count": 4645,
+            "page_view_count": 214,
+            "like_count": 147,
+            "comment_count": 37
+          }
+        },
+        {
+          "note_key": "n87303389c070",
+          "title": "初めての企業PR✨WeryAIで『境界の図書館 #02』を作ってみました✨",
+          "published_at": "2026-09-27T03:02:28.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 962,
+            "page_view_count": 18,
+            "like_count": 10,
+            "comment_count": 1
+          },
+          "latest_totals": {
+            "impression_count": 4135,
+            "page_view_count": 224,
+            "like_count": 137,
+            "comment_count": 41
+          }
+        },
+        {
+          "note_key": "n37180fe24b18",
+          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
+          "published_at": "2026-06-09T12:52:27.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 835,
+            "page_view_count": 28,
+            "like_count": 20,
+            "comment_count": 4
+          },
+          "latest_totals": {
+            "impression_count": 27133,
+            "page_view_count": 1303,
+            "like_count": 813,
+            "comment_count": 139
+          }
+        },
+        {
+          "note_key": "nd8a4963fd056",
+          "title": "キャー終わってた！！NRT✨ハロウィンの街へ選抜戦のはずが、気づけば大人の夜になっていた🎃",
+          "published_at": "2026-09-24T10:43:23.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 476,
+            "page_view_count": 8,
+            "like_count": 4,
+            "comment_count": 0
+          },
+          "latest_totals": {
+            "impression_count": 6136,
+            "page_view_count": 259,
+            "like_count": 171,
+            "comment_count": 29
           }
         },
         {
@@ -112,664 +266,176 @@
           "published_at": "2026-09-15T11:12:58.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
+            "start": "2026-10-02",
+            "end": "2026-10-09"
           },
           "growth": {
-            "impression_count": 7648,
-            "page_view_count": 507,
-            "like_count": 254,
+            "impression_count": 392,
+            "page_view_count": 15,
+            "like_count": 4,
+            "comment_count": 5
+          },
+          "latest_totals": {
+            "impression_count": 7784,
+            "page_view_count": 511,
+            "like_count": 257,
             "comment_count": 74
-          },
-          "latest_totals": {
-            "impression_count": 7734,
-            "page_view_count": 510,
-            "like_count": 255,
-            "comment_count": 74
-          }
-        },
-        {
-          "note_key": "n07e979554cab",
-          "title": "✨KITA沼にハマって！note運営が変わったAIツール活用術🧰",
-          "published_at": "2026-09-05T11:15:54.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 7020,
-            "page_view_count": 299,
-            "like_count": 165,
-            "comment_count": 50
-          },
-          "latest_totals": {
-            "impression_count": 7048,
-            "page_view_count": 300,
-            "like_count": 167,
-            "comment_count": 50
-          }
-        },
-        {
-          "note_key": "nc0b1fb2e48b7",
-          "title": "✨両手にバトンが届きました🫢だから、ひとつの「ありがとう」にします❣️",
-          "published_at": "2026-09-03T11:06:12.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6834,
-            "page_view_count": 282,
-            "like_count": 190,
-            "comment_count": 30
-          },
-          "latest_totals": {
-            "impression_count": 6858,
-            "page_view_count": 283,
-            "like_count": 190,
-            "comment_count": 30
-          }
-        },
-        {
-          "note_key": "n384ab7af0e9a",
-          "title": "🌸200記事で気づいたこと✨noteは私にとって「循環する場所」✨",
-          "published_at": "2026-09-11T11:36:43.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6458,
-            "page_view_count": 475,
-            "like_count": 262,
-            "comment_count": 96
-          },
-          "latest_totals": {
-            "impression_count": 6494,
-            "page_view_count": 476,
-            "like_count": 263,
-            "comment_count": 96
-          }
-        },
-        {
-          "note_key": "n95dd8a939562",
-          "title": "📕ハッピーライティングマラソンお題#66｜何度も読み返した本は、ありますか？",
-          "published_at": "2026-09-07T11:41:47.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6415,
-            "page_view_count": 220,
-            "like_count": 171,
-            "comment_count": 32
-          },
-          "latest_totals": {
-            "impression_count": 6439,
-            "page_view_count": 220,
-            "like_count": 171,
-            "comment_count": 32
-          }
-        },
-        {
-          "note_key": "n25f06764eb4a",
-          "title": "✨ カケルンって何者？私を一段先へ連れていく言葉の力 ✨",
-          "published_at": "2026-09-08T11:26:07.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6401,
-            "page_view_count": 334,
-            "like_count": 174,
-            "comment_count": 40
-          },
-          "latest_totals": {
-            "impression_count": 6441,
-            "page_view_count": 335,
-            "like_count": 175,
-            "comment_count": 40
-          }
-        },
-        {
-          "note_key": "n8e86a8646504",
-          "title": "✨ 「気合いじゃなく設計」私のnote生活を変えた、はしゃもさんツール 🧰",
-          "published_at": "2026-09-04T11:08:40.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6339,
-            "page_view_count": 344,
-            "like_count": 177,
-            "comment_count": 43
-          },
-          "latest_totals": {
-            "impression_count": 6374,
-            "page_view_count": 344,
-            "like_count": 177,
-            "comment_count": 43
-          }
-        },
-        {
-          "note_key": "n1fe88a777f62",
-          "title": "✨ハッピーライティングマラソンお題#65｜批判されるのが怖くて、やめていることはありますか？",
-          "published_at": "2026-08-31T11:44:26.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6307,
-            "page_view_count": 189,
-            "like_count": 130,
-            "comment_count": 21
-          },
-          "latest_totals": {
-            "impression_count": 7300,
-            "page_view_count": 268,
-            "like_count": 191,
-            "comment_count": 39
           }
         }
       ],
       "page_view_count": [
         {
-          "note_key": "n77de1f3f5ccc",
-          "title": "✨毎日投稿をやめたら、お尻がしっくりこなくなった🤣",
-          "published_at": "2026-09-15T11:12:58.000Z",
+          "note_key": "nfe44ff8f59ff",
+          "title": "🌱 スキのタネ研究所だよりVol.００８",
+          "published_at": "2026-10-03T22:46:22.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
+            "start": "2026-10-04",
+            "end": "2026-10-09"
           },
           "growth": {
-            "impression_count": 7648,
-            "page_view_count": 507,
-            "like_count": 254,
-            "comment_count": 74
-          },
-          "latest_totals": {
-            "impression_count": 7734,
-            "page_view_count": 510,
-            "like_count": 255,
-            "comment_count": 74
-          }
-        },
-        {
-          "note_key": "n384ab7af0e9a",
-          "title": "🌸200記事で気づいたこと✨noteは私にとって「循環する場所」✨",
-          "published_at": "2026-09-11T11:36:43.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6458,
-            "page_view_count": 475,
-            "like_count": 262,
-            "comment_count": 96
-          },
-          "latest_totals": {
-            "impression_count": 6494,
-            "page_view_count": 476,
-            "like_count": 263,
-            "comment_count": 96
-          }
-        },
-        {
-          "note_key": "n622aaf25efb6",
-          "title": "✨5秒の「スキ」本気で遊んだら、スキ動画賞をいただきました🏆✨",
-          "published_at": "2026-09-01T11:24:45.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 8956,
-            "page_view_count": 451,
-            "like_count": 243,
-            "comment_count": 109
-          },
-          "latest_totals": {
-            "impression_count": 8993,
-            "page_view_count": 451,
-            "like_count": 243,
-            "comment_count": 109
-          }
-        },
-        {
-          "note_key": "n7152f7a4e5a0",
-          "title": "✨誕生日って、何を祝っているんだろう🎂",
-          "published_at": "2026-09-17T03:06:22.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6067,
-            "page_view_count": 373,
-            "like_count": 275,
-            "comment_count": 48
-          },
-          "latest_totals": {
-            "impression_count": 6137,
-            "page_view_count": 374,
-            "like_count": 275,
-            "comment_count": 48
-          }
-        },
-        {
-          "note_key": "n8e86a8646504",
-          "title": "✨ 「気合いじゃなく設計」私のnote生活を変えた、はしゃもさんツール 🧰",
-          "published_at": "2026-09-04T11:08:40.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6339,
-            "page_view_count": 344,
-            "like_count": 177,
-            "comment_count": 43
-          },
-          "latest_totals": {
-            "impression_count": 6374,
-            "page_view_count": 344,
-            "like_count": 177,
-            "comment_count": 43
-          }
-        },
-        {
-          "note_key": "n8b0d4f5fb74d",
-          "title": "🌱 スキのタネ研究所だよりVol.007",
-          "published_at": "2026-09-20T11:14:41.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 5178,
-            "page_view_count": 342,
-            "like_count": 211,
-            "comment_count": 67
-          },
-          "latest_totals": {
-            "impression_count": 5224,
-            "page_view_count": 343,
-            "like_count": 211,
-            "comment_count": 67
-          }
-        },
-        {
-          "note_key": "n307f36568762",
-          "title": "今日も読みに行きたくなる✨noteの先輩ふたりへ❤️",
-          "published_at": "2026-09-10T11:54:25.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 5711,
-            "page_view_count": 337,
-            "like_count": 188,
-            "comment_count": 38
-          },
-          "latest_totals": {
-            "impression_count": 5729,
-            "page_view_count": 337,
-            "like_count": 189,
-            "comment_count": 38
-          }
-        },
-        {
-          "note_key": "n25f06764eb4a",
-          "title": "✨ カケルンって何者？私を一段先へ連れていく言葉の力 ✨",
-          "published_at": "2026-09-08T11:26:07.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6401,
-            "page_view_count": 334,
-            "like_count": 174,
-            "comment_count": 40
-          },
-          "latest_totals": {
-            "impression_count": 6441,
-            "page_view_count": 335,
-            "like_count": 175,
-            "comment_count": 40
-          }
-        },
-        {
-          "note_key": "n07e979554cab",
-          "title": "✨KITA沼にハマって！note運営が変わったAIツール活用術🧰",
-          "published_at": "2026-09-05T11:15:54.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 7020,
-            "page_view_count": 299,
-            "like_count": 165,
-            "comment_count": 50
-          },
-          "latest_totals": {
-            "impression_count": 7048,
-            "page_view_count": 300,
-            "like_count": 167,
-            "comment_count": 50
-          }
-        },
-        {
-          "note_key": "nc0b1fb2e48b7",
-          "title": "✨両手にバトンが届きました🫢だから、ひとつの「ありがとう」にします❣️",
-          "published_at": "2026-09-03T11:06:12.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6834,
-            "page_view_count": 282,
-            "like_count": 190,
+            "impression_count": 2894,
+            "page_view_count": 203,
+            "like_count": 101,
             "comment_count": 30
           },
           "latest_totals": {
-            "impression_count": 6858,
+            "impression_count": 4792,
+            "page_view_count": 327,
+            "like_count": 212,
+            "comment_count": 41
+          }
+        },
+        {
+          "note_key": "nd0f01f8c31bd",
+          "title": "私を世界の文化にたとえたら✨5か国になった｜UTAKOちゃんの世界文化DNA診断やってみた🌍",
+          "published_at": "2026-10-07T10:41:15.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-07",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 2162,
+            "page_view_count": 142,
+            "like_count": 76,
+            "comment_count": 41
+          },
+          "latest_totals": {
+            "impression_count": 3569,
+            "page_view_count": 241,
+            "like_count": 157,
+            "comment_count": 49
+          }
+        },
+        {
+          "note_key": "n70c428071c28",
+          "title": "1枚の画像から30秒のショートムービーは作れる？WeryAIで『境界の図書館』の続きを作ってみた｜PR",
+          "published_at": "2026-09-30T10:50:06.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 2515,
+            "page_view_count": 81,
+            "like_count": 54,
+            "comment_count": 10
+          },
+          "latest_totals": {
+            "impression_count": 6919,
+            "page_view_count": 301,
+            "like_count": 209,
+            "comment_count": 44
+          }
+        },
+        {
+          "note_key": "n481f98f6ed66",
+          "title": "✨ハッピーライティングマラソンお題#67｜本の中で、ずっと心に残っている言葉はありますか？",
+          "published_at": "2026-09-29T10:35:12.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 1674,
+            "page_view_count": 69,
+            "like_count": 25,
+            "comment_count": 13
+          },
+          "latest_totals": {
+            "impression_count": 5371,
             "page_view_count": 283,
-            "like_count": 190,
-            "comment_count": 30
-          }
-        }
-      ],
-      "like_count": [
-        {
-          "note_key": "n7152f7a4e5a0",
-          "title": "✨誕生日って、何を祝っているんだろう🎂",
-          "published_at": "2026-09-17T03:06:22.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6067,
-            "page_view_count": 373,
-            "like_count": 275,
-            "comment_count": 48
-          },
-          "latest_totals": {
-            "impression_count": 6137,
-            "page_view_count": 374,
-            "like_count": 275,
-            "comment_count": 48
+            "like_count": 181,
+            "comment_count": 47
           }
         },
         {
-          "note_key": "n384ab7af0e9a",
-          "title": "🌸200記事で気づいたこと✨noteは私にとって「循環する場所」✨",
-          "published_at": "2026-09-11T11:36:43.000Z",
+          "note_key": "n37180fe24b18",
+          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
+          "published_at": "2026-06-09T12:52:27.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
+            "start": "2026-10-02",
+            "end": "2026-10-09"
           },
           "growth": {
-            "impression_count": 6458,
-            "page_view_count": 475,
-            "like_count": 262,
-            "comment_count": 96
+            "impression_count": 835,
+            "page_view_count": 28,
+            "like_count": 20,
+            "comment_count": 4
           },
           "latest_totals": {
-            "impression_count": 6494,
-            "page_view_count": 476,
-            "like_count": 263,
-            "comment_count": 96
+            "impression_count": 27133,
+            "page_view_count": 1303,
+            "like_count": 813,
+            "comment_count": 139
           }
         },
         {
-          "note_key": "n77de1f3f5ccc",
-          "title": "✨毎日投稿をやめたら、お尻がしっくりこなくなった🤣",
-          "published_at": "2026-09-15T11:12:58.000Z",
+          "note_key": "na57710065283",
+          "title": "「夏の余白」から生まれた曲「Summer Fades」🌊",
+          "published_at": "2026-09-28T11:03:26.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
+            "start": "2026-10-02",
+            "end": "2026-10-09"
           },
           "growth": {
-            "impression_count": 7648,
-            "page_view_count": 507,
-            "like_count": 254,
-            "comment_count": 74
+            "impression_count": 1004,
+            "page_view_count": 27,
+            "like_count": 18,
+            "comment_count": 4
           },
           "latest_totals": {
-            "impression_count": 7734,
-            "page_view_count": 510,
-            "like_count": 255,
-            "comment_count": 74
+            "impression_count": 4645,
+            "page_view_count": 214,
+            "like_count": 147,
+            "comment_count": 37
           }
         },
         {
-          "note_key": "n622aaf25efb6",
-          "title": "✨5秒の「スキ」本気で遊んだら、スキ動画賞をいただきました🏆✨",
-          "published_at": "2026-09-01T11:24:45.000Z",
+          "note_key": "n87303389c070",
+          "title": "初めての企業PR✨WeryAIで『境界の図書館 #02』を作ってみました✨",
+          "published_at": "2026-09-27T03:02:28.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
+            "start": "2026-10-02",
+            "end": "2026-10-09"
           },
           "growth": {
-            "impression_count": 8956,
-            "page_view_count": 451,
-            "like_count": 243,
-            "comment_count": 109
+            "impression_count": 962,
+            "page_view_count": 18,
+            "like_count": 10,
+            "comment_count": 1
           },
           "latest_totals": {
-            "impression_count": 8993,
-            "page_view_count": 451,
-            "like_count": 243,
-            "comment_count": 109
-          }
-        },
-        {
-          "note_key": "n8b0d4f5fb74d",
-          "title": "🌱 スキのタネ研究所だよりVol.007",
-          "published_at": "2026-09-20T11:14:41.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 5178,
-            "page_view_count": 342,
-            "like_count": 211,
-            "comment_count": 67
-          },
-          "latest_totals": {
-            "impression_count": 5224,
-            "page_view_count": 343,
-            "like_count": 211,
-            "comment_count": 67
-          }
-        },
-        {
-          "note_key": "nc0b1fb2e48b7",
-          "title": "✨両手にバトンが届きました🫢だから、ひとつの「ありがとう」にします❣️",
-          "published_at": "2026-09-03T11:06:12.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6834,
-            "page_view_count": 282,
-            "like_count": 190,
-            "comment_count": 30
-          },
-          "latest_totals": {
-            "impression_count": 6858,
-            "page_view_count": 283,
-            "like_count": 190,
-            "comment_count": 30
-          }
-        },
-        {
-          "note_key": "n307f36568762",
-          "title": "今日も読みに行きたくなる✨noteの先輩ふたりへ❤️",
-          "published_at": "2026-09-10T11:54:25.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 5711,
-            "page_view_count": 337,
-            "like_count": 188,
-            "comment_count": 38
-          },
-          "latest_totals": {
-            "impression_count": 5729,
-            "page_view_count": 337,
-            "like_count": 189,
-            "comment_count": 38
-          }
-        },
-        {
-          "note_key": "n8e86a8646504",
-          "title": "✨ 「気合いじゃなく設計」私のnote生活を変えた、はしゃもさんツール 🧰",
-          "published_at": "2026-09-04T11:08:40.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6339,
-            "page_view_count": 344,
-            "like_count": 177,
-            "comment_count": 43
-          },
-          "latest_totals": {
-            "impression_count": 6374,
-            "page_view_count": 344,
-            "like_count": 177,
-            "comment_count": 43
-          }
-        },
-        {
-          "note_key": "nc5f5689d029b",
-          "title": "秋のぷちふく｜まだ食べてないので💦妄想で栗を食べました🌰",
-          "published_at": "2026-09-09T11:21:50.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 5571,
-            "page_view_count": 242,
-            "like_count": 174,
-            "comment_count": 42
-          },
-          "latest_totals": {
-            "impression_count": 5597,
-            "page_view_count": 242,
-            "like_count": 174,
-            "comment_count": 42
-          }
-        },
-        {
-          "note_key": "n25f06764eb4a",
-          "title": "✨ カケルンって何者？私を一段先へ連れていく言葉の力 ✨",
-          "published_at": "2026-09-08T11:26:07.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6401,
-            "page_view_count": 334,
-            "like_count": 174,
-            "comment_count": 40
-          },
-          "latest_totals": {
-            "impression_count": 6441,
-            "page_view_count": 335,
-            "like_count": 175,
-            "comment_count": 40
-          }
-        }
-      ],
-      "comment_count": [
-        {
-          "note_key": "n622aaf25efb6",
-          "title": "✨5秒の「スキ」本気で遊んだら、スキ動画賞をいただきました🏆✨",
-          "published_at": "2026-09-01T11:24:45.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 8956,
-            "page_view_count": 451,
-            "like_count": 243,
-            "comment_count": 109
-          },
-          "latest_totals": {
-            "impression_count": 8993,
-            "page_view_count": 451,
-            "like_count": 243,
-            "comment_count": 109
-          }
-        },
-        {
-          "note_key": "n384ab7af0e9a",
-          "title": "🌸200記事で気づいたこと✨noteは私にとって「循環する場所」✨",
-          "published_at": "2026-09-11T11:36:43.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 6458,
-            "page_view_count": 475,
-            "like_count": 262,
-            "comment_count": 96
-          },
-          "latest_totals": {
-            "impression_count": 6494,
-            "page_view_count": 476,
-            "like_count": 263,
-            "comment_count": 96
+            "impression_count": 4135,
+            "page_view_count": 224,
+            "like_count": 137,
+            "comment_count": 41
           }
         },
         {
@@ -778,64 +444,20 @@
           "published_at": "2026-09-15T11:12:58.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
+            "start": "2026-10-02",
+            "end": "2026-10-09"
           },
           "growth": {
-            "impression_count": 7648,
-            "page_view_count": 507,
-            "like_count": 254,
+            "impression_count": 392,
+            "page_view_count": 15,
+            "like_count": 4,
+            "comment_count": 5
+          },
+          "latest_totals": {
+            "impression_count": 7784,
+            "page_view_count": 511,
+            "like_count": 257,
             "comment_count": 74
-          },
-          "latest_totals": {
-            "impression_count": 7734,
-            "page_view_count": 510,
-            "like_count": 255,
-            "comment_count": 74
-          }
-        },
-        {
-          "note_key": "n8b0d4f5fb74d",
-          "title": "🌱 スキのタネ研究所だよりVol.007",
-          "published_at": "2026-09-20T11:14:41.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 5178,
-            "page_view_count": 342,
-            "like_count": 211,
-            "comment_count": 67
-          },
-          "latest_totals": {
-            "impression_count": 5224,
-            "page_view_count": 343,
-            "like_count": 211,
-            "comment_count": 67
-          }
-        },
-        {
-          "note_key": "n07e979554cab",
-          "title": "✨KITA沼にハマって！note運営が変わったAIツール活用術🧰",
-          "published_at": "2026-09-05T11:15:54.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
-          },
-          "growth": {
-            "impression_count": 7020,
-            "page_view_count": 299,
-            "like_count": 165,
-            "comment_count": 50
-          },
-          "latest_totals": {
-            "impression_count": 7048,
-            "page_view_count": 300,
-            "like_count": 167,
-            "comment_count": 50
           }
         },
         {
@@ -844,17 +466,17 @@
           "published_at": "2026-09-25T11:02:41.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
+            "start": "2026-10-02",
+            "end": "2026-10-09"
           },
           "growth": {
-            "impression_count": 17890,
-            "page_view_count": 260,
-            "like_count": 154,
-            "comment_count": 49
+            "impression_count": 12727,
+            "page_view_count": 12,
+            "like_count": 4,
+            "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 18023,
+            "impression_count": 18169,
             "page_view_count": 262,
             "like_count": 157,
             "comment_count": 49
@@ -866,86 +488,464 @@
           "published_at": "2026-09-17T03:06:22.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
+            "start": "2026-10-02",
+            "end": "2026-10-09"
           },
           "growth": {
-            "impression_count": 6067,
-            "page_view_count": 373,
+            "impression_count": 264,
+            "page_view_count": 9,
+            "like_count": 4,
+            "comment_count": 0
+          },
+          "latest_totals": {
+            "impression_count": 6167,
+            "page_view_count": 376,
             "like_count": 275,
             "comment_count": 48
+          }
+        }
+      ],
+      "like_count": [
+        {
+          "note_key": "nfe44ff8f59ff",
+          "title": "🌱 スキのタネ研究所だよりVol.００８",
+          "published_at": "2026-10-03T22:46:22.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-04",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 2894,
+            "page_view_count": 203,
+            "like_count": 101,
+            "comment_count": 30
           },
           "latest_totals": {
-            "impression_count": 6137,
-            "page_view_count": 374,
+            "impression_count": 4792,
+            "page_view_count": 327,
+            "like_count": 212,
+            "comment_count": 41
+          }
+        },
+        {
+          "note_key": "nd0f01f8c31bd",
+          "title": "私を世界の文化にたとえたら✨5か国になった｜UTAKOちゃんの世界文化DNA診断やってみた🌍",
+          "published_at": "2026-10-07T10:41:15.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-07",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 2162,
+            "page_view_count": 142,
+            "like_count": 76,
+            "comment_count": 41
+          },
+          "latest_totals": {
+            "impression_count": 3569,
+            "page_view_count": 241,
+            "like_count": 157,
+            "comment_count": 49
+          }
+        },
+        {
+          "note_key": "n70c428071c28",
+          "title": "1枚の画像から30秒のショートムービーは作れる？WeryAIで『境界の図書館』の続きを作ってみた｜PR",
+          "published_at": "2026-09-30T10:50:06.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 2515,
+            "page_view_count": 81,
+            "like_count": 54,
+            "comment_count": 10
+          },
+          "latest_totals": {
+            "impression_count": 6919,
+            "page_view_count": 301,
+            "like_count": 209,
+            "comment_count": 44
+          }
+        },
+        {
+          "note_key": "n481f98f6ed66",
+          "title": "✨ハッピーライティングマラソンお題#67｜本の中で、ずっと心に残っている言葉はありますか？",
+          "published_at": "2026-09-29T10:35:12.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 1674,
+            "page_view_count": 69,
+            "like_count": 25,
+            "comment_count": 13
+          },
+          "latest_totals": {
+            "impression_count": 5371,
+            "page_view_count": 283,
+            "like_count": 181,
+            "comment_count": 47
+          }
+        },
+        {
+          "note_key": "n37180fe24b18",
+          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
+          "published_at": "2026-06-09T12:52:27.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 835,
+            "page_view_count": 28,
+            "like_count": 20,
+            "comment_count": 4
+          },
+          "latest_totals": {
+            "impression_count": 27133,
+            "page_view_count": 1303,
+            "like_count": 813,
+            "comment_count": 139
+          }
+        },
+        {
+          "note_key": "na57710065283",
+          "title": "「夏の余白」から生まれた曲「Summer Fades」🌊",
+          "published_at": "2026-09-28T11:03:26.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 1004,
+            "page_view_count": 27,
+            "like_count": 18,
+            "comment_count": 4
+          },
+          "latest_totals": {
+            "impression_count": 4645,
+            "page_view_count": 214,
+            "like_count": 147,
+            "comment_count": 37
+          }
+        },
+        {
+          "note_key": "n87303389c070",
+          "title": "初めての企業PR✨WeryAIで『境界の図書館 #02』を作ってみました✨",
+          "published_at": "2026-09-27T03:02:28.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 962,
+            "page_view_count": 18,
+            "like_count": 10,
+            "comment_count": 1
+          },
+          "latest_totals": {
+            "impression_count": 4135,
+            "page_view_count": 224,
+            "like_count": 137,
+            "comment_count": 41
+          }
+        },
+        {
+          "note_key": "nb1821f28e6e0",
+          "title": "さぁ‼️家に帰ろう❣️",
+          "published_at": "2026-03-26T10:16:43.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 79,
+            "page_view_count": 4,
+            "like_count": 7,
+            "comment_count": 0
+          },
+          "latest_totals": {
+            "impression_count": 1275,
+            "page_view_count": 73,
+            "like_count": 70,
+            "comment_count": 6
+          }
+        },
+        {
+          "note_key": "n8fe2c3119557",
+          "title": "🌱 スキのタネ研究所だよりVol.005",
+          "published_at": "2026-08-30T11:44:14.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 182,
+            "page_view_count": 4,
+            "like_count": 6,
+            "comment_count": 0
+          },
+          "latest_totals": {
+            "impression_count": 3529,
+            "page_view_count": 169,
+            "like_count": 125,
+            "comment_count": 25
+          }
+        },
+        {
+          "note_key": "n7152f7a4e5a0",
+          "title": "✨誕生日って、何を祝っているんだろう🎂",
+          "published_at": "2026-09-17T03:06:22.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 264,
+            "page_view_count": 9,
+            "like_count": 4,
+            "comment_count": 0
+          },
+          "latest_totals": {
+            "impression_count": 6167,
+            "page_view_count": 376,
             "like_count": 275,
             "comment_count": 48
           }
-        },
+        }
+      ],
+      "comment_count": [
         {
-          "note_key": "n0e956f9b8613",
-          "title": "🌱 スキのタネ研究所だよりVol.006",
-          "published_at": "2026-09-06T11:00:49.000Z",
+          "note_key": "nd0f01f8c31bd",
+          "title": "私を世界の文化にたとえたら✨5か国になった｜UTAKOちゃんの世界文化DNA診断やってみた🌍",
+          "published_at": "2026-10-07T10:41:15.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
+            "start": "2026-10-07",
+            "end": "2026-10-09"
           },
           "growth": {
-            "impression_count": 5181,
-            "page_view_count": 231,
-            "like_count": 171,
-            "comment_count": 43
+            "impression_count": 2162,
+            "page_view_count": 142,
+            "like_count": 76,
+            "comment_count": 41
           },
           "latest_totals": {
-            "impression_count": 5199,
-            "page_view_count": 231,
-            "like_count": 171,
-            "comment_count": 43
+            "impression_count": 3569,
+            "page_view_count": 241,
+            "like_count": 157,
+            "comment_count": 49
           }
         },
         {
-          "note_key": "n8e86a8646504",
-          "title": "✨ 「気合いじゃなく設計」私のnote生活を変えた、はしゃもさんツール 🧰",
-          "published_at": "2026-09-04T11:08:40.000Z",
+          "note_key": "nfe44ff8f59ff",
+          "title": "🌱 スキのタネ研究所だよりVol.００８",
+          "published_at": "2026-10-03T22:46:22.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
+            "start": "2026-10-04",
+            "end": "2026-10-09"
           },
           "growth": {
-            "impression_count": 6339,
-            "page_view_count": 344,
-            "like_count": 177,
-            "comment_count": 43
+            "impression_count": 2894,
+            "page_view_count": 203,
+            "like_count": 101,
+            "comment_count": 30
           },
           "latest_totals": {
-            "impression_count": 6374,
-            "page_view_count": 344,
-            "like_count": 177,
-            "comment_count": 43
+            "impression_count": 4792,
+            "page_view_count": 327,
+            "like_count": 212,
+            "comment_count": 41
           }
         },
         {
-          "note_key": "nc5f5689d029b",
-          "title": "秋のぷちふく｜まだ食べてないので💦妄想で栗を食べました🌰",
-          "published_at": "2026-09-09T11:21:50.000Z",
+          "note_key": "n481f98f6ed66",
+          "title": "✨ハッピーライティングマラソンお題#67｜本の中で、ずっと心に残っている言葉はありますか？",
+          "published_at": "2026-09-29T10:35:12.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-01",
-            "end": "2026-10-08"
+            "start": "2026-10-02",
+            "end": "2026-10-09"
           },
           "growth": {
-            "impression_count": 5571,
-            "page_view_count": 242,
-            "like_count": 174,
-            "comment_count": 42
+            "impression_count": 1674,
+            "page_view_count": 69,
+            "like_count": 25,
+            "comment_count": 13
           },
           "latest_totals": {
-            "impression_count": 5597,
-            "page_view_count": 242,
-            "like_count": 174,
-            "comment_count": 42
+            "impression_count": 5371,
+            "page_view_count": 283,
+            "like_count": 181,
+            "comment_count": 47
+          }
+        },
+        {
+          "note_key": "n70c428071c28",
+          "title": "1枚の画像から30秒のショートムービーは作れる？WeryAIで『境界の図書館』の続きを作ってみた｜PR",
+          "published_at": "2026-09-30T10:50:06.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 2515,
+            "page_view_count": 81,
+            "like_count": 54,
+            "comment_count": 10
+          },
+          "latest_totals": {
+            "impression_count": 6919,
+            "page_view_count": 301,
+            "like_count": 209,
+            "comment_count": 44
+          }
+        },
+        {
+          "note_key": "n77de1f3f5ccc",
+          "title": "✨毎日投稿をやめたら、お尻がしっくりこなくなった🤣",
+          "published_at": "2026-09-15T11:12:58.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 392,
+            "page_view_count": 15,
+            "like_count": 4,
+            "comment_count": 5
+          },
+          "latest_totals": {
+            "impression_count": 7784,
+            "page_view_count": 511,
+            "like_count": 257,
+            "comment_count": 74
+          }
+        },
+        {
+          "note_key": "n37180fe24b18",
+          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
+          "published_at": "2026-06-09T12:52:27.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 835,
+            "page_view_count": 28,
+            "like_count": 20,
+            "comment_count": 4
+          },
+          "latest_totals": {
+            "impression_count": 27133,
+            "page_view_count": 1303,
+            "like_count": 813,
+            "comment_count": 139
+          }
+        },
+        {
+          "note_key": "na57710065283",
+          "title": "「夏の余白」から生まれた曲「Summer Fades」🌊",
+          "published_at": "2026-09-28T11:03:26.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 1004,
+            "page_view_count": 27,
+            "like_count": 18,
+            "comment_count": 4
+          },
+          "latest_totals": {
+            "impression_count": 4645,
+            "page_view_count": 214,
+            "like_count": 147,
+            "comment_count": 37
+          }
+        },
+        {
+          "note_key": "n8897f780eb77",
+          "title": "🎵わたしのまま🎵〜このままでいいのかな？って思う人がいたら聞いてみて✨",
+          "published_at": "2026-07-01T11:47:31.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 5,
+            "page_view_count": 8,
+            "like_count": 1,
+            "comment_count": 2
+          },
+          "latest_totals": {
+            "impression_count": 3662,
+            "page_view_count": 261,
+            "like_count": 193,
+            "comment_count": 45
+          }
+        },
+        {
+          "note_key": "n87303389c070",
+          "title": "初めての企業PR✨WeryAIで『境界の図書館 #02』を作ってみました✨",
+          "published_at": "2026-09-27T03:02:28.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 962,
+            "page_view_count": 18,
+            "like_count": 10,
+            "comment_count": 1
+          },
+          "latest_totals": {
+            "impression_count": 4135,
+            "page_view_count": 224,
+            "like_count": 137,
+            "comment_count": 41
+          }
+        },
+        {
+          "note_key": "n7152f7a4e5a0",
+          "title": "✨誕生日って、何を祝っているんだろう🎂",
+          "published_at": "2026-09-17T03:06:22.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-02",
+            "end": "2026-10-09"
+          },
+          "growth": {
+            "impression_count": 264,
+            "page_view_count": 9,
+            "like_count": 4,
+            "comment_count": 0
+          },
+          "latest_totals": {
+            "impression_count": 6167,
+            "page_view_count": 376,
+            "like_count": 275,
+            "comment_count": 48
           }
         }
       ]
@@ -954,20 +954,20 @@
   "insights": [
     {
       "type": "period_summary",
-      "text": "期間中にインプレッション +184,846、PV +7,980、スキ +4,544、コメント +1,104。"
+      "text": "期間中にインプレッション +34,117、PV +932、スキ +570、コメント +129。"
     },
     {
       "type": "week_comparison",
-      "text": "PVの増加量は前の7日間と比べて243.6%減少。"
+      "text": "PVの増加量は前の7日間と比べて31.1%減少。"
     },
     {
       "type": "impression_comparison",
-      "text": "インプレッションの増加量は前の7日間と比べて258.0%減少。"
+      "text": "インプレッションの増加量は前の7日間と比べて10.1%増加。"
     },
     {
       "type": "top_article",
-      "note_key": "n77de1f3f5ccc",
-      "text": "期間中もっともPVが伸びた記事は「✨毎日投稿をやめたら、お尻がしっくりこなくなった🤣」で +507PV。"
+      "note_key": "nfe44ff8f59ff",
+      "text": "期間中もっともPVが伸びた記事は「🌱 スキのタネ研究所だよりVol.００８」で +203PV。"
     }
   ]
 }
