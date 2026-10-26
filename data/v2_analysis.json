@@ -1,65 +1,65 @@
 {
-  "generated_at": "2026-10-24T16:09:12Z",
+  "generated_at": "2026-10-25T16:39:05Z",
   "version": 1,
   "summary": {
-    "available_snapshot_days": 35,
+    "available_snapshot_days": 36,
     "comparison_type": "7_day",
     "period": {
-      "start": "2026-10-17",
-      "end": "2026-10-24"
+      "start": "2026-10-18",
+      "end": "2026-10-25"
     },
     "latest_totals": {
-      "impression_count": 1153986,
-      "page_view_count": 48913,
-      "like_count": 34455,
-      "comment_count": 5552
+      "impression_count": 1159110,
+      "page_view_count": 49109,
+      "like_count": 34578,
+      "comment_count": 5584
     },
     "current_period_growth": {
-      "impression_count": 23876,
-      "page_view_count": 959,
-      "like_count": 576,
-      "comment_count": 143
+      "impression_count": 24632,
+      "page_view_count": 993,
+      "like_count": 587,
+      "comment_count": 160
     },
     "rates": {
-      "pv_per_impression_percent": 4.02,
-      "like_per_pv_percent": 60.06,
-      "comment_per_pv_percent": 14.91
+      "pv_per_impression_percent": 4.03,
+      "like_per_pv_percent": 59.11,
+      "comment_per_pv_percent": 16.11
     },
     "previous_period_growth": {
-      "impression_count": 27954,
-      "page_view_count": 1174,
-      "like_count": 705,
-      "comment_count": 155
+      "impression_count": 27805,
+      "page_view_count": 1213,
+      "like_count": 735,
+      "comment_count": 162
     },
     "period_comparison": {
       "impression_count": {
-        "current": 23876,
-        "previous": 27954,
-        "difference": -4078,
-        "change_percent": -14.6
+        "current": 24632,
+        "previous": 27805,
+        "difference": -3173,
+        "change_percent": -11.4
       },
       "page_view_count": {
-        "current": 959,
-        "previous": 1174,
-        "difference": -215,
-        "change_percent": -18.3
+        "current": 993,
+        "previous": 1213,
+        "difference": -220,
+        "change_percent": -18.1
       },
       "like_count": {
-        "current": 576,
-        "previous": 705,
-        "difference": -129,
-        "change_percent": -18.3
+        "current": 587,
+        "previous": 735,
+        "difference": -148,
+        "change_percent": -20.1
       },
       "comment_count": {
-        "current": 143,
-        "previous": 155,
-        "difference": -12,
-        "change_percent": -7.7
+        "current": 160,
+        "previous": 162,
+        "difference": -2,
+        "change_percent": -1.2
       }
     }
   },
   "articles": {
-    "article_count": 225,
+    "article_count": 226,
     "rankings": {
       "impression_count": [
         {
@@ -69,18 +69,18 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-10-18",
-            "end": "2026-10-24"
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 3943,
-            "page_view_count": 215,
-            "like_count": 122,
+            "impression_count": 4112,
+            "page_view_count": 219,
+            "like_count": 128,
             "comment_count": 42
           },
           "latest_totals": {
-            "impression_count": 4969,
-            "page_view_count": 280,
-            "like_count": 183,
+            "impression_count": 5138,
+            "page_view_count": 284,
+            "like_count": 189,
             "comment_count": 48
           }
         },
@@ -91,19 +91,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-10-21",
-            "end": "2026-10-24"
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 3254,
-            "page_view_count": 263,
-            "like_count": 107,
-            "comment_count": 47
+            "impression_count": 3638,
+            "page_view_count": 290,
+            "like_count": 119,
+            "comment_count": 53
           },
           "latest_totals": {
-            "impression_count": 4530,
-            "page_view_count": 328,
-            "like_count": 162,
-            "comment_count": 55
+            "impression_count": 4914,
+            "page_view_count": 355,
+            "like_count": 174,
+            "comment_count": 61
+          }
+        },
+        {
+          "note_key": "n8573001cd0ab",
+          "title": "写本模写、できたよーーーー！！金箔失敗からの怒涛の２週間💦",
+          "published_at": "2026-10-24T10:51:05.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-24",
+            "end": "2026-10-25"
+          },
+          "growth": {
+            "impression_count": 2482,
+            "page_view_count": 121,
+            "like_count": 79,
+            "comment_count": 23
+          },
+          "latest_totals": {
+            "impression_count": 3271,
+            "page_view_count": 203,
+            "like_count": 144,
+            "comment_count": 34
           }
         },
         {
@@ -112,42 +134,20 @@
           "published_at": "2026-10-16T11:10:33.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 2353,
-            "page_view_count": 93,
-            "like_count": 46,
-            "comment_count": 20
+            "impression_count": 1730,
+            "page_view_count": 56,
+            "like_count": 29,
+            "comment_count": 14
           },
           "latest_totals": {
-            "impression_count": 5160,
-            "page_view_count": 269,
-            "like_count": 179,
+            "impression_count": 5342,
+            "page_view_count": 271,
+            "like_count": 183,
             "comment_count": 51
-          }
-        },
-        {
-          "note_key": "n10876a624703",
-          "title": "「零ぴちゅさん企画」うちのオリキャラに本音を聞いてみた。……ところでレンって誰？｜#オリキャラ本音",
-          "published_at": "2026-09-25T11:02:41.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
-          },
-          "growth": {
-            "impression_count": 1446,
-            "page_view_count": 6,
-            "like_count": 0,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 23719,
-            "page_view_count": 272,
-            "like_count": 159,
-            "comment_count": 49
           }
         },
         {
@@ -156,19 +156,19 @@
           "published_at": "2026-10-12T10:56:58.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 1322,
-            "page_view_count": 44,
-            "like_count": 18,
-            "comment_count": 6
+            "impression_count": 1234,
+            "page_view_count": 33,
+            "like_count": 14,
+            "comment_count": 4
           },
           "latest_totals": {
-            "impression_count": 5666,
-            "page_view_count": 358,
-            "like_count": 211,
+            "impression_count": 5846,
+            "page_view_count": 362,
+            "like_count": 214,
             "comment_count": 61
           }
         },
@@ -178,20 +178,42 @@
           "published_at": "2026-10-14T11:04:05.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 1146,
-            "page_view_count": 14,
-            "like_count": 14,
+            "impression_count": 1111,
+            "page_view_count": 11,
+            "like_count": 11,
             "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 5022,
-            "page_view_count": 229,
-            "like_count": 162,
+            "impression_count": 5172,
+            "page_view_count": 231,
+            "like_count": 164,
             "comment_count": 37
+          }
+        },
+        {
+          "note_key": "n10876a624703",
+          "title": "「零ぴちゅさん企画」うちのオリキャラに本音を聞いてみた。……ところでレンって誰？｜#オリキャラ本音",
+          "published_at": "2026-09-25T11:02:41.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-18",
+            "end": "2026-10-25"
+          },
+          "growth": {
+            "impression_count": 998,
+            "page_view_count": 6,
+            "like_count": 0,
+            "comment_count": 0
+          },
+          "latest_totals": {
+            "impression_count": 24060,
+            "page_view_count": 272,
+            "like_count": 159,
+            "comment_count": 49
           }
         },
         {
@@ -200,20 +222,20 @@
           "published_at": "2026-06-09T12:52:27.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 706,
-            "page_view_count": 19,
-            "like_count": 13,
-            "comment_count": 0
+            "impression_count": 779,
+            "page_view_count": 27,
+            "like_count": 18,
+            "comment_count": 3
           },
           "latest_totals": {
-            "impression_count": 28744,
-            "page_view_count": 1355,
-            "like_count": 841,
-            "comment_count": 143
+            "impression_count": 28933,
+            "page_view_count": 1371,
+            "like_count": 849,
+            "comment_count": 146
           }
         },
         {
@@ -222,19 +244,19 @@
           "published_at": "2026-10-10T10:42:54.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 637,
-            "page_view_count": 16,
+            "impression_count": 577,
+            "page_view_count": 15,
             "like_count": 9,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 5310,
-            "page_view_count": 262,
-            "like_count": 185,
+            "impression_count": 5361,
+            "page_view_count": 263,
+            "like_count": 186,
             "comment_count": 34
           }
         },
@@ -244,42 +266,20 @@
           "published_at": "2026-09-30T10:50:06.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 581,
-            "page_view_count": 3,
-            "like_count": 5,
+            "impression_count": 545,
+            "page_view_count": 4,
+            "like_count": 3,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 8548,
-            "page_view_count": 323,
+            "impression_count": 8601,
+            "page_view_count": 324,
             "like_count": 221,
             "comment_count": 46
-          }
-        },
-        {
-          "note_key": "nd0f01f8c31bd",
-          "title": "私を世界の文化にたとえたら✨5か国になった｜UTAKOちゃんの世界文化DNA診断やってみた🌍",
-          "published_at": "2026-10-07T10:41:15.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
-          },
-          "growth": {
-            "impression_count": 506,
-            "page_view_count": 15,
-            "like_count": 7,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 5897,
-            "page_view_count": 366,
-            "like_count": 216,
-            "comment_count": 61
           }
         }
       ],
@@ -291,19 +291,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-10-21",
-            "end": "2026-10-24"
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 3254,
-            "page_view_count": 263,
-            "like_count": 107,
-            "comment_count": 47
+            "impression_count": 3638,
+            "page_view_count": 290,
+            "like_count": 119,
+            "comment_count": 53
           },
           "latest_totals": {
-            "impression_count": 4530,
-            "page_view_count": 328,
-            "like_count": 162,
-            "comment_count": 55
+            "impression_count": 4914,
+            "page_view_count": 355,
+            "like_count": 174,
+            "comment_count": 61
           }
         },
         {
@@ -313,19 +313,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-10-18",
-            "end": "2026-10-24"
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 3943,
-            "page_view_count": 215,
-            "like_count": 122,
+            "impression_count": 4112,
+            "page_view_count": 219,
+            "like_count": 128,
             "comment_count": 42
           },
           "latest_totals": {
-            "impression_count": 4969,
-            "page_view_count": 280,
-            "like_count": 183,
+            "impression_count": 5138,
+            "page_view_count": 284,
+            "like_count": 189,
             "comment_count": 48
+          }
+        },
+        {
+          "note_key": "n8573001cd0ab",
+          "title": "写本模写、できたよーーーー！！金箔失敗からの怒涛の２週間💦",
+          "published_at": "2026-10-24T10:51:05.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-24",
+            "end": "2026-10-25"
+          },
+          "growth": {
+            "impression_count": 2482,
+            "page_view_count": 121,
+            "like_count": 79,
+            "comment_count": 23
+          },
+          "latest_totals": {
+            "impression_count": 3271,
+            "page_view_count": 203,
+            "like_count": 144,
+            "comment_count": 34
           }
         },
         {
@@ -334,19 +356,19 @@
           "published_at": "2026-10-16T11:10:33.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 2353,
-            "page_view_count": 93,
-            "like_count": 46,
-            "comment_count": 20
+            "impression_count": 1730,
+            "page_view_count": 56,
+            "like_count": 29,
+            "comment_count": 14
           },
           "latest_totals": {
-            "impression_count": 5160,
-            "page_view_count": 269,
-            "like_count": 179,
+            "impression_count": 5342,
+            "page_view_count": 271,
+            "like_count": 183,
             "comment_count": 51
           }
         },
@@ -356,19 +378,19 @@
           "published_at": "2026-10-12T10:56:58.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 1322,
-            "page_view_count": 44,
-            "like_count": 18,
-            "comment_count": 6
+            "impression_count": 1234,
+            "page_view_count": 33,
+            "like_count": 14,
+            "comment_count": 4
           },
           "latest_totals": {
-            "impression_count": 5666,
-            "page_view_count": 358,
-            "like_count": 211,
+            "impression_count": 5846,
+            "page_view_count": 362,
+            "like_count": 214,
             "comment_count": 61
           }
         },
@@ -378,20 +400,20 @@
           "published_at": "2026-06-09T12:52:27.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 706,
-            "page_view_count": 19,
-            "like_count": 13,
-            "comment_count": 0
+            "impression_count": 779,
+            "page_view_count": 27,
+            "like_count": 18,
+            "comment_count": 3
           },
           "latest_totals": {
-            "impression_count": 28744,
-            "page_view_count": 1355,
-            "like_count": 841,
-            "comment_count": 143
+            "impression_count": 28933,
+            "page_view_count": 1371,
+            "like_count": 849,
+            "comment_count": 146
           }
         },
         {
@@ -400,64 +422,20 @@
           "published_at": "2026-10-10T10:42:54.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 637,
-            "page_view_count": 16,
+            "impression_count": 577,
+            "page_view_count": 15,
             "like_count": 9,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 5310,
-            "page_view_count": 262,
-            "like_count": 185,
+            "impression_count": 5361,
+            "page_view_count": 263,
+            "like_count": 186,
             "comment_count": 34
-          }
-        },
-        {
-          "note_key": "nd0f01f8c31bd",
-          "title": "私を世界の文化にたとえたら✨5か国になった｜UTAKOちゃんの世界文化DNA診断やってみた🌍",
-          "published_at": "2026-10-07T10:41:15.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
-          },
-          "growth": {
-            "impression_count": 506,
-            "page_view_count": 15,
-            "like_count": 7,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 5897,
-            "page_view_count": 366,
-            "like_count": 216,
-            "comment_count": 61
-          }
-        },
-        {
-          "note_key": "n9694f505c312",
-          "title": "✨ハッピーライティングマラソンお題#68｜今の自分だからこそ、もう一度読みたい本は？",
-          "published_at": "2026-10-14T11:04:05.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
-          },
-          "growth": {
-            "impression_count": 1146,
-            "page_view_count": 14,
-            "like_count": 14,
-            "comment_count": 2
-          },
-          "latest_totals": {
-            "impression_count": 5022,
-            "page_view_count": 229,
-            "like_count": 162,
-            "comment_count": 37
           }
         },
         {
@@ -466,42 +444,64 @@
           "published_at": "2025-02-07T06:55:40.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 62,
-            "page_view_count": 7,
-            "like_count": 2,
+            "impression_count": 68,
+            "page_view_count": 12,
+            "like_count": 3,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 12721,
-            "page_view_count": 1368,
-            "like_count": 873,
+            "impression_count": 12735,
+            "page_view_count": 1375,
+            "like_count": 875,
             "comment_count": 64
           }
         },
         {
-          "note_key": "n384ab7af0e9a",
-          "title": "🌸200記事で気づいたこと✨noteは私にとって「循環する場所」✨",
-          "published_at": "2026-09-11T11:36:43.000Z",
+          "note_key": "n9694f505c312",
+          "title": "✨ハッピーライティングマラソンお題#68｜今の自分だからこそ、もう一度読みたい本は？",
+          "published_at": "2026-10-14T11:04:05.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 75,
-            "page_view_count": 6,
-            "like_count": 1,
-            "comment_count": 1
+            "impression_count": 1111,
+            "page_view_count": 11,
+            "like_count": 11,
+            "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 6737,
-            "page_view_count": 485,
-            "like_count": 266,
-            "comment_count": 98
+            "impression_count": 5172,
+            "page_view_count": 231,
+            "like_count": 164,
+            "comment_count": 37
+          }
+        },
+        {
+          "note_key": "n10876a624703",
+          "title": "「零ぴちゅさん企画」うちのオリキャラに本音を聞いてみた。……ところでレンって誰？｜#オリキャラ本音",
+          "published_at": "2026-09-25T11:02:41.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-18",
+            "end": "2026-10-25"
+          },
+          "growth": {
+            "impression_count": 998,
+            "page_view_count": 6,
+            "like_count": 0,
+            "comment_count": 0
+          },
+          "latest_totals": {
+            "impression_count": 24060,
+            "page_view_count": 272,
+            "like_count": 159,
+            "comment_count": 49
           }
         }
       ],
@@ -513,18 +513,18 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-10-18",
-            "end": "2026-10-24"
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 3943,
-            "page_view_count": 215,
-            "like_count": 122,
+            "impression_count": 4112,
+            "page_view_count": 219,
+            "like_count": 128,
             "comment_count": 42
           },
           "latest_totals": {
-            "impression_count": 4969,
-            "page_view_count": 280,
-            "like_count": 183,
+            "impression_count": 5138,
+            "page_view_count": 284,
+            "like_count": 189,
             "comment_count": 48
           }
         },
@@ -535,19 +535,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-10-21",
-            "end": "2026-10-24"
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 3254,
-            "page_view_count": 263,
-            "like_count": 107,
-            "comment_count": 47
+            "impression_count": 3638,
+            "page_view_count": 290,
+            "like_count": 119,
+            "comment_count": 53
           },
           "latest_totals": {
-            "impression_count": 4530,
-            "page_view_count": 328,
-            "like_count": 162,
-            "comment_count": 55
+            "impression_count": 4914,
+            "page_view_count": 355,
+            "like_count": 174,
+            "comment_count": 61
+          }
+        },
+        {
+          "note_key": "n8573001cd0ab",
+          "title": "写本模写、できたよーーーー！！金箔失敗からの怒涛の２週間💦",
+          "published_at": "2026-10-24T10:51:05.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-24",
+            "end": "2026-10-25"
+          },
+          "growth": {
+            "impression_count": 2482,
+            "page_view_count": 121,
+            "like_count": 79,
+            "comment_count": 23
+          },
+          "latest_totals": {
+            "impression_count": 3271,
+            "page_view_count": 203,
+            "like_count": 144,
+            "comment_count": 34
           }
         },
         {
@@ -556,20 +578,42 @@
           "published_at": "2026-10-16T11:10:33.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 2353,
-            "page_view_count": 93,
-            "like_count": 46,
-            "comment_count": 20
+            "impression_count": 1730,
+            "page_view_count": 56,
+            "like_count": 29,
+            "comment_count": 14
           },
           "latest_totals": {
-            "impression_count": 5160,
-            "page_view_count": 269,
-            "like_count": 179,
+            "impression_count": 5342,
+            "page_view_count": 271,
+            "like_count": 183,
             "comment_count": 51
+          }
+        },
+        {
+          "note_key": "n37180fe24b18",
+          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
+          "published_at": "2026-06-09T12:52:27.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-18",
+            "end": "2026-10-25"
+          },
+          "growth": {
+            "impression_count": 779,
+            "page_view_count": 27,
+            "like_count": 18,
+            "comment_count": 3
+          },
+          "latest_totals": {
+            "impression_count": 28933,
+            "page_view_count": 1371,
+            "like_count": 849,
+            "comment_count": 146
           }
         },
         {
@@ -578,19 +622,19 @@
           "published_at": "2026-10-12T10:56:58.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 1322,
-            "page_view_count": 44,
-            "like_count": 18,
-            "comment_count": 6
+            "impression_count": 1234,
+            "page_view_count": 33,
+            "like_count": 14,
+            "comment_count": 4
           },
           "latest_totals": {
-            "impression_count": 5666,
-            "page_view_count": 358,
-            "like_count": 211,
+            "impression_count": 5846,
+            "page_view_count": 362,
+            "like_count": 214,
             "comment_count": 61
           }
         },
@@ -600,42 +644,20 @@
           "published_at": "2026-10-14T11:04:05.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 1146,
-            "page_view_count": 14,
-            "like_count": 14,
+            "impression_count": 1111,
+            "page_view_count": 11,
+            "like_count": 11,
             "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 5022,
-            "page_view_count": 229,
-            "like_count": 162,
+            "impression_count": 5172,
+            "page_view_count": 231,
+            "like_count": 164,
             "comment_count": 37
-          }
-        },
-        {
-          "note_key": "n37180fe24b18",
-          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
-          "published_at": "2026-06-09T12:52:27.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
-          },
-          "growth": {
-            "impression_count": 706,
-            "page_view_count": 19,
-            "like_count": 13,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 28744,
-            "page_view_count": 1355,
-            "like_count": 841,
-            "comment_count": 143
           }
         },
         {
@@ -644,42 +666,42 @@
           "published_at": "2026-10-10T10:42:54.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 637,
-            "page_view_count": 16,
+            "impression_count": 577,
+            "page_view_count": 15,
             "like_count": 9,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 5310,
-            "page_view_count": 262,
-            "like_count": 185,
+            "impression_count": 5361,
+            "page_view_count": 263,
+            "like_count": 186,
             "comment_count": 34
           }
         },
         {
-          "note_key": "nd0f01f8c31bd",
-          "title": "私を世界の文化にたとえたら✨5か国になった｜UTAKOちゃんの世界文化DNA診断やってみた🌍",
-          "published_at": "2026-10-07T10:41:15.000Z",
+          "note_key": "nb8b95db7176c",
+          "title": "✨きれいな夕日🌇誰に見せたいですか？",
+          "published_at": "2026-08-27T11:51:07.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 506,
-            "page_view_count": 15,
-            "like_count": 7,
+            "impression_count": 119,
+            "page_view_count": 1,
+            "like_count": 5,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 5897,
-            "page_view_count": 366,
-            "like_count": 216,
-            "comment_count": 61
+            "impression_count": 7779,
+            "page_view_count": 305,
+            "like_count": 230,
+            "comment_count": 40
           }
         },
         {
@@ -688,42 +710,20 @@
           "published_at": "2026-04-13T13:38:02.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 91,
+            "impression_count": 92,
             "page_view_count": 3,
             "like_count": 5,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 2119,
+            "impression_count": 2120,
             "page_view_count": 89,
             "like_count": 120,
             "comment_count": 2
-          }
-        },
-        {
-          "note_key": "n70c428071c28",
-          "title": "1枚の画像から30秒のショートムービーは作れる？WeryAIで『境界の図書館』の続きを作ってみた｜PR",
-          "published_at": "2026-09-30T10:50:06.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
-          },
-          "growth": {
-            "impression_count": 581,
-            "page_view_count": 3,
-            "like_count": 5,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 8548,
-            "page_view_count": 323,
-            "like_count": 221,
-            "comment_count": 46
           }
         }
       ],
@@ -735,19 +735,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-10-21",
-            "end": "2026-10-24"
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 3254,
-            "page_view_count": 263,
-            "like_count": 107,
-            "comment_count": 47
+            "impression_count": 3638,
+            "page_view_count": 290,
+            "like_count": 119,
+            "comment_count": 53
           },
           "latest_totals": {
-            "impression_count": 4530,
-            "page_view_count": 328,
-            "like_count": 162,
-            "comment_count": 55
+            "impression_count": 4914,
+            "page_view_count": 355,
+            "like_count": 174,
+            "comment_count": 61
           }
         },
         {
@@ -757,19 +757,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-10-18",
-            "end": "2026-10-24"
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 3943,
-            "page_view_count": 215,
-            "like_count": 122,
+            "impression_count": 4112,
+            "page_view_count": 219,
+            "like_count": 128,
             "comment_count": 42
           },
           "latest_totals": {
-            "impression_count": 4969,
-            "page_view_count": 280,
-            "like_count": 183,
+            "impression_count": 5138,
+            "page_view_count": 284,
+            "like_count": 189,
             "comment_count": 48
+          }
+        },
+        {
+          "note_key": "n8573001cd0ab",
+          "title": "写本模写、できたよーーーー！！金箔失敗からの怒涛の２週間💦",
+          "published_at": "2026-10-24T10:51:05.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-24",
+            "end": "2026-10-25"
+          },
+          "growth": {
+            "impression_count": 2482,
+            "page_view_count": 121,
+            "like_count": 79,
+            "comment_count": 23
+          },
+          "latest_totals": {
+            "impression_count": 3271,
+            "page_view_count": 203,
+            "like_count": 144,
+            "comment_count": 34
           }
         },
         {
@@ -778,19 +800,19 @@
           "published_at": "2026-10-16T11:10:33.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 2353,
-            "page_view_count": 93,
-            "like_count": 46,
-            "comment_count": 20
+            "impression_count": 1730,
+            "page_view_count": 56,
+            "like_count": 29,
+            "comment_count": 14
           },
           "latest_totals": {
-            "impression_count": 5160,
-            "page_view_count": 269,
-            "like_count": 179,
+            "impression_count": 5342,
+            "page_view_count": 271,
+            "like_count": 183,
             "comment_count": 51
           }
         },
@@ -800,20 +822,42 @@
           "published_at": "2026-10-12T10:56:58.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 1322,
-            "page_view_count": 44,
-            "like_count": 18,
-            "comment_count": 6
+            "impression_count": 1234,
+            "page_view_count": 33,
+            "like_count": 14,
+            "comment_count": 4
           },
           "latest_totals": {
-            "impression_count": 5666,
-            "page_view_count": 358,
-            "like_count": 211,
+            "impression_count": 5846,
+            "page_view_count": 362,
+            "like_count": 214,
             "comment_count": 61
+          }
+        },
+        {
+          "note_key": "n37180fe24b18",
+          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
+          "published_at": "2026-06-09T12:52:27.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-18",
+            "end": "2026-10-25"
+          },
+          "growth": {
+            "impression_count": 779,
+            "page_view_count": 27,
+            "like_count": 18,
+            "comment_count": 3
+          },
+          "latest_totals": {
+            "impression_count": 28933,
+            "page_view_count": 1371,
+            "like_count": 849,
+            "comment_count": 146
           }
         },
         {
@@ -822,42 +866,20 @@
           "published_at": "2026-10-14T11:04:05.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 1146,
-            "page_view_count": 14,
-            "like_count": 14,
+            "impression_count": 1111,
+            "page_view_count": 11,
+            "like_count": 11,
             "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 5022,
-            "page_view_count": 229,
-            "like_count": 162,
+            "impression_count": 5172,
+            "page_view_count": 231,
+            "like_count": 164,
             "comment_count": 37
-          }
-        },
-        {
-          "note_key": "n384ab7af0e9a",
-          "title": "🌸200記事で気づいたこと✨noteは私にとって「循環する場所」✨",
-          "published_at": "2026-09-11T11:36:43.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
-          },
-          "growth": {
-            "impression_count": 75,
-            "page_view_count": 6,
-            "like_count": 1,
-            "comment_count": 1
-          },
-          "latest_totals": {
-            "impression_count": 6737,
-            "page_view_count": 485,
-            "like_count": 266,
-            "comment_count": 98
           }
         },
         {
@@ -866,17 +888,17 @@
           "published_at": "2026-09-17T03:06:22.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 122,
-            "page_view_count": 1,
+            "impression_count": 115,
+            "page_view_count": 0,
             "like_count": 0,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 6513,
+            "impression_count": 6534,
             "page_view_count": 380,
             "like_count": 275,
             "comment_count": 48
@@ -888,64 +910,42 @@
           "published_at": "2026-09-15T11:12:58.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 166,
-            "page_view_count": 2,
+            "impression_count": 162,
+            "page_view_count": 3,
             "like_count": 1,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 8253,
-            "page_view_count": 516,
+            "impression_count": 8279,
+            "page_view_count": 517,
             "like_count": 259,
             "comment_count": 74
           }
         },
         {
-          "note_key": "n307f36568762",
-          "title": "今日も読みに行きたくなる✨noteの先輩ふたりへ❤️",
-          "published_at": "2026-09-10T11:54:25.000Z",
+          "note_key": "n384ab7af0e9a",
+          "title": "🌸200記事で気づいたこと✨noteは私にとって「循環する場所」✨",
+          "published_at": "2026-09-11T11:36:43.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
+            "start": "2026-10-18",
+            "end": "2026-10-25"
           },
           "growth": {
-            "impression_count": 34,
-            "page_view_count": 0,
-            "like_count": 0,
+            "impression_count": 75,
+            "page_view_count": 3,
+            "like_count": 1,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 5857,
-            "page_view_count": 339,
-            "like_count": 190,
-            "comment_count": 38
-          }
-        },
-        {
-          "note_key": "nc5f5689d029b",
-          "title": "秋のぷちふく｜まだ食べてないので💦妄想で栗を食べました🌰",
-          "published_at": "2026-09-09T11:21:50.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-17",
-            "end": "2026-10-24"
-          },
-          "growth": {
-            "impression_count": 39,
-            "page_view_count": 0,
-            "like_count": 0,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 5780,
-            "page_view_count": 245,
-            "like_count": 176,
-            "comment_count": 42
+            "impression_count": 6748,
+            "page_view_count": 485,
+            "like_count": 266,
+            "comment_count": 98
           }
         }
       ]
@@ -954,20 +954,20 @@
   "insights": [
     {
       "type": "period_summary",
-      "text": "期間中にインプレッション +23,876、PV +959、スキ +576、コメント +143。"
+      "text": "期間中にインプレッション +24,632、PV +993、スキ +587、コメント +160。"
     },
     {
       "type": "week_comparison",
-      "text": "PVの増加量は前の7日間と比べて18.3%減少。"
+      "text": "PVの増加量は前の7日間と比べて18.1%減少。"
     },
     {
       "type": "impression_comparison",
-      "text": "インプレッションの増加量は前の7日間と比べて14.6%減少。"
+      "text": "インプレッションの増加量は前の7日間と比べて11.4%減少。"
     },
     {
       "type": "top_article",
       "note_key": "n33e480172968",
-      "text": "期間中もっともPVが伸びた記事は「【ハロウィーン🎃MV企画】｜700年前の写本が開いた夜🌉セラフの冒険が始まった✨」で +263PV。"
+      "text": "期間中もっともPVが伸びた記事は「【ハロウィーン🎃MV企画】｜700年前の写本が開いた夜🌉セラフの冒険が始まった✨」で +290PV。"
     }
   ]
 }
