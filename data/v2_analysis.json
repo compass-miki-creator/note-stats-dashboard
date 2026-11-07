@@ -1,109 +1,87 @@
 {
-  "generated_at": "2026-11-04T19:57:18Z",
+  "generated_at": "2026-11-06T19:36:28Z",
   "version": 1,
   "summary": {
-    "available_snapshot_days": 39,
+    "available_snapshot_days": 41,
     "comparison_type": "7_day",
     "period": {
-      "start": "2026-10-21",
-      "end": "2026-11-04"
+      "start": "2026-10-23",
+      "end": "2026-11-06"
     },
     "latest_totals": {
-      "impression_count": 1203007,
-      "page_view_count": 51144,
-      "like_count": 35835,
-      "comment_count": 5876
+      "impression_count": 1213499,
+      "page_view_count": 51475,
+      "like_count": 36082,
+      "comment_count": 5921
     },
     "current_period_growth": {
-      "impression_count": 58613,
-      "page_view_count": 2661,
-      "like_count": 1610,
-      "comment_count": 389
+      "impression_count": 62821,
+      "page_view_count": 2753,
+      "like_count": 1724,
+      "comment_count": 396
     },
     "rates": {
-      "pv_per_impression_percent": 4.54,
-      "like_per_pv_percent": 60.5,
-      "comment_per_pv_percent": 14.62
+      "pv_per_impression_percent": 4.38,
+      "like_per_pv_percent": 62.62,
+      "comment_per_pv_percent": 14.38
     },
     "previous_period_growth": {
-      "impression_count": 26905,
-      "page_view_count": 1027,
-      "like_count": 666,
-      "comment_count": 150
+      "impression_count": 25262,
+      "page_view_count": 949,
+      "like_count": 577,
+      "comment_count": 143
     },
     "period_comparison": {
       "impression_count": {
-        "current": 58613,
-        "previous": 26905,
-        "difference": 31708,
-        "change_percent": 117.9
+        "current": 62821,
+        "previous": 25262,
+        "difference": 37559,
+        "change_percent": 148.7
       },
       "page_view_count": {
-        "current": 2661,
-        "previous": 1027,
-        "difference": 1634,
-        "change_percent": 159.1
+        "current": 2753,
+        "previous": 949,
+        "difference": 1804,
+        "change_percent": 190.1
       },
       "like_count": {
-        "current": 1610,
-        "previous": 666,
-        "difference": 944,
-        "change_percent": 141.7
+        "current": 1724,
+        "previous": 577,
+        "difference": 1147,
+        "change_percent": 198.8
       },
       "comment_count": {
-        "current": 389,
-        "previous": 150,
-        "difference": 239,
-        "change_percent": 159.3
+        "current": 396,
+        "previous": 143,
+        "difference": 253,
+        "change_percent": 176.9
       }
     }
   },
   "articles": {
-    "article_count": 231,
+    "article_count": 232,
     "rankings": {
       "impression_count": [
         {
-          "note_key": "n33e480172968",
-          "title": "【ハロウィーン🎃MV企画】｜700年前の写本が開いた夜🌉セラフの冒険が始まった✨",
-          "published_at": "2026-10-21T11:06:29.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 5502,
-            "page_view_count": 410,
-            "like_count": 143,
-            "comment_count": 76
-          },
-          "latest_totals": {
-            "impression_count": 6778,
-            "page_view_count": 475,
-            "like_count": 198,
-            "comment_count": 84
-          }
-        },
-        {
           "note_key": "n8573001cd0ab",
           "title": "写本模写、できたよーーーー！！金箔失敗からの怒涛の２週間💦",
           "published_at": "2026-10-24T10:51:05.000Z",
           "status": "PUBLISHED",
           "period": {
             "start": "2026-10-24",
-            "end": "2026-11-04"
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 4911,
-            "page_view_count": 246,
-            "like_count": 134,
-            "comment_count": 46
+            "impression_count": 5086,
+            "page_view_count": 253,
+            "like_count": 135,
+            "comment_count": 48
           },
           "latest_totals": {
-            "impression_count": 5700,
-            "page_view_count": 328,
-            "like_count": 199,
-            "comment_count": 57
+            "impression_count": 5875,
+            "page_view_count": 335,
+            "like_count": 200,
+            "comment_count": 59
           }
         },
         {
@@ -113,19 +91,63 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-02",
-            "end": "2026-11-04"
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 2818,
-            "page_view_count": 153,
-            "like_count": 102,
-            "comment_count": 20
+            "impression_count": 3820,
+            "page_view_count": 189,
+            "like_count": 128,
+            "comment_count": 26
           },
           "latest_totals": {
-            "impression_count": 3854,
-            "page_view_count": 242,
-            "like_count": 182,
-            "comment_count": 37
+            "impression_count": 4856,
+            "page_view_count": 278,
+            "like_count": 208,
+            "comment_count": 43
+          }
+        },
+        {
+          "note_key": "n64ec8f6150b4",
+          "title": "✨ハッピーライティングマラソンお題#71｜「なぜか惹かれる」と感じているものはありますか？",
+          "published_at": "2026-11-04T11:02:56.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-04",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 3158,
+            "page_view_count": 129,
+            "like_count": 99,
+            "comment_count": 22
+          },
+          "latest_totals": {
+            "impression_count": 4544,
+            "page_view_count": 210,
+            "like_count": 176,
+            "comment_count": 36
+          }
+        },
+        {
+          "note_key": "n33e480172968",
+          "title": "【ハロウィーン🎃MV企画】｜700年前の写本が開いた夜🌉セラフの冒険が始まった✨",
+          "published_at": "2026-10-21T11:06:29.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-23",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 2977,
+            "page_view_count": 216,
+            "like_count": 55,
+            "comment_count": 41
+          },
+          "latest_totals": {
+            "impression_count": 7030,
+            "page_view_count": 483,
+            "like_count": 198,
+            "comment_count": 84
           }
         },
         {
@@ -134,20 +156,20 @@
           "published_at": "2026-06-09T12:52:27.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
+            "start": "2026-10-23",
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 2147,
-            "page_view_count": 112,
-            "like_count": 55,
-            "comment_count": 20
+            "impression_count": 2284,
+            "page_view_count": 122,
+            "like_count": 60,
+            "comment_count": 24
           },
           "latest_totals": {
-            "impression_count": 30600,
-            "page_view_count": 1463,
-            "like_count": 894,
-            "comment_count": 163
+            "impression_count": 30910,
+            "page_view_count": 1474,
+            "like_count": 900,
+            "comment_count": 167
           }
         },
         {
@@ -156,264 +178,20 @@
           "published_at": "2026-10-16T11:10:33.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
+            "start": "2026-10-23",
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 1964,
-            "page_view_count": 38,
-            "like_count": 20,
-            "comment_count": 4
-          },
-          "latest_totals": {
-            "impression_count": 6531,
-            "page_view_count": 284,
-            "like_count": 192,
-            "comment_count": 53
-          }
-        },
-        {
-          "note_key": "n8930d7f285cd",
-          "title": "🌱 スキのタネ研究所だよりVol.009",
-          "published_at": "2026-10-18T11:12:27.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 1735,
-            "page_view_count": 43,
-            "like_count": 29,
-            "comment_count": 2
-          },
-          "latest_totals": {
-            "impression_count": 6093,
-            "page_view_count": 302,
-            "like_count": 195,
-            "comment_count": 48
-          }
-        },
-        {
-          "note_key": "n19c51a7a4565",
-          "title": "✨世界のハロウィンを見てきて〜✨｜セラフのHALLOWEEN WORLD TOUR🎃👻",
-          "published_at": "2026-10-12T10:56:58.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 1570,
-            "page_view_count": 23,
+            "impression_count": 1652,
+            "page_view_count": 35,
             "like_count": 16,
-            "comment_count": 2
+            "comment_count": 5
           },
           "latest_totals": {
-            "impression_count": 6749,
-            "page_view_count": 373,
-            "like_count": 222,
-            "comment_count": 61
-          }
-        },
-        {
-          "note_key": "n10876a624703",
-          "title": "「零ぴちゅさん企画」うちのオリキャラに本音を聞いてみた。……ところでレンって誰？｜#オリキャラ本音",
-          "published_at": "2026-09-25T11:02:41.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 1338,
-            "page_view_count": 3,
-            "like_count": 0,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 24533,
-            "page_view_count": 272,
-            "like_count": 159,
-            "comment_count": 49
-          }
-        },
-        {
-          "note_key": "n9694f505c312",
-          "title": "✨ハッピーライティングマラソンお題#68｜今の自分だからこそ、もう一度読みたい本は？",
-          "published_at": "2026-10-14T11:04:05.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 1247,
-            "page_view_count": 11,
-            "like_count": 9,
-            "comment_count": 1
-          },
-          "latest_totals": {
-            "impression_count": 5863,
-            "page_view_count": 238,
-            "like_count": 168,
-            "comment_count": 37
-          }
-        },
-        {
-          "note_key": "n70c428071c28",
-          "title": "1枚の画像から30秒のショートムービーは作れる？WeryAIで『境界の図書館』の続きを作ってみた｜PR",
-          "published_at": "2026-09-30T10:50:06.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 998,
-            "page_view_count": 3,
-            "like_count": 2,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 9272,
-            "page_view_count": 326,
-            "like_count": 222,
-            "comment_count": 46
-          }
-        }
-      ],
-      "page_view_count": [
-        {
-          "note_key": "n33e480172968",
-          "title": "【ハロウィーン🎃MV企画】｜700年前の写本が開いた夜🌉セラフの冒険が始まった✨",
-          "published_at": "2026-10-21T11:06:29.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 5502,
-            "page_view_count": 410,
-            "like_count": 143,
-            "comment_count": 76
-          },
-          "latest_totals": {
-            "impression_count": 6778,
-            "page_view_count": 475,
-            "like_count": 198,
-            "comment_count": 84
-          }
-        },
-        {
-          "note_key": "n8573001cd0ab",
-          "title": "写本模写、できたよーーーー！！金箔失敗からの怒涛の２週間💦",
-          "published_at": "2026-10-24T10:51:05.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-24",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 4911,
-            "page_view_count": 246,
-            "like_count": 134,
-            "comment_count": 46
-          },
-          "latest_totals": {
-            "impression_count": 5700,
-            "page_view_count": 328,
-            "like_count": 199,
-            "comment_count": 57
-          }
-        },
-        {
-          "note_key": "n64d14a34ffdc",
-          "title": "🌱 スキのタネ研究所だより Vol.010",
-          "published_at": "2026-11-02T11:04:33.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-02",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 2818,
-            "page_view_count": 153,
-            "like_count": 102,
-            "comment_count": 20
-          },
-          "latest_totals": {
-            "impression_count": 3854,
-            "page_view_count": 242,
-            "like_count": 182,
-            "comment_count": 37
-          }
-        },
-        {
-          "note_key": "n37180fe24b18",
-          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
-          "published_at": "2026-06-09T12:52:27.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 2147,
-            "page_view_count": 112,
-            "like_count": 55,
-            "comment_count": 20
-          },
-          "latest_totals": {
-            "impression_count": 30600,
-            "page_view_count": 1463,
-            "like_count": 894,
-            "comment_count": 163
-          }
-        },
-        {
-          "note_key": "n8930d7f285cd",
-          "title": "🌱 スキのタネ研究所だよりVol.009",
-          "published_at": "2026-10-18T11:12:27.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 1735,
-            "page_view_count": 43,
-            "like_count": 29,
-            "comment_count": 2
-          },
-          "latest_totals": {
-            "impression_count": 6093,
-            "page_view_count": 302,
-            "like_count": 195,
-            "comment_count": 48
-          }
-        },
-        {
-          "note_key": "nbc90ee915a71",
-          "title": "✨ハッピーライティングマラソンお題#69｜もし本を書くなら、どんな本を書いてみたい？",
-          "published_at": "2026-10-16T11:10:33.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 1964,
-            "page_view_count": 38,
-            "like_count": 20,
-            "comment_count": 4
-          },
-          "latest_totals": {
-            "impression_count": 6531,
-            "page_view_count": 284,
-            "like_count": 192,
-            "comment_count": 53
+            "impression_count": 6622,
+            "page_view_count": 291,
+            "like_count": 194,
+            "comment_count": 55
           }
         },
         {
@@ -423,41 +201,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-02",
-            "end": "2026-11-04"
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 966,
-            "page_view_count": 36,
-            "like_count": 21,
+            "impression_count": 1475,
+            "page_view_count": 50,
+            "like_count": 34,
             "comment_count": 7
           },
           "latest_totals": {
-            "impression_count": 3145,
-            "page_view_count": 192,
-            "like_count": 149,
+            "impression_count": 3654,
+            "page_view_count": 206,
+            "like_count": 162,
             "comment_count": 30
           }
         },
         {
-          "note_key": "n19c51a7a4565",
-          "title": "✨世界のハロウィンを見てきて〜✨｜セラフのHALLOWEEN WORLD TOUR🎃👻",
-          "published_at": "2026-10-12T10:56:58.000Z",
+          "note_key": "n2b804b0ecc28",
+          "title": "✨夢のハロウィンカフェから☕️なぜか仮装大会へ！？🎃😂",
+          "published_at": "2026-10-28T11:02:51.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
+            "start": "2026-11-02",
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 1570,
-            "page_view_count": 23,
-            "like_count": 16,
+            "impression_count": 1467,
+            "page_view_count": 19,
+            "like_count": 13,
             "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 6749,
-            "page_view_count": 373,
-            "like_count": 222,
-            "comment_count": 61
+            "impression_count": 5838,
+            "page_view_count": 327,
+            "like_count": 206,
+            "comment_count": 36
           }
         },
         {
@@ -467,67 +245,45 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-02",
-            "end": "2026-11-04"
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 834,
-            "page_view_count": 22,
-            "like_count": 13,
+            "impression_count": 1410,
+            "page_view_count": 27,
+            "like_count": 18,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 4774,
-            "page_view_count": 342,
-            "like_count": 203,
+            "impression_count": 5350,
+            "page_view_count": 347,
+            "like_count": 208,
             "comment_count": 59
           }
         },
         {
-          "note_key": "na57710065283",
-          "title": "「夏の余白」から生まれた曲「Summer Fades」🌊",
-          "published_at": "2026-09-28T11:03:26.000Z",
+          "note_key": "n8930d7f285cd",
+          "title": "🌱 スキのタネ研究所だよりVol.009",
+          "published_at": "2026-10-18T11:12:27.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
+            "start": "2026-10-23",
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 292,
-            "page_view_count": 16,
-            "like_count": 3,
-            "comment_count": 2
+            "impression_count": 1391,
+            "page_view_count": 31,
+            "like_count": 13,
+            "comment_count": 1
           },
           "latest_totals": {
-            "impression_count": 5429,
-            "page_view_count": 244,
-            "like_count": 154,
-            "comment_count": 39
+            "impression_count": 6186,
+            "page_view_count": 302,
+            "like_count": 195,
+            "comment_count": 48
           }
         }
       ],
-      "like_count": [
-        {
-          "note_key": "n33e480172968",
-          "title": "【ハロウィーン🎃MV企画】｜700年前の写本が開いた夜🌉セラフの冒険が始まった✨",
-          "published_at": "2026-10-21T11:06:29.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 5502,
-            "page_view_count": 410,
-            "like_count": 143,
-            "comment_count": 76
-          },
-          "latest_totals": {
-            "impression_count": 6778,
-            "page_view_count": 475,
-            "like_count": 198,
-            "comment_count": 84
-          }
-        },
+      "page_view_count": [
         {
           "note_key": "n8573001cd0ab",
           "title": "写本模写、できたよーーーー！！金箔失敗からの怒涛の２週間💦",
@@ -535,19 +291,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-10-24",
-            "end": "2026-11-04"
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 4911,
-            "page_view_count": 246,
-            "like_count": 134,
-            "comment_count": 46
+            "impression_count": 5086,
+            "page_view_count": 253,
+            "like_count": 135,
+            "comment_count": 48
           },
           "latest_totals": {
-            "impression_count": 5700,
-            "page_view_count": 328,
-            "like_count": 199,
-            "comment_count": 57
+            "impression_count": 5875,
+            "page_view_count": 335,
+            "like_count": 200,
+            "comment_count": 59
+          }
+        },
+        {
+          "note_key": "n33e480172968",
+          "title": "【ハロウィーン🎃MV企画】｜700年前の写本が開いた夜🌉セラフの冒険が始まった✨",
+          "published_at": "2026-10-21T11:06:29.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-23",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 2977,
+            "page_view_count": 216,
+            "like_count": 55,
+            "comment_count": 41
+          },
+          "latest_totals": {
+            "impression_count": 7030,
+            "page_view_count": 483,
+            "like_count": 198,
+            "comment_count": 84
           }
         },
         {
@@ -557,19 +335,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-02",
-            "end": "2026-11-04"
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 2818,
-            "page_view_count": 153,
-            "like_count": 102,
-            "comment_count": 20
+            "impression_count": 3820,
+            "page_view_count": 189,
+            "like_count": 128,
+            "comment_count": 26
           },
           "latest_totals": {
-            "impression_count": 3854,
-            "page_view_count": 242,
-            "like_count": 182,
-            "comment_count": 37
+            "impression_count": 4856,
+            "page_view_count": 278,
+            "like_count": 208,
+            "comment_count": 43
+          }
+        },
+        {
+          "note_key": "n64ec8f6150b4",
+          "title": "✨ハッピーライティングマラソンお題#71｜「なぜか惹かれる」と感じているものはありますか？",
+          "published_at": "2026-11-04T11:02:56.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-04",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 3158,
+            "page_view_count": 129,
+            "like_count": 99,
+            "comment_count": 22
+          },
+          "latest_totals": {
+            "impression_count": 4544,
+            "page_view_count": 210,
+            "like_count": 176,
+            "comment_count": 36
           }
         },
         {
@@ -578,42 +378,20 @@
           "published_at": "2026-06-09T12:52:27.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
+            "start": "2026-10-23",
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 2147,
-            "page_view_count": 112,
-            "like_count": 55,
-            "comment_count": 20
+            "impression_count": 2284,
+            "page_view_count": 122,
+            "like_count": 60,
+            "comment_count": 24
           },
           "latest_totals": {
-            "impression_count": 30600,
-            "page_view_count": 1463,
-            "like_count": 894,
-            "comment_count": 163
-          }
-        },
-        {
-          "note_key": "n8930d7f285cd",
-          "title": "🌱 スキのタネ研究所だよりVol.009",
-          "published_at": "2026-10-18T11:12:27.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 1735,
-            "page_view_count": 43,
-            "like_count": 29,
-            "comment_count": 2
-          },
-          "latest_totals": {
-            "impression_count": 6093,
-            "page_view_count": 302,
-            "like_count": 195,
-            "comment_count": 48
+            "impression_count": 30910,
+            "page_view_count": 1474,
+            "like_count": 900,
+            "comment_count": 167
           }
         },
         {
@@ -623,18 +401,18 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-02",
-            "end": "2026-11-04"
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 966,
-            "page_view_count": 36,
-            "like_count": 21,
+            "impression_count": 1475,
+            "page_view_count": 50,
+            "like_count": 34,
             "comment_count": 7
           },
           "latest_totals": {
-            "impression_count": 3145,
-            "page_view_count": 192,
-            "like_count": 149,
+            "impression_count": 3654,
+            "page_view_count": 206,
+            "like_count": 162,
             "comment_count": 30
           }
         },
@@ -644,20 +422,64 @@
           "published_at": "2026-10-16T11:10:33.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
+            "start": "2026-10-23",
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 1964,
-            "page_view_count": 38,
-            "like_count": 20,
-            "comment_count": 4
+            "impression_count": 1652,
+            "page_view_count": 35,
+            "like_count": 16,
+            "comment_count": 5
           },
           "latest_totals": {
-            "impression_count": 6531,
-            "page_view_count": 284,
-            "like_count": 192,
-            "comment_count": 53
+            "impression_count": 6622,
+            "page_view_count": 291,
+            "like_count": 194,
+            "comment_count": 55
+          }
+        },
+        {
+          "note_key": "n8930d7f285cd",
+          "title": "🌱 スキのタネ研究所だよりVol.009",
+          "published_at": "2026-10-18T11:12:27.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-23",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 1391,
+            "page_view_count": 31,
+            "like_count": 13,
+            "comment_count": 1
+          },
+          "latest_totals": {
+            "impression_count": 6186,
+            "page_view_count": 302,
+            "like_count": 195,
+            "comment_count": 48
+          }
+        },
+        {
+          "note_key": "ncdc26734e8b5",
+          "title": "✨ しれネコハロウィンランドを満喫🎃占い・コスプレ・写真館レポート ✨",
+          "published_at": "2026-10-30T10:49:13.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-02",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 1410,
+            "page_view_count": 27,
+            "like_count": 18,
+            "comment_count": 0
+          },
+          "latest_totals": {
+            "impression_count": 5350,
+            "page_view_count": 347,
+            "like_count": 208,
+            "comment_count": 59
           }
         },
         {
@@ -666,19 +488,219 @@
           "published_at": "2026-10-12T10:56:58.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
+            "start": "2026-10-23",
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 1570,
-            "page_view_count": 23,
-            "like_count": 16,
-            "comment_count": 2
+            "impression_count": 1367,
+            "page_view_count": 25,
+            "like_count": 14,
+            "comment_count": 1
           },
           "latest_totals": {
-            "impression_count": 6749,
-            "page_view_count": 373,
-            "like_count": 222,
+            "impression_count": 6866,
+            "page_view_count": 378,
+            "like_count": 223,
+            "comment_count": 61
+          }
+        }
+      ],
+      "like_count": [
+        {
+          "note_key": "n8573001cd0ab",
+          "title": "写本模写、できたよーーーー！！金箔失敗からの怒涛の２週間💦",
+          "published_at": "2026-10-24T10:51:05.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-24",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 5086,
+            "page_view_count": 253,
+            "like_count": 135,
+            "comment_count": 48
+          },
+          "latest_totals": {
+            "impression_count": 5875,
+            "page_view_count": 335,
+            "like_count": 200,
+            "comment_count": 59
+          }
+        },
+        {
+          "note_key": "n64d14a34ffdc",
+          "title": "🌱 スキのタネ研究所だより Vol.010",
+          "published_at": "2026-11-02T11:04:33.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-02",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 3820,
+            "page_view_count": 189,
+            "like_count": 128,
+            "comment_count": 26
+          },
+          "latest_totals": {
+            "impression_count": 4856,
+            "page_view_count": 278,
+            "like_count": 208,
+            "comment_count": 43
+          }
+        },
+        {
+          "note_key": "n64ec8f6150b4",
+          "title": "✨ハッピーライティングマラソンお題#71｜「なぜか惹かれる」と感じているものはありますか？",
+          "published_at": "2026-11-04T11:02:56.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-04",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 3158,
+            "page_view_count": 129,
+            "like_count": 99,
+            "comment_count": 22
+          },
+          "latest_totals": {
+            "impression_count": 4544,
+            "page_view_count": 210,
+            "like_count": 176,
+            "comment_count": 36
+          }
+        },
+        {
+          "note_key": "n37180fe24b18",
+          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
+          "published_at": "2026-06-09T12:52:27.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-23",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 2284,
+            "page_view_count": 122,
+            "like_count": 60,
+            "comment_count": 24
+          },
+          "latest_totals": {
+            "impression_count": 30910,
+            "page_view_count": 1474,
+            "like_count": 900,
+            "comment_count": 167
+          }
+        },
+        {
+          "note_key": "n33e480172968",
+          "title": "【ハロウィーン🎃MV企画】｜700年前の写本が開いた夜🌉セラフの冒険が始まった✨",
+          "published_at": "2026-10-21T11:06:29.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-23",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 2977,
+            "page_view_count": 216,
+            "like_count": 55,
+            "comment_count": 41
+          },
+          "latest_totals": {
+            "impression_count": 7030,
+            "page_view_count": 483,
+            "like_count": 198,
+            "comment_count": 84
+          }
+        },
+        {
+          "note_key": "n9a79cf35fb2a",
+          "title": "カレントボディのLEDマスクで肌は変わる？５０代最新美容テクノロジーに挑戦✨",
+          "published_at": "2026-11-01T10:38:48.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-02",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 1475,
+            "page_view_count": 50,
+            "like_count": 34,
+            "comment_count": 7
+          },
+          "latest_totals": {
+            "impression_count": 3654,
+            "page_view_count": 206,
+            "like_count": 162,
+            "comment_count": 30
+          }
+        },
+        {
+          "note_key": "ncdc26734e8b5",
+          "title": "✨ しれネコハロウィンランドを満喫🎃占い・コスプレ・写真館レポート ✨",
+          "published_at": "2026-10-30T10:49:13.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-02",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 1410,
+            "page_view_count": 27,
+            "like_count": 18,
+            "comment_count": 0
+          },
+          "latest_totals": {
+            "impression_count": 5350,
+            "page_view_count": 347,
+            "like_count": 208,
+            "comment_count": 59
+          }
+        },
+        {
+          "note_key": "nbc90ee915a71",
+          "title": "✨ハッピーライティングマラソンお題#69｜もし本を書くなら、どんな本を書いてみたい？",
+          "published_at": "2026-10-16T11:10:33.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-23",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 1652,
+            "page_view_count": 35,
+            "like_count": 16,
+            "comment_count": 5
+          },
+          "latest_totals": {
+            "impression_count": 6622,
+            "page_view_count": 291,
+            "like_count": 194,
+            "comment_count": 55
+          }
+        },
+        {
+          "note_key": "n19c51a7a4565",
+          "title": "✨世界のハロウィンを見てきて〜✨｜セラフのHALLOWEEN WORLD TOUR🎃👻",
+          "published_at": "2026-10-12T10:56:58.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-23",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 1367,
+            "page_view_count": 25,
+            "like_count": 14,
+            "comment_count": 1
+          },
+          "latest_totals": {
+            "impression_count": 6866,
+            "page_view_count": 378,
+            "like_count": 223,
             "comment_count": 61
           }
         },
@@ -688,68 +710,24 @@
           "published_at": "2026-10-07T10:41:15.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
+            "start": "2026-10-23",
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 943,
+            "impression_count": 923,
             "page_view_count": 12,
-            "like_count": 15,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 6694,
-            "page_view_count": 377,
-            "like_count": 229,
-            "comment_count": 61
-          }
-        },
-        {
-          "note_key": "ncdc26734e8b5",
-          "title": "✨ しれネコハロウィンランドを満喫🎃占い・コスプレ・写真館レポート ✨",
-          "published_at": "2026-10-30T10:49:13.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-02",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 834,
-            "page_view_count": 22,
             "like_count": 13,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 4774,
-            "page_view_count": 342,
-            "like_count": 203,
-            "comment_count": 59
+            "impression_count": 6783,
+            "page_view_count": 378,
+            "like_count": 229,
+            "comment_count": 61
           }
         }
       ],
       "comment_count": [
-        {
-          "note_key": "n33e480172968",
-          "title": "【ハロウィーン🎃MV企画】｜700年前の写本が開いた夜🌉セラフの冒険が始まった✨",
-          "published_at": "2026-10-21T11:06:29.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 5502,
-            "page_view_count": 410,
-            "like_count": 143,
-            "comment_count": 76
-          },
-          "latest_totals": {
-            "impression_count": 6778,
-            "page_view_count": 475,
-            "like_count": 198,
-            "comment_count": 84
-          }
-        },
         {
           "note_key": "n8573001cd0ab",
           "title": "写本模写、できたよーーーー！！金箔失敗からの怒涛の２週間💦",
@@ -757,41 +735,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-10-24",
-            "end": "2026-11-04"
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 4911,
-            "page_view_count": 246,
-            "like_count": 134,
-            "comment_count": 46
+            "impression_count": 5086,
+            "page_view_count": 253,
+            "like_count": 135,
+            "comment_count": 48
           },
           "latest_totals": {
-            "impression_count": 5700,
-            "page_view_count": 328,
-            "like_count": 199,
-            "comment_count": 57
+            "impression_count": 5875,
+            "page_view_count": 335,
+            "like_count": 200,
+            "comment_count": 59
           }
         },
         {
-          "note_key": "n37180fe24b18",
-          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
-          "published_at": "2026-06-09T12:52:27.000Z",
+          "note_key": "n33e480172968",
+          "title": "【ハロウィーン🎃MV企画】｜700年前の写本が開いた夜🌉セラフの冒険が始まった✨",
+          "published_at": "2026-10-21T11:06:29.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
+            "start": "2026-10-23",
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 2147,
-            "page_view_count": 112,
+            "impression_count": 2977,
+            "page_view_count": 216,
             "like_count": 55,
-            "comment_count": 20
+            "comment_count": 41
           },
           "latest_totals": {
-            "impression_count": 30600,
-            "page_view_count": 1463,
-            "like_count": 894,
-            "comment_count": 163
+            "impression_count": 7030,
+            "page_view_count": 483,
+            "like_count": 198,
+            "comment_count": 84
           }
         },
         {
@@ -801,19 +779,63 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-02",
-            "end": "2026-11-04"
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 2818,
-            "page_view_count": 153,
-            "like_count": 102,
-            "comment_count": 20
+            "impression_count": 3820,
+            "page_view_count": 189,
+            "like_count": 128,
+            "comment_count": 26
           },
           "latest_totals": {
-            "impression_count": 3854,
-            "page_view_count": 242,
-            "like_count": 182,
-            "comment_count": 37
+            "impression_count": 4856,
+            "page_view_count": 278,
+            "like_count": 208,
+            "comment_count": 43
+          }
+        },
+        {
+          "note_key": "n37180fe24b18",
+          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
+          "published_at": "2026-06-09T12:52:27.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-10-23",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 2284,
+            "page_view_count": 122,
+            "like_count": 60,
+            "comment_count": 24
+          },
+          "latest_totals": {
+            "impression_count": 30910,
+            "page_view_count": 1474,
+            "like_count": 900,
+            "comment_count": 167
+          }
+        },
+        {
+          "note_key": "n64ec8f6150b4",
+          "title": "✨ハッピーライティングマラソンお題#71｜「なぜか惹かれる」と感じているものはありますか？",
+          "published_at": "2026-11-04T11:02:56.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-04",
+            "end": "2026-11-06"
+          },
+          "growth": {
+            "impression_count": 3158,
+            "page_view_count": 129,
+            "like_count": 99,
+            "comment_count": 22
+          },
+          "latest_totals": {
+            "impression_count": 4544,
+            "page_view_count": 210,
+            "like_count": 176,
+            "comment_count": 36
           }
         },
         {
@@ -823,18 +845,18 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-02",
-            "end": "2026-11-04"
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 966,
-            "page_view_count": 36,
-            "like_count": 21,
+            "impression_count": 1475,
+            "page_view_count": 50,
+            "like_count": 34,
             "comment_count": 7
           },
           "latest_totals": {
-            "impression_count": 3145,
-            "page_view_count": 192,
-            "like_count": 149,
+            "impression_count": 3654,
+            "page_view_count": 206,
+            "like_count": 162,
             "comment_count": 30
           }
         },
@@ -844,20 +866,20 @@
           "published_at": "2026-10-16T11:10:33.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
+            "start": "2026-10-23",
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 1964,
-            "page_view_count": 38,
-            "like_count": 20,
-            "comment_count": 4
+            "impression_count": 1652,
+            "page_view_count": 35,
+            "like_count": 16,
+            "comment_count": 5
           },
           "latest_totals": {
-            "impression_count": 6531,
-            "page_view_count": 284,
-            "like_count": 192,
-            "comment_count": 53
+            "impression_count": 6622,
+            "page_view_count": 291,
+            "like_count": 194,
+            "comment_count": 55
           }
         },
         {
@@ -866,17 +888,17 @@
           "published_at": "2026-06-24T11:51:13.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
+            "start": "2026-10-23",
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 375,
+            "impression_count": 394,
             "page_view_count": 10,
             "like_count": 2,
             "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 14735,
+            "impression_count": 14783,
             "page_view_count": 407,
             "like_count": 205,
             "comment_count": 30
@@ -888,17 +910,17 @@
           "published_at": "2026-05-28T11:33:53.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
+            "start": "2026-10-23",
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 12,
+            "impression_count": 10,
             "page_view_count": 9,
             "like_count": 0,
             "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 6156,
+            "impression_count": 6157,
             "page_view_count": 318,
             "like_count": 190,
             "comment_count": 50
@@ -910,42 +932,20 @@
           "published_at": "2026-09-28T11:03:26.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
+            "start": "2026-10-23",
+            "end": "2026-11-06"
           },
           "growth": {
-            "impression_count": 292,
+            "impression_count": 289,
             "page_view_count": 16,
             "like_count": 3,
             "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 5429,
+            "impression_count": 5453,
             "page_view_count": 244,
             "like_count": 154,
             "comment_count": 39
-          }
-        },
-        {
-          "note_key": "n19c51a7a4565",
-          "title": "✨世界のハロウィンを見てきて〜✨｜セラフのHALLOWEEN WORLD TOUR🎃👻",
-          "published_at": "2026-10-12T10:56:58.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-10-21",
-            "end": "2026-11-04"
-          },
-          "growth": {
-            "impression_count": 1570,
-            "page_view_count": 23,
-            "like_count": 16,
-            "comment_count": 2
-          },
-          "latest_totals": {
-            "impression_count": 6749,
-            "page_view_count": 373,
-            "like_count": 222,
-            "comment_count": 61
           }
         }
       ]
@@ -954,20 +954,20 @@
   "insights": [
     {
       "type": "period_summary",
-      "text": "期間中にインプレッション +58,613、PV +2,661、スキ +1,610、コメント +389。"
+      "text": "期間中にインプレッション +62,821、PV +2,753、スキ +1,724、コメント +396。"
     },
     {
       "type": "week_comparison",
-      "text": "PVの増加量は前の7日間と比べて159.1%増加。"
+      "text": "PVの増加量は前の7日間と比べて190.1%増加。"
     },
     {
       "type": "impression_comparison",
-      "text": "インプレッションの増加量は前の7日間と比べて117.9%増加。"
+      "text": "インプレッションの増加量は前の7日間と比べて148.7%増加。"
     },
     {
       "type": "top_article",
-      "note_key": "n33e480172968",
-      "text": "期間中もっともPVが伸びた記事は「【ハロウィーン🎃MV企画】｜700年前の写本が開いた夜🌉セラフの冒険が始まった✨」で +410PV。"
+      "note_key": "n8573001cd0ab",
+      "text": "期間中もっともPVが伸びた記事は「写本模写、できたよーーーー！！金箔失敗からの怒涛の２週間💦」で +253PV。"
     }
   ]
 }
