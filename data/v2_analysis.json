@@ -1,65 +1,65 @@
 {
-  "generated_at": "2026-11-13T19:56:05Z",
+  "generated_at": "2026-11-14T18:22:27Z",
   "version": 1,
   "summary": {
-    "available_snapshot_days": 48,
+    "available_snapshot_days": 49,
     "comparison_type": "7_day",
     "period": {
-      "start": "2026-11-06",
-      "end": "2026-11-13"
+      "start": "2026-11-07",
+      "end": "2026-11-14"
     },
     "latest_totals": {
-      "impression_count": 1262385,
-      "page_view_count": 52999,
-      "like_count": 37050,
-      "comment_count": 6120
+      "impression_count": 1269986,
+      "page_view_count": 53265,
+      "like_count": 37215,
+      "comment_count": 6158
     },
     "current_period_growth": {
-      "impression_count": 48886,
-      "page_view_count": 1524,
-      "like_count": 968,
-      "comment_count": 199
+      "impression_count": 51436,
+      "page_view_count": 1588,
+      "like_count": 1022,
+      "comment_count": 194
     },
     "rates": {
-      "pv_per_impression_percent": 3.12,
-      "like_per_pv_percent": 63.52,
-      "comment_per_pv_percent": 13.06
+      "pv_per_impression_percent": 3.09,
+      "like_per_pv_percent": 64.36,
+      "comment_per_pv_percent": 12.22
     },
     "previous_period_growth": {
-      "impression_count": 62821,
-      "page_view_count": 2753,
-      "like_count": 1724,
-      "comment_count": 396
+      "impression_count": 64564,
+      "page_view_count": 2764,
+      "like_count": 1738,
+      "comment_count": 412
     },
     "period_comparison": {
       "impression_count": {
-        "current": 48886,
-        "previous": 62821,
-        "difference": -13935,
-        "change_percent": -22.2
+        "current": 51436,
+        "previous": 64564,
+        "difference": -13128,
+        "change_percent": -20.3
       },
       "page_view_count": {
-        "current": 1524,
-        "previous": 2753,
-        "difference": -1229,
-        "change_percent": -44.6
+        "current": 1588,
+        "previous": 2764,
+        "difference": -1176,
+        "change_percent": -42.5
       },
       "like_count": {
-        "current": 968,
-        "previous": 1724,
-        "difference": -756,
-        "change_percent": -43.9
+        "current": 1022,
+        "previous": 1738,
+        "difference": -716,
+        "change_percent": -41.2
       },
       "comment_count": {
-        "current": 199,
-        "previous": 396,
-        "difference": -197,
-        "change_percent": -49.7
+        "current": 194,
+        "previous": 412,
+        "difference": -218,
+        "change_percent": -52.9
       }
     }
   },
   "articles": {
-    "article_count": 236,
+    "article_count": 237,
     "rankings": {
       "impression_count": [
         {
@@ -68,20 +68,20 @@
           "published_at": "2026-11-06T10:10:00.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 11286,
-            "page_view_count": 502,
-            "like_count": 208,
-            "comment_count": 90
+            "impression_count": 11272,
+            "page_view_count": 375,
+            "like_count": 141,
+            "comment_count": 58
           },
           "latest_totals": {
-            "impression_count": 12504,
-            "page_view_count": 587,
-            "like_count": 277,
-            "comment_count": 99
+            "impression_count": 13897,
+            "page_view_count": 611,
+            "like_count": 282,
+            "comment_count": 103
           }
         },
         {
@@ -90,19 +90,19 @@
           "published_at": "2026-11-04T11:02:56.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 8063,
-            "page_view_count": 76,
-            "like_count": 52,
-            "comment_count": 11
+            "impression_count": 8070,
+            "page_view_count": 52,
+            "like_count": 43,
+            "comment_count": 6
           },
           "latest_totals": {
-            "impression_count": 12607,
-            "page_view_count": 286,
-            "like_count": 228,
+            "impression_count": 13607,
+            "page_view_count": 290,
+            "like_count": 232,
             "comment_count": 47
           }
         },
@@ -113,85 +113,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-08",
-            "end": "2026-11-13"
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 4252,
-            "page_view_count": 180,
-            "like_count": 174,
-            "comment_count": 22
+            "impression_count": 4658,
+            "page_view_count": 192,
+            "like_count": 181,
+            "comment_count": 23
           },
           "latest_totals": {
-            "impression_count": 5309,
-            "page_view_count": 244,
-            "like_count": 241,
-            "comment_count": 24
-          }
-        },
-        {
-          "note_key": "ncdc26734e8b5",
-          "title": "✨ しれネコハロウィンランドを満喫🎃占い・コスプレ・写真館レポート ✨",
-          "published_at": "2026-10-30T10:49:13.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
-          },
-          "growth": {
-            "impression_count": 2658,
-            "page_view_count": 10,
-            "like_count": 8,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 8008,
-            "page_view_count": 357,
-            "like_count": 216,
-            "comment_count": 59
-          }
-        },
-        {
-          "note_key": "n64d14a34ffdc",
-          "title": "🌱 スキのタネ研究所だより Vol.010",
-          "published_at": "2026-11-02T11:04:33.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
-          },
-          "growth": {
-            "impression_count": 2399,
-            "page_view_count": 45,
-            "like_count": 31,
-            "comment_count": 4
-          },
-          "latest_totals": {
-            "impression_count": 7255,
-            "page_view_count": 323,
-            "like_count": 239,
-            "comment_count": 47
-          }
-        },
-        {
-          "note_key": "n45f3a07375fb",
-          "title": "✨ハッピーライティングマラソンお題#72｜今のあなたが、もっと受け取ってもいいと思うものは何ですか？",
-          "published_at": "2026-11-10T11:03:09.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-10",
-            "end": "2026-11-13"
-          },
-          "growth": {
-            "impression_count": 2380,
-            "page_view_count": 151,
-            "like_count": 85,
-            "comment_count": 27
-          },
-          "latest_totals": {
-            "impression_count": 3623,
-            "page_view_count": 216,
-            "like_count": 158,
-            "comment_count": 33
+            "impression_count": 5715,
+            "page_view_count": 256,
+            "like_count": 248,
+            "comment_count": 25
           }
         },
         {
@@ -201,19 +135,107 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-11",
-            "end": "2026-11-13"
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 2257,
-            "page_view_count": 118,
-            "like_count": 90,
-            "comment_count": 23
+            "impression_count": 2672,
+            "page_view_count": 134,
+            "like_count": 99,
+            "comment_count": 25
           },
           "latest_totals": {
-            "impression_count": 3425,
-            "page_view_count": 200,
-            "like_count": 146,
+            "impression_count": 3840,
+            "page_view_count": 216,
+            "like_count": 155,
+            "comment_count": 29
+          }
+        },
+        {
+          "note_key": "n45f3a07375fb",
+          "title": "✨ハッピーライティングマラソンお題#72｜今のあなたが、もっと受け取ってもいいと思うものは何ですか？",
+          "published_at": "2026-11-10T11:03:09.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-10",
+            "end": "2026-11-14"
+          },
+          "growth": {
+            "impression_count": 2616,
+            "page_view_count": 154,
+            "like_count": 89,
+            "comment_count": 28
+          },
+          "latest_totals": {
+            "impression_count": 3859,
+            "page_view_count": 219,
+            "like_count": 162,
+            "comment_count": 34
+          }
+        },
+        {
+          "note_key": "ncdc26734e8b5",
+          "title": "✨ しれネコハロウィンランドを満喫🎃占い・コスプレ・写真館レポート ✨",
+          "published_at": "2026-10-30T10:49:13.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-07",
+            "end": "2026-11-14"
+          },
+          "growth": {
+            "impression_count": 2615,
+            "page_view_count": 11,
+            "like_count": 8,
+            "comment_count": 0
+          },
+          "latest_totals": {
+            "impression_count": 8176,
+            "page_view_count": 358,
+            "like_count": 217,
+            "comment_count": 59
+          }
+        },
+        {
+          "note_key": "n64d14a34ffdc",
+          "title": "🌱 スキのタネ研究所だより Vol.010",
+          "published_at": "2026-11-02T11:04:33.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-07",
+            "end": "2026-11-14"
+          },
+          "growth": {
+            "impression_count": 2172,
+            "page_view_count": 41,
+            "like_count": 28,
+            "comment_count": 4
+          },
+          "latest_totals": {
+            "impression_count": 7373,
+            "page_view_count": 324,
+            "like_count": 240,
+            "comment_count": 47
+          }
+        },
+        {
+          "note_key": "ncffb0e6bf1f9",
+          "title": "歌を贈ったら🎵歌が返ってきた〜✨『羅針』という素敵なプレゼント〜🎁",
+          "published_at": "2026-11-13T10:40:17.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-13",
+            "end": "2026-11-14"
+          },
+          "growth": {
+            "impression_count": 1950,
+            "page_view_count": 102,
+            "like_count": 66,
             "comment_count": 27
+          },
+          "latest_totals": {
+            "impression_count": 3023,
+            "page_view_count": 170,
+            "like_count": 125,
+            "comment_count": 33
           }
         },
         {
@@ -222,18 +244,18 @@
           "published_at": "2026-11-01T10:38:48.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 1978,
-            "page_view_count": 23,
-            "like_count": 11,
-            "comment_count": 2
+            "impression_count": 1888,
+            "page_view_count": 22,
+            "like_count": 7,
+            "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 5632,
-            "page_view_count": 229,
+            "impression_count": 5766,
+            "page_view_count": 232,
             "like_count": 173,
             "comment_count": 32
           }
@@ -244,42 +266,20 @@
           "published_at": "2026-10-28T11:02:51.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 1703,
+            "impression_count": 1418,
             "page_view_count": 8,
-            "like_count": 4,
+            "like_count": 5,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 7541,
-            "page_view_count": 335,
-            "like_count": 210,
+            "impression_count": 7665,
+            "page_view_count": 336,
+            "like_count": 211,
             "comment_count": 36
-          }
-        },
-        {
-          "note_key": "n08b17c49d1b6",
-          "title": "ハッピーライティングマラソンお題#70｜最近、「流れが変わってきたな」と感じることはありますか？",
-          "published_at": "2026-10-26T11:08:43.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
-          },
-          "growth": {
-            "impression_count": 1033,
-            "page_view_count": 5,
-            "like_count": 7,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 8902,
-            "page_view_count": 319,
-            "like_count": 238,
-            "comment_count": 45
           }
         }
       ],
@@ -290,20 +290,20 @@
           "published_at": "2026-11-06T10:10:00.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 11286,
-            "page_view_count": 502,
-            "like_count": 208,
-            "comment_count": 90
+            "impression_count": 11272,
+            "page_view_count": 375,
+            "like_count": 141,
+            "comment_count": 58
           },
           "latest_totals": {
-            "impression_count": 12504,
-            "page_view_count": 587,
-            "like_count": 277,
-            "comment_count": 99
+            "impression_count": 13897,
+            "page_view_count": 611,
+            "like_count": 282,
+            "comment_count": 103
           }
         },
         {
@@ -313,19 +313,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-08",
-            "end": "2026-11-13"
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 4252,
-            "page_view_count": 180,
-            "like_count": 174,
-            "comment_count": 22
+            "impression_count": 4658,
+            "page_view_count": 192,
+            "like_count": 181,
+            "comment_count": 23
           },
           "latest_totals": {
-            "impression_count": 5309,
-            "page_view_count": 244,
-            "like_count": 241,
-            "comment_count": 24
+            "impression_count": 5715,
+            "page_view_count": 256,
+            "like_count": 248,
+            "comment_count": 25
           }
         },
         {
@@ -335,19 +335,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-10",
-            "end": "2026-11-13"
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 2380,
-            "page_view_count": 151,
-            "like_count": 85,
-            "comment_count": 27
+            "impression_count": 2616,
+            "page_view_count": 154,
+            "like_count": 89,
+            "comment_count": 28
           },
           "latest_totals": {
-            "impression_count": 3623,
-            "page_view_count": 216,
-            "like_count": 158,
-            "comment_count": 33
+            "impression_count": 3859,
+            "page_view_count": 219,
+            "like_count": 162,
+            "comment_count": 34
           }
         },
         {
@@ -357,19 +357,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-11",
-            "end": "2026-11-13"
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 2257,
-            "page_view_count": 118,
-            "like_count": 90,
-            "comment_count": 23
+            "impression_count": 2672,
+            "page_view_count": 134,
+            "like_count": 99,
+            "comment_count": 25
           },
           "latest_totals": {
-            "impression_count": 3425,
-            "page_view_count": 200,
-            "like_count": 146,
+            "impression_count": 3840,
+            "page_view_count": 216,
+            "like_count": 155,
+            "comment_count": 29
+          }
+        },
+        {
+          "note_key": "ncffb0e6bf1f9",
+          "title": "歌を贈ったら🎵歌が返ってきた〜✨『羅針』という素敵なプレゼント〜🎁",
+          "published_at": "2026-11-13T10:40:17.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-13",
+            "end": "2026-11-14"
+          },
+          "growth": {
+            "impression_count": 1950,
+            "page_view_count": 102,
+            "like_count": 66,
             "comment_count": 27
+          },
+          "latest_totals": {
+            "impression_count": 3023,
+            "page_view_count": 170,
+            "like_count": 125,
+            "comment_count": 33
           }
         },
         {
@@ -378,19 +400,19 @@
           "published_at": "2026-11-04T11:02:56.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 8063,
-            "page_view_count": 76,
-            "like_count": 52,
-            "comment_count": 11
+            "impression_count": 8070,
+            "page_view_count": 52,
+            "like_count": 43,
+            "comment_count": 6
           },
           "latest_totals": {
-            "impression_count": 12607,
-            "page_view_count": 286,
-            "like_count": 228,
+            "impression_count": 13607,
+            "page_view_count": 290,
+            "like_count": 232,
             "comment_count": 47
           }
         },
@@ -400,64 +422,20 @@
           "published_at": "2026-11-02T11:04:33.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 2399,
-            "page_view_count": 45,
-            "like_count": 31,
+            "impression_count": 2172,
+            "page_view_count": 41,
+            "like_count": 28,
             "comment_count": 4
           },
           "latest_totals": {
-            "impression_count": 7255,
-            "page_view_count": 323,
-            "like_count": 239,
+            "impression_count": 7373,
+            "page_view_count": 324,
+            "like_count": 240,
             "comment_count": 47
-          }
-        },
-        {
-          "note_key": "n9a79cf35fb2a",
-          "title": "カレントボディのLEDマスクで肌は変わる？５０代最新美容テクノロジーに挑戦✨",
-          "published_at": "2026-11-01T10:38:48.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
-          },
-          "growth": {
-            "impression_count": 1978,
-            "page_view_count": 23,
-            "like_count": 11,
-            "comment_count": 2
-          },
-          "latest_totals": {
-            "impression_count": 5632,
-            "page_view_count": 229,
-            "like_count": 173,
-            "comment_count": 32
-          }
-        },
-        {
-          "note_key": "n37180fe24b18",
-          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
-          "published_at": "2026-06-09T12:52:27.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
-          },
-          "growth": {
-            "impression_count": 356,
-            "page_view_count": 22,
-            "like_count": 11,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 31266,
-            "page_view_count": 1496,
-            "like_count": 911,
-            "comment_count": 167
           }
         },
         {
@@ -466,68 +444,68 @@
           "published_at": "2026-10-10T10:42:54.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 219,
-            "page_view_count": 16,
-            "like_count": 6,
-            "comment_count": 1
+            "impression_count": 203,
+            "page_view_count": 26,
+            "like_count": 7,
+            "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 5942,
-            "page_view_count": 282,
-            "like_count": 193,
-            "comment_count": 35
+            "impression_count": 5952,
+            "page_view_count": 292,
+            "like_count": 194,
+            "comment_count": 36
           }
         },
         {
-          "note_key": "n33e480172968",
-          "title": "【ハロウィーン🎃MV企画】｜700年前の写本が開いた夜🌉セラフの冒険が始まった✨",
-          "published_at": "2026-10-21T11:06:29.000Z",
+          "note_key": "n9a79cf35fb2a",
+          "title": "カレントボディのLEDマスクで肌は変わる？５０代最新美容テクノロジーに挑戦✨",
+          "published_at": "2026-11-01T10:38:48.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 412,
-            "page_view_count": 15,
-            "like_count": 2,
+            "impression_count": 1888,
+            "page_view_count": 22,
+            "like_count": 7,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 7442,
-            "page_view_count": 498,
-            "like_count": 200,
-            "comment_count": 84
+            "impression_count": 5766,
+            "page_view_count": 232,
+            "like_count": 173,
+            "comment_count": 32
+          }
+        },
+        {
+          "note_key": "n37180fe24b18",
+          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
+          "published_at": "2026-06-09T12:52:27.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-07",
+            "end": "2026-11-14"
+          },
+          "growth": {
+            "impression_count": 215,
+            "page_view_count": 18,
+            "like_count": 3,
+            "comment_count": 0
+          },
+          "latest_totals": {
+            "impression_count": 31274,
+            "page_view_count": 1496,
+            "like_count": 911,
+            "comment_count": 167
           }
         }
       ],
       "like_count": [
-        {
-          "note_key": "n4a5a519ed19f",
-          "title": "✨ 魔法のガラスドーム｜あなたのキャラクターで、小さな四季の世界を作ってみませんか？",
-          "published_at": "2026-11-06T10:10:00.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
-          },
-          "growth": {
-            "impression_count": 11286,
-            "page_view_count": 502,
-            "like_count": 208,
-            "comment_count": 90
-          },
-          "latest_totals": {
-            "impression_count": 12504,
-            "page_view_count": 587,
-            "like_count": 277,
-            "comment_count": 99
-          }
-        },
         {
           "note_key": "na73a32abd491",
           "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨｜2026年11月",
@@ -535,19 +513,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-08",
-            "end": "2026-11-13"
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 4252,
-            "page_view_count": 180,
-            "like_count": 174,
-            "comment_count": 22
+            "impression_count": 4658,
+            "page_view_count": 192,
+            "like_count": 181,
+            "comment_count": 23
           },
           "latest_totals": {
-            "impression_count": 5309,
-            "page_view_count": 244,
-            "like_count": 241,
-            "comment_count": 24
+            "impression_count": 5715,
+            "page_view_count": 256,
+            "like_count": 248,
+            "comment_count": 25
+          }
+        },
+        {
+          "note_key": "n4a5a519ed19f",
+          "title": "✨ 魔法のガラスドーム｜あなたのキャラクターで、小さな四季の世界を作ってみませんか？",
+          "published_at": "2026-11-06T10:10:00.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-07",
+            "end": "2026-11-14"
+          },
+          "growth": {
+            "impression_count": 11272,
+            "page_view_count": 375,
+            "like_count": 141,
+            "comment_count": 58
+          },
+          "latest_totals": {
+            "impression_count": 13897,
+            "page_view_count": 611,
+            "like_count": 282,
+            "comment_count": 103
           }
         },
         {
@@ -557,19 +557,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-11",
-            "end": "2026-11-13"
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 2257,
-            "page_view_count": 118,
-            "like_count": 90,
-            "comment_count": 23
+            "impression_count": 2672,
+            "page_view_count": 134,
+            "like_count": 99,
+            "comment_count": 25
           },
           "latest_totals": {
-            "impression_count": 3425,
-            "page_view_count": 200,
-            "like_count": 146,
-            "comment_count": 27
+            "impression_count": 3840,
+            "page_view_count": 216,
+            "like_count": 155,
+            "comment_count": 29
           }
         },
         {
@@ -579,18 +579,40 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-10",
-            "end": "2026-11-13"
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 2380,
-            "page_view_count": 151,
-            "like_count": 85,
+            "impression_count": 2616,
+            "page_view_count": 154,
+            "like_count": 89,
+            "comment_count": 28
+          },
+          "latest_totals": {
+            "impression_count": 3859,
+            "page_view_count": 219,
+            "like_count": 162,
+            "comment_count": 34
+          }
+        },
+        {
+          "note_key": "ncffb0e6bf1f9",
+          "title": "歌を贈ったら🎵歌が返ってきた〜✨『羅針』という素敵なプレゼント〜🎁",
+          "published_at": "2026-11-13T10:40:17.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-13",
+            "end": "2026-11-14"
+          },
+          "growth": {
+            "impression_count": 1950,
+            "page_view_count": 102,
+            "like_count": 66,
             "comment_count": 27
           },
           "latest_totals": {
-            "impression_count": 3623,
-            "page_view_count": 216,
-            "like_count": 158,
+            "impression_count": 3023,
+            "page_view_count": 170,
+            "like_count": 125,
             "comment_count": 33
           }
         },
@@ -600,19 +622,19 @@
           "published_at": "2026-11-04T11:02:56.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 8063,
-            "page_view_count": 76,
-            "like_count": 52,
-            "comment_count": 11
+            "impression_count": 8070,
+            "page_view_count": 52,
+            "like_count": 43,
+            "comment_count": 6
           },
           "latest_totals": {
-            "impression_count": 12607,
-            "page_view_count": 286,
-            "like_count": 228,
+            "impression_count": 13607,
+            "page_view_count": 290,
+            "like_count": 232,
             "comment_count": 47
           }
         },
@@ -622,64 +644,20 @@
           "published_at": "2026-11-02T11:04:33.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 2399,
-            "page_view_count": 45,
-            "like_count": 31,
+            "impression_count": 2172,
+            "page_view_count": 41,
+            "like_count": 28,
             "comment_count": 4
           },
           "latest_totals": {
-            "impression_count": 7255,
-            "page_view_count": 323,
-            "like_count": 239,
+            "impression_count": 7373,
+            "page_view_count": 324,
+            "like_count": 240,
             "comment_count": 47
-          }
-        },
-        {
-          "note_key": "n37180fe24b18",
-          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨※6/9",
-          "published_at": "2026-06-09T12:52:27.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
-          },
-          "growth": {
-            "impression_count": 356,
-            "page_view_count": 22,
-            "like_count": 11,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 31266,
-            "page_view_count": 1496,
-            "like_count": 911,
-            "comment_count": 167
-          }
-        },
-        {
-          "note_key": "n9a79cf35fb2a",
-          "title": "カレントボディのLEDマスクで肌は変わる？５０代最新美容テクノロジーに挑戦✨",
-          "published_at": "2026-11-01T10:38:48.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
-          },
-          "growth": {
-            "impression_count": 1978,
-            "page_view_count": 23,
-            "like_count": 11,
-            "comment_count": 2
-          },
-          "latest_totals": {
-            "impression_count": 5632,
-            "page_view_count": 229,
-            "like_count": 173,
-            "comment_count": 32
           }
         },
         {
@@ -688,42 +666,64 @@
           "published_at": "2026-10-30T10:49:13.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 2658,
-            "page_view_count": 10,
+            "impression_count": 2615,
+            "page_view_count": 11,
             "like_count": 8,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 8008,
-            "page_view_count": 357,
-            "like_count": 216,
+            "impression_count": 8176,
+            "page_view_count": 358,
+            "like_count": 217,
             "comment_count": 59
           }
         },
         {
-          "note_key": "n08b17c49d1b6",
-          "title": "ハッピーライティングマラソンお題#70｜最近、「流れが変わってきたな」と感じることはありますか？",
-          "published_at": "2026-10-26T11:08:43.000Z",
+          "note_key": "n7d5aca6f2cdf",
+          "title": "約束の曲🎶本人より先に330回再生！銀さんへ贈る元気になる曲⁉️",
+          "published_at": "2026-10-10T10:42:54.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 1033,
-            "page_view_count": 5,
+            "impression_count": 203,
+            "page_view_count": 26,
+            "like_count": 7,
+            "comment_count": 2
+          },
+          "latest_totals": {
+            "impression_count": 5952,
+            "page_view_count": 292,
+            "like_count": 194,
+            "comment_count": 36
+          }
+        },
+        {
+          "note_key": "n9a79cf35fb2a",
+          "title": "カレントボディのLEDマスクで肌は変わる？５０代最新美容テクノロジーに挑戦✨",
+          "published_at": "2026-11-01T10:38:48.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-07",
+            "end": "2026-11-14"
+          },
+          "growth": {
+            "impression_count": 1888,
+            "page_view_count": 22,
             "like_count": 7,
             "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 8902,
-            "page_view_count": 319,
-            "like_count": 238,
-            "comment_count": 45
+            "impression_count": 5766,
+            "page_view_count": 232,
+            "like_count": 173,
+            "comment_count": 32
           }
         }
       ],
@@ -734,20 +734,20 @@
           "published_at": "2026-11-06T10:10:00.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 11286,
-            "page_view_count": 502,
-            "like_count": 208,
-            "comment_count": 90
+            "impression_count": 11272,
+            "page_view_count": 375,
+            "like_count": 141,
+            "comment_count": 58
           },
           "latest_totals": {
-            "impression_count": 12504,
-            "page_view_count": 587,
-            "like_count": 277,
-            "comment_count": 99
+            "impression_count": 13897,
+            "page_view_count": 611,
+            "like_count": 282,
+            "comment_count": 103
           }
         },
         {
@@ -757,18 +757,40 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-10",
-            "end": "2026-11-13"
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 2380,
-            "page_view_count": 151,
-            "like_count": 85,
+            "impression_count": 2616,
+            "page_view_count": 154,
+            "like_count": 89,
+            "comment_count": 28
+          },
+          "latest_totals": {
+            "impression_count": 3859,
+            "page_view_count": 219,
+            "like_count": 162,
+            "comment_count": 34
+          }
+        },
+        {
+          "note_key": "ncffb0e6bf1f9",
+          "title": "歌を贈ったら🎵歌が返ってきた〜✨『羅針』という素敵なプレゼント〜🎁",
+          "published_at": "2026-11-13T10:40:17.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-13",
+            "end": "2026-11-14"
+          },
+          "growth": {
+            "impression_count": 1950,
+            "page_view_count": 102,
+            "like_count": 66,
             "comment_count": 27
           },
           "latest_totals": {
-            "impression_count": 3623,
-            "page_view_count": 216,
-            "like_count": 158,
+            "impression_count": 3023,
+            "page_view_count": 170,
+            "like_count": 125,
             "comment_count": 33
           }
         },
@@ -779,19 +801,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-11",
-            "end": "2026-11-13"
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 2257,
-            "page_view_count": 118,
-            "like_count": 90,
-            "comment_count": 23
+            "impression_count": 2672,
+            "page_view_count": 134,
+            "like_count": 99,
+            "comment_count": 25
           },
           "latest_totals": {
-            "impression_count": 3425,
-            "page_view_count": 200,
-            "like_count": 146,
-            "comment_count": 27
+            "impression_count": 3840,
+            "page_view_count": 216,
+            "like_count": 155,
+            "comment_count": 29
           }
         },
         {
@@ -801,19 +823,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-08",
-            "end": "2026-11-13"
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 4252,
-            "page_view_count": 180,
-            "like_count": 174,
-            "comment_count": 22
+            "impression_count": 4658,
+            "page_view_count": 192,
+            "like_count": 181,
+            "comment_count": 23
           },
           "latest_totals": {
-            "impression_count": 5309,
-            "page_view_count": 244,
-            "like_count": 241,
-            "comment_count": 24
+            "impression_count": 5715,
+            "page_view_count": 256,
+            "like_count": 248,
+            "comment_count": 25
           }
         },
         {
@@ -822,19 +844,19 @@
           "published_at": "2026-11-04T11:02:56.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 8063,
-            "page_view_count": 76,
-            "like_count": 52,
-            "comment_count": 11
+            "impression_count": 8070,
+            "page_view_count": 52,
+            "like_count": 43,
+            "comment_count": 6
           },
           "latest_totals": {
-            "impression_count": 12607,
-            "page_view_count": 286,
-            "like_count": 228,
+            "impression_count": 13607,
+            "page_view_count": 290,
+            "like_count": 232,
             "comment_count": 47
           }
         },
@@ -844,42 +866,20 @@
           "published_at": "2026-11-02T11:04:33.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 2399,
-            "page_view_count": 45,
-            "like_count": 31,
+            "impression_count": 2172,
+            "page_view_count": 41,
+            "like_count": 28,
             "comment_count": 4
           },
           "latest_totals": {
-            "impression_count": 7255,
-            "page_view_count": 323,
-            "like_count": 239,
+            "impression_count": 7373,
+            "page_view_count": 324,
+            "like_count": 240,
             "comment_count": 47
-          }
-        },
-        {
-          "note_key": "n9a79cf35fb2a",
-          "title": "カレントボディのLEDマスクで肌は変わる？５０代最新美容テクノロジーに挑戦✨",
-          "published_at": "2026-11-01T10:38:48.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
-          },
-          "growth": {
-            "impression_count": 1978,
-            "page_view_count": 23,
-            "like_count": 11,
-            "comment_count": 2
-          },
-          "latest_totals": {
-            "impression_count": 5632,
-            "page_view_count": 229,
-            "like_count": 173,
-            "comment_count": 32
           }
         },
         {
@@ -888,20 +888,42 @@
           "published_at": "2026-10-10T10:42:54.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 219,
-            "page_view_count": 16,
-            "like_count": 6,
+            "impression_count": 203,
+            "page_view_count": 26,
+            "like_count": 7,
+            "comment_count": 2
+          },
+          "latest_totals": {
+            "impression_count": 5952,
+            "page_view_count": 292,
+            "like_count": 194,
+            "comment_count": 36
+          }
+        },
+        {
+          "note_key": "n4ea538f6e346",
+          "title": "自己紹介　はじめてのnote",
+          "published_at": "2025-02-07T06:55:40.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-07",
+            "end": "2026-11-14"
+          },
+          "growth": {
+            "impression_count": 101,
+            "page_view_count": 14,
+            "like_count": 3,
             "comment_count": 1
           },
           "latest_totals": {
-            "impression_count": 5942,
-            "page_view_count": 282,
-            "like_count": 193,
-            "comment_count": 35
+            "impression_count": 12999,
+            "page_view_count": 1400,
+            "like_count": 883,
+            "comment_count": 65
           }
         },
         {
@@ -910,42 +932,20 @@
           "published_at": "2026-10-16T11:10:33.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
+            "start": "2026-11-07",
+            "end": "2026-11-14"
           },
           "growth": {
-            "impression_count": 210,
+            "impression_count": 192,
             "page_view_count": 8,
             "like_count": 0,
             "comment_count": 1
           },
           "latest_totals": {
-            "impression_count": 6832,
+            "impression_count": 6850,
             "page_view_count": 299,
             "like_count": 194,
             "comment_count": 56
-          }
-        },
-        {
-          "note_key": "n7152f7a4e5a0",
-          "title": "✨誕生日って、何を祝っているんだろう🎂",
-          "published_at": "2026-09-17T03:06:22.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-06",
-            "end": "2026-11-13"
-          },
-          "growth": {
-            "impression_count": 83,
-            "page_view_count": 2,
-            "like_count": 1,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 6816,
-            "page_view_count": 388,
-            "like_count": 280,
-            "comment_count": 48
           }
         }
       ]
@@ -954,20 +954,20 @@
   "insights": [
     {
       "type": "period_summary",
-      "text": "期間中にインプレッション +48,886、PV +1,524、スキ +968、コメント +199。"
+      "text": "期間中にインプレッション +51,436、PV +1,588、スキ +1,022、コメント +194。"
     },
     {
       "type": "week_comparison",
-      "text": "PVの増加量は前の7日間と比べて44.6%減少。"
+      "text": "PVの増加量は前の7日間と比べて42.5%減少。"
     },
     {
       "type": "impression_comparison",
-      "text": "インプレッションの増加量は前の7日間と比べて22.2%減少。"
+      "text": "インプレッションの増加量は前の7日間と比べて20.3%減少。"
     },
     {
       "type": "top_article",
       "note_key": "n4a5a519ed19f",
-      "text": "期間中もっともPVが伸びた記事は「✨ 魔法のガラスドーム｜あなたのキャラクターで、小さな四季の世界を作ってみませんか？」で +502PV。"
+      "text": "期間中もっともPVが伸びた記事は「✨ 魔法のガラスドーム｜あなたのキャラクターで、小さな四季の世界を作ってみませんか？」で +375PV。"
     }
   ]
 }
