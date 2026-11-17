@@ -388,6 +388,8 @@ function renderActivityLog(){
     </div>
   </div>
 
+  <div id="kpiComparisonNote" role="status" style="font-size:12px;color:var(--text-muted);margin:8px 0 18px;line-height:1.6">比較条件を確認中…</div>
+
   <!-- Trend chart -->
   <div class="card mb-4">
     <div class="card-header">
@@ -812,38 +814,79 @@ function aggSummary(rows, keyFn) {
   return agg;
 }
 
+// Comparable period KPIs: use exact observed snapshots only, never interpolate gaps.
+function dayISO(date) { return date.toISOString().slice(0,10); }
+function shiftDay(iso, amount) {
+  const d=new Date(iso+'T00:00:00Z');
+  d.setUTCDate(d.getUTCDate()+amount);
+  return dayISO(d);
+}
+function periodKpiComparison(period) {
+  const days=sortedDaily();
+  if(!days.length) return {comparable:false,note:'比較不可：日次スナップショットなし'};
+  const latest=normDate(getDateKey(days[days.length-1]));
+  const map=new Map(days.map(r=>[normDate(getDateKey(r)),r]));
+  let currentStart,previousStart,previousEnd,periodName;
+  if(period==='weekly') {
+    const weekday=new Date(latest+'T00:00:00Z').getUTCDay();
+    const elapsed=(weekday+6)%7; // Monday=0
+    currentStart=shiftDay(latest,-elapsed-1);
+    previousStart=shiftDay(currentStart,-7);
+    previousEnd=shiftDay(latest,-7);
+    periodName='週';
+  } else {
+    const day=Number(latest.slice(8,10));
+    const [y,m]=latest.slice(0,7).split('-').map(Number);
+    const startCurrent=new Date(Date.UTC(y,m-1,0));
+    const previousMonthLast=startCurrent.getUTCDate();
+    const previousMonthStart=dayISO(new Date(Date.UTC(y,m-2,0)));
+    if(day>previousMonthLast) return {comparable:false,note:'比較不可：前月に同じ日付がありません'};
+    currentStart=dayISO(startCurrent);
+    previousStart=previousMonthStart;
+    previousEnd=dayISO(new Date(Date.UTC(y,m-2,day)));
+    periodName='月';
+  }
+  const a=map.get(currentStart),b=map.get(latest),c=map.get(previousStart),d=map.get(previousEnd);
+  if(!a||!b||!c||!d) {
+    const missing=[[currentStart,a],[latest,b],[previousStart,c],[previousEnd,d]].filter(([,r])=>!r).map(([day])=>day);
+    return {comparable:false,note:'比較不可：必要な実測日が欠損（'+missing.join('、')+'）'};
+  }
+  const delta=(from,to)=>({
+    views:getDailyViews(to)-getDailyViews(from),
+    likes:getDailyLikes(to)-getDailyLikes(from),
+    comments:getDailyComments(to)-getDailyComments(from)
+  });
+  const curr=delta(a,b),prev=delta(c,d);
+  if(Object.values(curr).some(v=>v<0)||Object.values(prev).some(v=>v<0)) {
+    return {comparable:false,note:'比較不可：期間差分に負の値があります'};
+  }
+  const complete=period==='weekly'
+    ? new Date(latest+'T00:00:00Z').getUTCDay()===0
+    : shiftDay(latest,1).slice(0,7)!==latest.slice(0,7);
+  return {comparable:true,curr,prev,note:(complete?'確定':'集計途中')+'｜'+
+    (periodName==='週'?'今週':'今月')+' '+currentStart+' → '+latest+
+    ' ／ 比較 '+previousStart+' → '+previousEnd+
+    '（実測日ベース・取得時刻差あり）'};
+}
+
 function getPeriodData() {
   const p=S.currentPeriod;
   let curr={views:0,likes:0,comments:0}, prev={views:0,likes:0,comments:0};
   let labels=[], vData=[], lData=[];
 
-  if(p==='weekly') {
-    if(S.weeklySummary.length>0){
-      const agg=aggSummary(S.weeklySummary,getWeekKey);
-      const keys=Object.keys(agg).sort();
-      keys.slice(-12).forEach(k=>{labels.push(k);vData.push(agg[k].views);lData.push(agg[k].likes);});
-      if(keys.length>=1)curr={...agg[keys[keys.length-1]],comments:0};
-      if(keys.length>=2)prev={...agg[keys[keys.length-2]],comments:0};
+  let periodComparison=null;
+  if(p==='weekly'||p==='monthly') {
+    const weekly=p==='weekly', rows=weekly?S.weeklySummary:S.monthlySummary;
+    const keyFn=weekly?getWeekKey:getMonthKey;
+    const agg=aggSummary(rows,keyFn),keys=Object.keys(agg).sort();
+    keys.slice(weekly?-12:-13).forEach(k=>{labels.push(k);vData.push(agg[k].views);lData.push(agg[k].likes);});
+    periodComparison=periodKpiComparison(p);
+    if(periodComparison.comparable) {
+      curr=periodComparison.curr;
+      prev=periodComparison.prev;
     } else {
-      const daily=sortedDaily().slice(-14);
-      daily.forEach(r=>{labels.push(normDate(getDateKey(r)));vData.push(getDailyViews(r));lData.push(getDailyLikes(r));});
-      const last7=daily.slice(-7),prev7=daily.slice(-14,-7);
-      curr={views:last7.reduce((s,r)=>s+getDailyViews(r),0),likes:last7.reduce((s,r)=>s+getDailyLikes(r),0),comments:0};
-      prev={views:prev7.reduce((s,r)=>s+getDailyViews(r),0),likes:prev7.reduce((s,r)=>s+getDailyLikes(r),0),comments:0};
-    }
-  } else if(p==='monthly') {
-    if(S.monthlySummary.length>0){
-      const agg=aggSummary(S.monthlySummary,getMonthKey);
-      const keys=Object.keys(agg).sort();
-      keys.slice(-13).forEach(k=>{labels.push(k);vData.push(agg[k].views);lData.push(agg[k].likes);});
-      if(keys.length>=1)curr={...agg[keys[keys.length-1]],comments:0};
-      if(keys.length>=2)prev={...agg[keys[keys.length-2]],comments:0};
-    } else {
-      const byM={}; sortedDaily().forEach(r=>{const m=normDate(getDateKey(r)).slice(0,7);if(!m)return;if(!byM[m])byM[m]={views:0,likes:0};byM[m].views+=getDailyViews(r);byM[m].likes+=getDailyLikes(r);});
-      const keys=Object.keys(byM).sort();
-      keys.forEach(k=>{labels.push(k);vData.push(byM[k].views);lData.push(byM[k].likes);});
-      if(keys.length>=1)curr={...byM[keys[keys.length-1]],comments:0};
-      if(keys.length>=2)prev={...byM[keys[keys.length-2]],comments:0};
+      // Current summary may still be useful, but its comparison must be suppressed.
+      if(keys.length) curr={...agg[keys[keys.length-1]],comments:0};
     }
   } else if(p==='yearly') {
     const byY={}; sortedDaily().forEach(r=>{const y=normDate(getDateKey(r)).slice(0,4);if(!y)return;if(!byY[y])byY[y]={views:0,likes:0};byY[y].views+=getDailyViews(r);byY[y].likes+=getDailyLikes(r);});
@@ -871,7 +914,7 @@ function getPeriodData() {
   }
   // コメントKPIは articles.csv の最新スナップショットから合計する。
   // daily_summary.csv にコメント列がなくても表示できるようにする。
-  if (S.articles.length > 0) {
+  if (p!=='weekly' && p!=='monthly' && S.articles.length > 0) {
     const dates = [...new Set(S.articles.map(r => normDate(r.date || '')).filter(Boolean))].sort();
     const latestDate = dates[dates.length - 1];
     const prevDate = dates.length > 1 ? dates[dates.length - 2] : null;
@@ -885,7 +928,7 @@ function getPeriodData() {
           .filter(r => normDate(r.date || '') === prevDate)
           .reduce((s, r) => s + getC(r), 0)
       : 0;
-  } else {
+  } else if (p!=='weekly' && p!=='monthly') {
     const dailyForComments = sortedDaily();
     if (dailyForComments.length > 0) {
       const latest = dailyForComments[dailyForComments.length - 1];
@@ -897,7 +940,7 @@ function getPeriodData() {
     }
   }
 
-  return {curr,prev,labels,vData,lData};
+  return {curr,prev,labels,vData,lData,periodComparison};
 }
 
 function getPeriodArticles() {
@@ -970,7 +1013,8 @@ function summarizeV2(v){
 }
 
 function renderSummary() {
-  const {curr,prev,labels,vData,lData}=getPeriodData();
+  const {curr,prev,labels,vData,lData,periodComparison}=getPeriodData();
+  const comparable=!periodComparison||periodComparison.comparable;
   const eta=curr.views>0?(curr.likes/curr.views*100):0;
   const prevEta=prev.views>0?(prev.likes/prev.views*100):0;
 
@@ -978,10 +1022,11 @@ function renderSummary() {
   document.getElementById('kpiLikes').textContent    = fmt(curr.likes);
   document.getElementById('kpiComments').textContent = fmt(curr.comments);
   document.getElementById('kpiEta').textContent      = eta.toFixed(2)+'%';
-  document.getElementById('kpiViewsDiff').innerHTML    = kpiDiff(curr.views,prev.views);
-  document.getElementById('kpiLikesDiff').innerHTML    = kpiDiff(curr.likes,prev.likes);
-  document.getElementById('kpiCommentsDiff').innerHTML = kpiDiff(curr.comments,prev.comments);
-  document.getElementById('kpiEtaDiff').innerHTML      = kpiDiff(eta,prevEta);
+  document.getElementById('kpiViewsDiff').innerHTML    = comparable?kpiDiff(curr.views,prev.views):'比較不可';
+  document.getElementById('kpiLikesDiff').innerHTML    = comparable?kpiDiff(curr.likes,prev.likes):'比較不可';
+  document.getElementById('kpiCommentsDiff').innerHTML = comparable?kpiDiff(curr.comments,prev.comments):'比較不可';
+  document.getElementById('kpiEtaDiff').innerHTML      = comparable&&curr.views>0&&prev.views>0?kpiDiff(eta,prevEta):'比較不可';
+  document.getElementById('kpiComparisonNote').textContent=periodComparison?periodComparison.note:'累計・期間表示はタブにより定義が異なります';
 
   const {curr:fc,diff:fd}=getFollowerStats();
   document.getElementById('kpiFollowers').textContent=fc.toLocaleString();
