@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KITAcore Note Analytics — Lite</title>
+  <script src="./analysis.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <script>
 // ── ACTIVITY LOG ──────────────────────────────────────────────────────
@@ -27,14 +28,14 @@ function renderActivityLog(){
       --note-green: #3EC19C; --note-green-hover: #35a886; --note-blue: #4a90d9; --pro-color: #ff7043;
       --bg: #f6f6f6; --surface: #ffffff; --surface-2: #f9f9f9; --border: #e8e8e8;
       --text-primary: #1a1a1a; --text-secondary: #555555; --text-muted: #999999;
-      --kpi-num: #1a1a1a; --table-hover: #f5faf8;
+      --table-hover: #f5faf8;
       --shadow: 0 1px 3px rgba(0,0,0,0.07); --shadow-md: 0 2px 10px rgba(0,0,0,0.10);
       --positive: #27ae60; --negative: #e74c3c;
     }
     [data-theme="dark"] {
       --bg: #0e1018; --surface: #181b27; --surface-2: #131620; --border: #252838;
       --text-primary: #e8e8e8; --text-secondary: #9494aa; --text-muted: #5a5a70;
-      --kpi-num: #f0f0f0; --table-hover: #1c1f2e;
+      --table-hover: #1c1f2e;
       --shadow: 0 1px 4px rgba(0,0,0,0.4); --shadow-md: 0 2px 12px rgba(0,0,0,0.5);
       --positive: #2ecc71; --negative: #e74c3c;
     }
@@ -141,14 +142,6 @@ function renderActivityLog(){
 
     .page { padding: 22px 24px; max-width: 1180px; margin: 0 auto; }
 
-    .kpi-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 20px; }
-    .kpi-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; box-shadow: var(--shadow); }
-    .kpi-label { font-size: 11px; color: var(--text-muted); margin-bottom: 5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-    .kpi-value { font-size: 28px; font-weight: 800; color: var(--kpi-num); letter-spacing: -0.5px; line-height: 1.1; }
-    .kpi-diff { font-size: 11px; margin-top: 5px; display: flex; align-items: center; gap: 2px; }
-    .kpi-diff.up   { color: var(--positive); }
-    .kpi-diff.down { color: var(--negative); }
-    .kpi-diff.flat { color: var(--text-muted); }
 
     .card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow); }
     .card-header { padding: 15px 18px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
@@ -267,8 +260,8 @@ function renderActivityLog(){
     .age-note { padding:10px 14px; color:var(--text-muted); font-size:11px; border-bottom:1px solid var(--border); }
 
     @media (max-width: 900px) { .analysis-grid { grid-template-columns:1fr; } }
-    @media (max-width: 900px) { .kpi-strip { grid-template-columns: repeat(3, 1fr); } .pro-features { grid-template-columns: 1fr; } }
-    @media (max-width: 600px) { .kpi-strip { grid-template-columns: 1fr 1fr; } .page { padding: 14px 16px; } .header { padding: 0 16px; } .logo-sub, .lite-chip { display: none; } }
+    @media (max-width: 900px) { .pro-features { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .page { padding: 14px 16px; } .header { padding: 0 16px; } .logo-sub, .lite-chip { display: none; } }
 
     /* ===== ACTIVITY LOG ===== */
     .activity-card { margin-bottom:16px; }
@@ -284,12 +277,60 @@ function renderActivityLog(){
     @media(max-width:600px){.activity-row{grid-template-columns:1fr;gap:7px}}
 
     /* ===== V2 OPERATIONS VIEW ===== */
-    .v2-shell{max-width:1200px;margin:20px auto 0;padding:0 24px}
-    .v2-hero{background:linear-gradient(135deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:14px}
-    .v2-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap}.v2-title{font-size:20px;font-weight:800}.v2-sub{color:var(--text-muted);font-size:11px;margin-top:5px}.v2-badge{font-size:10px;font-weight:800;color:var(--note-green);border:1px solid rgba(62,193,156,.35);background:rgba(62,193,156,.08);border-radius:999px;padding:5px 9px}
-    .v2-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}.v2-kpi{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:13px}.v2-kpi-label{font-size:10px;color:var(--text-muted);font-weight:700}.v2-kpi-value{font-size:22px;font-weight:800;margin-top:4px;font-variant-numeric:tabular-nums}.v2-kpi-note{font-size:10px;color:var(--text-secondary);margin-top:3px}
-    .v2-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-bottom:14px}.v2-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden}.v2-card-head{padding:12px 14px;border-bottom:1px solid var(--border);font-weight:800;font-size:13px}.v2-card-body{padding:14px}.v2-metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.v2-metric{background:var(--surface-2);border-radius:8px;padding:10px}.v2-metric span{display:block}.v2-metric .l{font-size:9px;color:var(--text-muted);font-weight:700}.v2-metric .v{font-size:16px;font-weight:800;margin-top:3px}.v2-list{display:flex;flex-direction:column;gap:8px}.v2-item{padding:9px 10px;background:var(--surface-2);border-radius:8px;font-size:11px;line-height:1.55}.v2-item strong{color:var(--text-primary)}.v2-empty{color:var(--text-muted);font-size:11px}.v2-raw details{border-top:1px solid var(--border)}.v2-raw summary{cursor:pointer;padding:11px 14px;color:var(--text-muted);font-size:11px}.v2-raw pre{margin:0;padding:14px;max-height:420px;overflow:auto;font-size:10px;line-height:1.5;background:var(--surface-2);white-space:pre-wrap;overflow-wrap:anywhere}.legacy-label{max-width:1200px;margin:22px auto 0;padding:0 24px;color:var(--text-muted);font-size:11px;font-weight:800;letter-spacing:.04em}
-    @media(max-width:800px){.v2-kpis{grid-template-columns:repeat(2,1fr)}.v2-grid{grid-template-columns:1fr}}
+    .period-tab { appearance:none; border:0; border-bottom:2px solid transparent; background:none; font-family:inherit; }
+    .ops { max-width:1200px; margin:20px auto 0; padding:0 24px; }
+    .ops-hero,.ops-card { padding:24px; margin-bottom:14px; background:var(--surface); border:1px solid var(--border); border-radius:14px; }
+    .ops-hero { background:var(--surface-2); border-top:3px solid var(--note-green); }
+    .ops h2 { font-size:20px; line-height:1.4; margin:0 0 8px; }
+    .ops h3 { font-size:14px; line-height:1.4; margin:0 0 5px; }
+    .ops p,.ops summary { font-size:13px; line-height:1.6; overflow-wrap:anywhere; }
+    .ops p { margin:4px 0; }
+    .ops a { color:var(--text-primary); text-decoration:underline; text-underline-offset:3px; }
+    .ops summary { cursor:pointer; }
+    .ops .ops-eyebrow { color:var(--text-secondary); font-weight:700; margin:0 0 8px; display:flex; align-items:center; gap:8px; }
+    .ops-eyebrow span { font-size:11px; border:1px solid var(--border); border-radius:5px; padding:0 6px; background:var(--surface); }
+    .ops-next { margin:16px 0; padding:12px 14px; border-left:3px solid var(--note-green); background:var(--surface); border-radius:0 8px 8px 0; }
+    .ops-observation { color:var(--text-secondary); }
+    .ops-metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr)); gap:10px; }
+    .ops-metric { min-width:0; background:var(--surface-2); border:1px solid var(--border); border-radius:8px; padding:12px; }
+    .ops-metric>p,.ops-muted { color:var(--text-secondary); }
+    .ops-value { font-size:23px; font-weight:750; font-variant-numeric:tabular-nums; line-height:1.25; }
+    .ops-metric details { margin-top:7px; }
+    .ops-alternative { border-left:4px solid var(--note-green); }
+    .ops-alternative .ops-next { background:var(--surface-2); margin:14px 0 0; }
+    .ops-windows { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr)); gap:8px; margin:12px 0; }
+    .ops-windows>div { background:var(--surface-2); padding:9px 12px; border-radius:7px; }
+    .ops-windows dt { font-size:13px; font-weight:700; }
+    .ops-windows dd { margin:3px 0 0; font-size:12px; font-variant-numeric:tabular-nums; }
+    .ops-comparison-table { margin:8px 0; }
+    .ops-comparison-table table { table-layout:fixed; }
+    .ops-scroll.ops-comparison-table th,.ops-scroll.ops-comparison-table td { white-space:normal; overflow-wrap:anywhere; }
+    .ops-comparison-table thead th { cursor:default; user-select:auto; }
+    .ops-contributions { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.3fr); gap:16px; margin:14px 0; }
+    .ops-scroll { overflow:auto; }
+    .ops-scroll table { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; }
+    .ops-scroll th,.ops-scroll td { padding:7px 6px; border-bottom:1px solid var(--border); }
+    .ops-scroll th { text-align:left; }
+    .ops-scroll td { text-align:right; white-space:nowrap; font-size:12px; }
+    #noteMarket,#opsAlternative { scroll-margin-top:68px; }
+    .ops-market-intro { margin:12px 0; }
+    .ops-market-intro p { margin-bottom:7px; }
+    .ops-disclosure { border-top:1px solid var(--border); padding:8px 0; }
+    .ops-disclosure dl { margin:9px 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr)); gap:10px; }
+    .ops-disclosure dl>div { padding:10px 12px; background:var(--surface-2); border-radius:8px; }
+    .ops-disclosure dt { font-weight:700; }
+    .ops-disclosure dd { margin:4px 0 0; }
+    .ops-source { color:var(--text-secondary); font-size:12px; }
+    .ops-raw { margin:0 0 16px; }
+    .ops-raw pre { padding:12px; max-height:420px; overflow:auto; background:var(--surface-2); white-space:pre-wrap; overflow-wrap:anywhere; }
+    @media(max-width:700px) {
+      .ops { padding:0 14px; }
+      .ops-hero,.ops-card { padding:15px; }
+      .ops-contributions { grid-template-columns:1fr; }
+      .ops-metrics { grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr)); }
+      .ops-value { font-size:19px; }
+    }
+
   </style>
 </head>
 <body>
@@ -329,69 +370,34 @@ function renderActivityLog(){
 <!-- PERIOD TABS -->
 <div class="period-header">
   <div class="period-tabs">
-    <div class="period-tab active" onclick="switchPeriod('weekly', this)">週</div>
-    <div class="period-tab" onclick="switchPeriod('monthly', this)">月</div>
-    <div class="period-tab" onclick="switchPeriod('yearly', this)">年</div>
-    <div class="period-tab" onclick="switchPeriod('all', this)">全期間</div>
+    <button type="button" class="period-tab active" aria-pressed="true" onclick="switchPeriod('weekly', this)">週</button>
+    <button type="button" class="period-tab" aria-pressed="false" onclick="switchPeriod('monthly', this)">月</button>
+    <button type="button" class="period-tab" aria-pressed="false" onclick="switchPeriod('yearly', this)">年</button>
+    <button type="button" class="period-tab" aria-pressed="false" onclick="switchPeriod('all', this)">全期間</button>
   </div>
 </div>
 
 
-<!-- V2 OPERATIONS VIEW -->
-<section class="v2-shell" id="v2Shell">
-  <div class="v2-hero">
-    <div class="v2-head"><div><div class="v2-title">V2｜これからの運営を見る</div><div class="v2-sub" id="v2Period">v2_analysis.json を読み込み中…</div></div><span class="v2-badge" id="v2Badge">V2 ANALYSIS</span></div>
-    <div class="v2-kpis">
-      <div class="v2-kpi"><div class="v2-kpi-label">累計インプレッション</div><div class="v2-kpi-value" id="v2Imp">—</div><div class="v2-kpi-note" id="v2ImpGrowth">期間増加 —</div></div>
-      <div class="v2-kpi"><div class="v2-kpi-label">累計PV</div><div class="v2-kpi-value" id="v2Pv">—</div><div class="v2-kpi-note" id="v2PvGrowth">期間増加 —</div></div>
-      <div class="v2-kpi"><div class="v2-kpi-label">累計スキ</div><div class="v2-kpi-value" id="v2Like">—</div><div class="v2-kpi-note" id="v2LikeGrowth">期間増加 —</div></div>
-      <div class="v2-kpi"><div class="v2-kpi-label">累計コメント</div><div class="v2-kpi-value" id="v2Comment">—</div><div class="v2-kpi-note" id="v2CommentGrowth">期間増加 —</div></div>
-    </div>
-  </div>
-  <div class="v2-grid">
-    <div class="v2-card"><div class="v2-card-head">📈 今回の変化</div><div class="v2-card-body"><div class="v2-metrics" id="v2Rates"></div></div></div>
-    <div class="v2-card"><div class="v2-card-head">🧭 観測条件</div><div class="v2-card-body"><div class="v2-list" id="v2Context"></div></div></div>
-  </div>
-  <div class="v2-card v2-raw"><div class="v2-card-head">🔎 V2分析データ</div><div class="v2-card-body"><div class="v2-list" id="v2Highlights"><div class="v2-empty">読み込み待ち</div></div></div><details><summary>JSON全体を確認する</summary><pre id="v2Raw"></pre></details></div>
-</section>
-<div class="legacy-label">DETAILS｜従来の分析ビュー</div>
+<div class="ops">
+  <section id="periodAnalysis" aria-label="期間の運営分析" aria-live="polite">
+    <h2>運営の振り返り</h2><p>日次集計を読み込み中…</p>
+  </section>
+  <section class="ops-card" id="noteMarket" aria-labelledby="noteMarketTitle">
+    <h2 id="noteMarketTitle">note市場動向</h2>
+    <div id="noteMarketBody"><p>公式の開示履歴を読み込み中…</p></div>
+  </section>
+  <details class="ops-raw" id="v2Source" hidden>
+    <summary id="v2SourceTitle">GraphQL V2 元データ</summary>
+    <pre id="v2Raw"></pre>
+  </details>
+</div>
 
 <!-- PAGE CONTENT -->
 <div class="page">
-
-  <!-- KPI strip -->
-  <div class="kpi-strip" style="margin-top:20px">
-    <div class="kpi-card">
-      <div class="kpi-label">全体ビュー</div>
-      <div class="kpi-value" id="kpiViews">—</div>
-      <div class="kpi-diff flat" id="kpiViewsDiff">前期間比 —</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">スキ</div>
-      <div class="kpi-value" id="kpiLikes">—</div>
-      <div class="kpi-diff flat" id="kpiLikesDiff">前期間比 —</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">コメント</div>
-      <div class="kpi-value" id="kpiComments">—</div>
-      <div class="kpi-diff flat" id="kpiCommentsDiff">前期間比 —</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">η スキ率 <span class="help-mark" title="スキ数÷PV×100。読まれた回数に対して、どのくらいスキされたかを見る指標です。">?</span></div>
-      <div class="kpi-value" id="kpiEta">—</div>
-      <div class="kpi-diff flat" id="kpiEtaDiff">前期間比 —</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label">フォロワー</div>
-      <div class="kpi-value" id="kpiFollowers">—</div>
-      <div class="kpi-diff flat" id="kpiFollowersDiff">純増 —</div>
-    </div>
-  </div>
-
   <!-- Trend chart -->
   <div class="card mb-4">
     <div class="card-header">
-      <span class="card-title" id="chartTitle">ビュー推移（週）</span>
+      <span class="card-title" id="chartTitle">期間の推移</span>
       <div class="chart-legend">
         <span><span class="legend-dot" style="background:#3EC19C"></span>ビュー</span>
         <span><span class="legend-dot" style="background:#ff7043"></span>スキ</span>
@@ -406,7 +412,7 @@ function renderActivityLog(){
   <div class="card mb-4">
     <div class="card-header">
       <span class="card-title">記事ランキング</span>
-      <span class="card-sub" id="tablePeriodLabel">週間</span>
+      <span class="card-sub" id="tablePeriodLabel"></span>
     </div>
     <div class="card-body-flush tbl-scroll">
       <table>
@@ -417,7 +423,7 @@ function renderActivityLog(){
             <th class="td-right sort-desc" onclick="sortTable('views')">ビュー</th>
             <th class="td-right" onclick="sortTable('likes')">スキ</th>
             <th class="td-right no-sort">コメント</th>
-            <th class="td-right" onclick="sortTable('eta')">η</th>
+            <th class="td-right" onclick="sortTable('eta')">スキ率</th>
           </tr>
         </thead>
         <tbody id="articleTable">
@@ -617,7 +623,6 @@ const S = {
   articles: [], dailySummary: [], weeklySummary: [], monthlySummary: [],
   periodRanking: [], trendAnalysis: [], assetArticles: [], publicationAge: [], articleClassification: [], categorySummary: [], classificationAxisSummary: [], classificationQuality: [], experimentCandidates: [], experimentProposals: [], followers: [], activityLog: [],loadedFiles: new Set(),
   currentPeriod: 'weekly', selectedCategory: '', charts: {},
-  sortCol: 'views', sortDir: 'desc',
   v2Analysis: null,
 };
 
@@ -713,7 +718,7 @@ async function loadFromRepo() {
   }
   try {
     const v2res = await fetch('./data/v2_analysis.json', {cache:'no-store'});
-    if (v2res.ok) { S.v2Analysis = await v2res.json(); renderV2(); }
+    if (v2res.ok) { S.v2Analysis = await v2res.json(); renderV2Source(); }
   } catch(e) { console.warn('V2 analysis load skipped', e); }
   try {
   const activityRes = await fetch('./data/activity_log.json', {cache:'no-store'});
@@ -725,8 +730,8 @@ async function loadFromRepo() {
   console.warn('Activity log load skipped', e);
 }
   
+  renderSummary();
   if (loaded > 0) {
-    renderSummary();
     setStatus('loaded', `${loaded}ファイル読込済`);
     const dz = document.getElementById('dropZone');
     dz.querySelector('span:not(.dz-icon)').innerHTML =
@@ -744,7 +749,7 @@ function processFiles(files) {
     const reader=new FileReader();
     const lowerName=file.name.toLowerCase();
     if(lowerName==='v2_analysis.json'){
-      reader.onload=e2=>{ try{ S.v2Analysis=JSON.parse(e2.target.result); renderV2(); }catch(err){ alert('v2_analysis.json を読み込めませんでした'); } };
+      reader.onload=e2=>{ try{ S.v2Analysis=JSON.parse(e2.target.result); renderV2Source(); }catch(err){ alert('v2_analysis.json を読み込めませんでした'); } };
       reader.readAsText(file,'UTF-8'); return;
     }
     if(lowerName==='activity_log.json'){
@@ -768,19 +773,6 @@ function updateStatus(){ setStatus('loaded',`${S.loadedFiles.size}ファイル`)
 // ── HELPERS ───────────────────────────────────────────────────────────
 const n   = v => parseFloat(v)||0;
 const fmt = v => { v=n(v); return v>=10000?(v/10000).toFixed(1)+'万':v.toLocaleString(); };
-const normDate = s => (s||'').replace(/\//g,'-');
-const getDateKey  = r => r['日付'] || r.date || '';
-const getV  = r => n(r.read_count  || r.views || r.view_count  || 0);
-const getL  = r => n(r.like_count  || r.likes || r.suki        || 0);
-const getC  = r => n(r.comment_count || r.comments || 0);
-const getEta = r => {
-  if(r['スキ率(%)']!==undefined) return n(r['スキ率(%)']);
-  const v=getV(r),l=getL(r); return v>0?(l/v*100):0;
-};
-const getDailyViews     = r => n(r['ビュー合計'] || r.views || 0);
-const getDailyLikes     = r => n(r['スキ合計']   || r.likes || 0);
-const getDailyComments  = r => n(r['コメント合計'] || r.comments || r.comment_count || 0);
-const getFollowCount    = r => n(r['フォロワー数'] || r.followers || r.follower_count || 0);
 const getWeekKey  = r => r['年']&&(r['週']||r['期間']) ? `${r['年']}-${String(r['週']||r['期間']).replace(/^W?/,'W')}` : r.week||r.date||'';
 const getMonthKey = r => r['年']&&(r['月']||r['期間']) ? `${r['年']}-${String(r['月']||r['期間']).padStart(2,'0')}` : r.month||'';
 
@@ -789,206 +781,28 @@ function etaBadge(eta) {
   const cls=v>=15?'eta-hi':v>=7?'eta-mid':'eta-lo';
   return `<span class="eta-badge ${cls}">${v.toFixed(1)}%</span>`;
 }
-function kpiDiff(curr, prev, label='前期間比') {
-  if(prev===0||prev==null) return `<span class="kpi-diff flat">${label} —</span>`;
-  const d=curr-prev, pct=((d/prev)*100).toFixed(1);
-  const cls=d>0?'up':d<0?'down':'flat', arrow=d>0?'↑':d<0?'↓':'→';
-  return `<span class="kpi-diff ${cls}">${arrow} ${Math.abs(d).toLocaleString()} (${d>=0?'+':''}${pct}%)</span>`;
+function renderV2Source() {
+  const data = S.v2Analysis;
+  const panel = document.getElementById('v2Source');
+  panel.hidden = !data;
+  if (!data) return;
+  const period = data.summary?.period;
+  document.getElementById('v2SourceTitle').textContent =
+    `GraphQL V2 元データ（独立集計 ${period?.start || '—'} → ${period?.end || '—'}）`;
+  document.getElementById('v2Raw').textContent = JSON.stringify(data, null, 2);
 }
 
-// ── PERIOD DATA ───────────────────────────────────────────────────────
-function sortedDaily() {
-  return [...S.dailySummary].sort((a,b)=>normDate(getDateKey(a))<normDate(getDateKey(b))?-1:1);
-}
-function aggSummary(rows, keyFn) {
-  const agg={};
-  rows.forEach(r=>{
-    if(r['比較状態'] && r['比較状態']!=='available')return;
-    const k=keyFn(r); if(!k)return;
-    if(!agg[k])agg[k]={views:0,likes:0};
-    agg[k].views+=n(r['期間増加PV']||0);
-    agg[k].likes+=n(r['期間増加スキ']||0);
-  });
-  return agg;
-}
-
-function getPeriodData() {
-  const p=S.currentPeriod;
-  let curr={views:0,likes:0,comments:0}, prev={views:0,likes:0,comments:0};
-  let labels=[], vData=[], lData=[];
-
-  if(p==='weekly') {
-    if(S.weeklySummary.length>0){
-      const agg=aggSummary(S.weeklySummary,getWeekKey);
-      const keys=Object.keys(agg).sort();
-      keys.slice(-12).forEach(k=>{labels.push(k);vData.push(agg[k].views);lData.push(agg[k].likes);});
-      if(keys.length>=1)curr={...agg[keys[keys.length-1]],comments:0};
-      if(keys.length>=2)prev={...agg[keys[keys.length-2]],comments:0};
-    } else {
-      const daily=sortedDaily().slice(-14);
-      daily.forEach(r=>{labels.push(normDate(getDateKey(r)));vData.push(getDailyViews(r));lData.push(getDailyLikes(r));});
-      const last7=daily.slice(-7),prev7=daily.slice(-14,-7);
-      curr={views:last7.reduce((s,r)=>s+getDailyViews(r),0),likes:last7.reduce((s,r)=>s+getDailyLikes(r),0),comments:0};
-      prev={views:prev7.reduce((s,r)=>s+getDailyViews(r),0),likes:prev7.reduce((s,r)=>s+getDailyLikes(r),0),comments:0};
-    }
-  } else if(p==='monthly') {
-    if(S.monthlySummary.length>0){
-      const agg=aggSummary(S.monthlySummary,getMonthKey);
-      const keys=Object.keys(agg).sort();
-      keys.slice(-13).forEach(k=>{labels.push(k);vData.push(agg[k].views);lData.push(agg[k].likes);});
-      if(keys.length>=1)curr={...agg[keys[keys.length-1]],comments:0};
-      if(keys.length>=2)prev={...agg[keys[keys.length-2]],comments:0};
-    } else {
-      const byM={}; sortedDaily().forEach(r=>{const m=normDate(getDateKey(r)).slice(0,7);if(!m)return;if(!byM[m])byM[m]={views:0,likes:0};byM[m].views+=getDailyViews(r);byM[m].likes+=getDailyLikes(r);});
-      const keys=Object.keys(byM).sort();
-      keys.forEach(k=>{labels.push(k);vData.push(byM[k].views);lData.push(byM[k].likes);});
-      if(keys.length>=1)curr={...byM[keys[keys.length-1]],comments:0};
-      if(keys.length>=2)prev={...byM[keys[keys.length-2]],comments:0};
-    }
-  } else if(p==='yearly') {
-    const byY={}; sortedDaily().forEach(r=>{const y=normDate(getDateKey(r)).slice(0,4);if(!y)return;if(!byY[y])byY[y]={views:0,likes:0};byY[y].views+=getDailyViews(r);byY[y].likes+=getDailyLikes(r);});
-    const keys=Object.keys(byY).sort();
-    keys.forEach(k=>{labels.push(k);vData.push(byY[k].views);lData.push(byY[k].likes);});
-    if(keys.length>=1)curr={...byY[keys[keys.length-1]],comments:0};
-    if(keys.length>=2)prev={...byY[keys[keys.length-2]],comments:0};
-  } else {
-    const daily=sortedDaily();
-    daily.forEach(r=>{labels.push(normDate(getDateKey(r)));vData.push(getDailyViews(r));lData.push(getDailyLikes(r));});
-    // daily_summary のビュー・スキは各取得日時点の累積値。
-    // 全期間KPIでは日別行を合算せず、最新スナップショットを表示する。
-    const latest=daily[daily.length-1];
-    const previous=daily.length>1?daily[daily.length-2]:null;
-    curr={
-      views:latest?getDailyViews(latest):0,
-      likes:latest?getDailyLikes(latest):0,
-      comments:0
-    };
-    prev={
-      views:previous?getDailyViews(previous):0,
-      likes:previous?getDailyLikes(previous):0,
-      comments:0
-    };
-  }
-  // コメントKPIは articles.csv の最新スナップショットから合計する。
-  // daily_summary.csv にコメント列がなくても表示できるようにする。
-  if (S.articles.length > 0) {
-    const dates = [...new Set(S.articles.map(r => normDate(r.date || '')).filter(Boolean))].sort();
-    const latestDate = dates[dates.length - 1];
-    const prevDate = dates.length > 1 ? dates[dates.length - 2] : null;
-
-    curr.comments = S.articles
-      .filter(r => normDate(r.date || '') === latestDate)
-      .reduce((s, r) => s + getC(r), 0);
-
-    prev.comments = prevDate
-      ? S.articles
-          .filter(r => normDate(r.date || '') === prevDate)
-          .reduce((s, r) => s + getC(r), 0)
-      : 0;
-  } else {
-    const dailyForComments = sortedDaily();
-    if (dailyForComments.length > 0) {
-      const latest = dailyForComments[dailyForComments.length - 1];
-      const previous = dailyForComments.length > 1
-        ? dailyForComments[dailyForComments.length - 2]
-        : null;
-      curr.comments = getDailyComments(latest);
-      prev.comments = previous ? getDailyComments(previous) : 0;
-    }
-  }
-
-  return {curr,prev,labels,vData,lData};
-}
-
-function getPeriodArticles() {
-  const p=S.currentPeriod;
-  if(p==='weekly'&&S.weeklySummary.length>0){
-    const agg=aggSummary(S.weeklySummary,getWeekKey);
-    const latestWeek=Object.keys(agg).sort().pop();
-    return S.weeklySummary.filter(r=>getWeekKey(r)===latestWeek && (!r['比較状態']||r['比較状態']==='available'))
-      .sort((a,b)=>n(b['期間増加PV'])-n(a['期間増加PV']))
-      .map(r=>({title:r.title||'',url:r.url||'',views:n(r['期間増加PV']||0),likes:n(r['期間増加スキ']||0),comments:0,eta:0,published_at:''}));
-  }
-  if(p==='monthly'&&S.monthlySummary.length>0){
-    const agg=aggSummary(S.monthlySummary,getMonthKey);
-    const latestMonth=Object.keys(agg).sort().pop();
-    return S.monthlySummary.filter(r=>getMonthKey(r)===latestMonth && (!r['比較状態']||r['比較状態']==='available'))
-      .sort((a,b)=>n(b['期間増加PV'])-n(a['期間増加PV']))
-      .map(r=>({title:r.title||'',url:'',views:n(r['期間増加PV']||0),likes:n(r['期間増加スキ']||0),comments:0,eta:0,published_at:''}));
-  }
-  // yearly / all: latest snapshot per article from articles.csv
-  if(S.articles.length>0){
-    const latestByKey={};
-    S.articles.forEach(r=>{
-      const k=r.key||r.note_id||r.title||'';
-      const d=normDate(r.date||'');
-      if(!latestByKey[k]||d>normDate(latestByKey[k].date||''))latestByKey[k]=r;
-    });
-    return Object.values(latestByKey).sort((a,b)=>getV(b)-getV(a));
-  }
-  return S.periodRanking;
-}
-
-function getFollowerStats() {
-  const src=S.followers.length>0?S.followers:S.dailySummary;
-  if(!src.length)return{curr:0,diff:0};
-  const sorted=[...src].filter(r=>getFollowCount(r)>0).sort((a,b)=>normDate(getDateKey(a))<normDate(getDateKey(b))?-1:1);
-  if(!sorted.length)return{curr:0,diff:0};
-  const last=sorted[sorted.length-1], prev=sorted.length>1?sorted[sorted.length-2]:null;
-  const curr=getFollowCount(last), p=prev?getFollowCount(prev):curr;
-  return{curr,diff:curr-p};
-}
-
-// ── RENDER ────────────────────────────────────────────────────────────
-function renderV2(){
-  const d=S.v2Analysis;if(!d)return;
-  const sum=d.summary||{}, totals=sum.latest_totals||{}, growth=sum.current_period_growth||{}, rates=sum.rates||{};
-  const set=(id,val)=>{const el=document.getElementById(id);if(el)el.textContent=val;};
-  const number=v=>v==null?'—':Number(v).toLocaleString('ja-JP');
-  const plus=v=>v==null?'—':`${Number(v)>=0?'+':''}${Number(v).toLocaleString('ja-JP')}`;
-  set('v2Imp',number(totals.impression_count)); set('v2Pv',number(totals.page_view_count)); set('v2Like',number(totals.like_count)); set('v2Comment',number(totals.comment_count));
-  set('v2ImpGrowth','期間増加 '+plus(growth.impression_count)); set('v2PvGrowth','期間増加 '+plus(growth.page_view_count)); set('v2LikeGrowth','期間増加 '+plus(growth.like_count)); set('v2CommentGrowth','期間増加 '+plus(growth.comment_count));
-  const p=sum.period||{}; set('v2Period',`${p.start||'—'} → ${p.end||'—'} ｜ ${sum.comparison_type||'比較'} ｜ snapshot ${sum.available_snapshot_days??'—'}日`);
-  set('v2Badge',`V2 / ${d.generated_at?d.generated_at.slice(0,10):'latest'}`);
-  const rateLabels={pv_per_impression_percent:'PV / Impression',like_per_pv_percent:'スキ / PV',comment_per_pv_percent:'コメント / PV'};
-  const rateBox=document.getElementById('v2Rates');
-  rateBox.innerHTML=Object.entries(rates).map(([k,v])=>`<div class="v2-metric"><span class="l">${esc(rateLabels[k]||humanKey(k))}</span><span class="v">${typeof v==='number'?v.toLocaleString('ja-JP'):esc(String(v))}${k.includes('percent')?'%':''}</span></div>`).join('')||'<div class="v2-empty">率データなし</div>';
-  const ctx=document.getElementById('v2Context');
-  ctx.innerHTML=[['比較期間',`${p.start||'—'} → ${p.end||'—'}`],['比較タイプ',sum.comparison_type||'—'],['利用可能スナップショット',`${sum.available_snapshot_days??'—'}日`],['生成日時',d.generated_at||'—']].map(([a,b])=>`<div class="v2-item"><strong>${a}</strong><br>${esc(String(b))}</div>`).join('');
-  const known=new Set(['generated_at','version','summary']); const extra=Object.entries(d).filter(([k])=>!known.has(k));
-  const hi=document.getElementById('v2Highlights');
-  if(!extra.length){hi.innerHTML='<div class="v2-empty">追加分析セクションはまだありません。summaryを正常に読み込んでいます。</div>';}else{
-    hi.innerHTML=extra.map(([k,v])=>`<div class="v2-item"><strong>${esc(humanKey(k))}</strong><br>${esc(summarizeV2(v))}</div>`).join('');
-  }
-  document.getElementById('v2Raw').textContent=JSON.stringify(d,null,2);
-}
-function humanKey(k){return String(k).replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase());}
-function summarizeV2(v){
-  if(v==null)return '—'; if(Array.isArray(v))return `${v.length}件`+(v.length&&typeof v[0]!=='object'?`：${v.slice(0,5).join(' / ')}`:'');
-  if(typeof v==='object'){const keys=Object.keys(v);return `${keys.length}項目：${keys.slice(0,6).map(humanKey).join(' / ')}`;}
-  return String(v);
-}
-
+let periodAnalysis;
 function renderSummary() {
-  const {curr,prev,labels,vData,lData}=getPeriodData();
-  const eta=curr.views>0?(curr.likes/curr.views*100):0;
-  const prevEta=prev.views>0?(prev.likes/prev.views*100):0;
+  periodAnalysis = DashboardAnalysis.build(S, S.currentPeriod);
+  DashboardAnalysis.render(document.getElementById('periodAnalysis'), periodAnalysis);
+  const { labels, views, likes } = DashboardAnalysis.trend(periodAnalysis);
+  const all = periodAnalysis.all;
+  document.getElementById('chartTitle').textContent = all
+    ? '観測日ごとの累計ビューとスキ' : `${periodAnalysis.label}ごとの観測増分（欠測・途中を含む）`;
+  document.getElementById('tablePeriodLabel').textContent = all ? '最新記録の累計' : `${periodAnalysis.label}の観測増分`;
 
-  document.getElementById('kpiViews').textContent    = fmt(curr.views);
-  document.getElementById('kpiLikes').textContent    = fmt(curr.likes);
-  document.getElementById('kpiComments').textContent = fmt(curr.comments);
-  document.getElementById('kpiEta').textContent      = eta.toFixed(2)+'%';
-  document.getElementById('kpiViewsDiff').innerHTML    = kpiDiff(curr.views,prev.views);
-  document.getElementById('kpiLikesDiff').innerHTML    = kpiDiff(curr.likes,prev.likes);
-  document.getElementById('kpiCommentsDiff').innerHTML = kpiDiff(curr.comments,prev.comments);
-  document.getElementById('kpiEtaDiff').innerHTML      = kpiDiff(eta,prevEta);
-
-  const {curr:fc,diff:fd}=getFollowerStats();
-  document.getElementById('kpiFollowers').textContent=fc.toLocaleString();
-  const fCls=fd>0?'up':fd<0?'down':'flat';
-  document.getElementById('kpiFollowersDiff').innerHTML=`<span class="kpi-diff ${fCls}">純増 ${fd>=0?'+':''}${fd}</span>`;
-
-  renderChart(labels,vData,lData);
+  if (typeof Chart !== 'undefined') renderChart(labels, views, likes);
   renderTable();
   renderAnalysis();
   renderAgeAnalysis();
@@ -1032,35 +846,41 @@ let sortCol='views', sortDir='desc';
 function sortTable(col) {
   sortDir = sortCol===col?(sortDir==='desc'?'asc':'desc'):'desc';
   sortCol = col;
-  document.querySelectorAll('thead th').forEach(th=>th.classList.remove('sort-asc','sort-desc'));
+  const headers = document.getElementById('articleTable').closest('table').querySelectorAll('thead th');
+  headers.forEach(th => th.classList.remove('sort-asc', 'sort-desc'));
+  const activeIndex = { views: 2, likes: 3, eta: 5 }[sortCol];
+  headers[activeIndex]?.classList.add(`sort-${sortDir}`);
   renderTable();
 }
 
 function renderTable() {
-  const articles=getPeriodArticles();
-  const tbody=document.getElementById('articleTable');
-  if(!articles||!articles.length){
-    tbody.innerHTML=`<tr><td colspan="6"><div class="empty"><div class="empty-icon">📊</div><div class="empty-text">データを読み込んでください</div><div class="empty-sub">CSVをドロップ、またはGitHub Pagesで自動読込</div></div></td></tr>`;
+  const tbody = document.getElementById('articleTable');
+  const articles = (periodAnalysis?.rows || []).filter(row => row.views != null);
+  if (!articles.length) {
+    tbody.innerHTML = '<tr><td colspan="6"><div class="empty">この期間に表示できる記事別記録がありません。</div></td></tr>';
     return;
   }
-  const norm=articles.map(r=>({
-    title:r.title||r.article_title||'',url:r.url||r.article_url||'',
-    views:getV(r),likes:getL(r),comments:getC(r),eta:getEta(r),
-  }));
-  norm.sort((a,b)=>{
-    const av=a[sortCol],bv=b[sortCol];
-    return sortDir==='desc'?bv-av:av-bv;
+  const ranked = articles.map(row => ({ ...row, eta: row.views > 0 && row.likes >= 0 && row.likes != null
+    ? row.likes / row.views * 100 : null }));
+  ranked.sort((a, b) => {
+    const av = a[sortCol], bv = b[sortCol];
+    if (av == null || bv == null) return Number(av == null) - Number(bv == null);
+    return sortDir === 'desc' ? bv - av : av - bv;
   });
-  tbody.innerHTML=norm.slice(0,30).map((r,i)=>`
-    <tr>
-      <td class="rank-num ${i===0?'top1':i===1?'top2':i===2?'top3':''}">${i+1}</td>
-      <td>${r.url?`<a class="art-link art-title" href="${r.url}" target="_blank" title="${r.title}">${r.title}</a>`:`<span class="art-title" title="${r.title}">${r.title}</span>`}</td>
-      <td class="td-right">${fmt(r.views)}</td>
-      <td class="td-right">${fmt(r.likes)}</td>
-      <td class="td-right">${r.comments>0?fmt(r.comments):'<span class="td-muted">—</span>'}</td>
-      <td class="td-right">${etaBadge(r.eta)}</td>
-    </tr>
-  `).join('');
+  const counted = value => value == null ? '—' : value.toLocaleString('ja-JP');
+  tbody.innerHTML = ranked.slice(0, 30).map((row, i) => {
+    const title = esc(row.title);
+    const link = /^https:\/\/note\.com\//.test(row.url || '')
+      ? `<a class="art-link art-title" href="${esc(row.url)}" target="_blank" rel="noopener noreferrer" title="${title}">${title}</a>`
+      : `<span class="art-title" title="${title}">${title}</span>`;
+    return `<tr>
+      <td class="rank-num">${i + 1}</td><td>${link}</td>
+      <td class="td-right">${counted(row.views)}</td>
+      <td class="td-right">${counted(row.likes)}</td>
+      <td class="td-right">${counted(row.comments)}</td>
+      <td class="td-right">${row.eta == null ? '—' : etaBadge(row.eta)}</td>
+    </tr>`;
+  }).join('');
 }
 
 
@@ -1399,12 +1219,11 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape')toggleGuide(
 
 // ── NAVIGATION ────────────────────────────────────────────────────────
 function switchPeriod(period, el) {
-  document.querySelectorAll('.period-tab').forEach(t=>t.classList.remove('active'));
-  el.classList.add('active');
-  S.currentPeriod=period;
-  const labels={weekly:'週間',monthly:'月間',yearly:'年間',all:'全期間'};
-  document.getElementById('chartTitle').textContent=`ビュー推移（${labels[period].replace('間','')}）`;
-  document.getElementById('tablePeriodLabel').textContent=labels[period];
+  document.querySelectorAll('.period-tab').forEach(tab => {
+    tab.classList.toggle('active', tab === el);
+    tab.setAttribute('aria-pressed', String(tab === el));
+  });
+  S.currentPeriod = period;
   renderSummary();
 }
 
@@ -1418,7 +1237,10 @@ function toggleTheme() {
 }
 
 // ── INIT ──────────────────────────────────────────────────────────────
-window.addEventListener('DOMContentLoaded', loadFromRepo);
+window.addEventListener('DOMContentLoaded', () => {
+  loadFromRepo();
+  loadNoteMarket();
+});
 </script>
 </body>
 </html>
