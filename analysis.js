@@ -2,6 +2,8 @@
 const DashboardAnalysis = (() => {
   const day = 86400000;
   const periods = { weekly: '週', monthly: '月', yearly: '年', all: '全期間' };
+  const comparisonNames = { weekly: '前週比', monthly: '前月比', yearly: '前年比' };
+  const timeTolerance = 3 * 3600;
   const columns = {
     views: ['ビュー合計', 'views'],
     likes: ['スキ合計', 'likes'],
@@ -53,6 +55,11 @@ const DashboardAnalysis = (() => {
   const clock = value => /^([01]\d|2[0-3]):[0-5]\d(?::[0-5]\d)?$/.test(value ?? '') ? value : '';
   const seconds = value => value.split(':').reduce((sum, part) => sum * 60 + Number(part), 0) * (value.length === 5 ? 60 : 1);
   const stamp = row => `${iso(row.date)} ${row.time || '時刻不明'}`;
+  const timeRange = (from, to) => `${stamp(from)} → ${stamp(to)}`;
+  const durationText = seconds => {
+    const minutes = Math.floor(seconds / 60);
+    return `${Math.floor(minutes / 1440)}日${Math.floor(minutes / 60) % 24}時間${minutes % 60}分`;
+  };
   const observed = row => row.date * 86400 + (row.time ? seconds(row.time) : 0);
 
   function periodStart(period, number) {
@@ -80,26 +87,97 @@ const DashboardAnalysis = (() => {
     return new Map([...rows].sort(([a], [b]) => a - b));
   }
 
-  function comparison(rows, period, start, end) {
-    if (period === 'all') return { reason: '全期間は最新の累計です。対応する前期間はありません。' };
-    if (!end || end.date < start) return { reason: '対象期間内の2時点が揃っていません。' };
-    if (!rows.has(start - 1)) return { reason: `${iso(start - 1)} の開始前記録がないため、期間全体は比較できません。` };
+  function pairedWindows(baseline, latest, priorBaseline, priorLatest) {
+    if (![baseline, latest, priorBaseline, priorLatest].every(row => row?.time)) return null;
+    const days = latest.date - baseline.date;
+    if (days < 1 || days !== priorLatest.date - priorBaseline.date) return null;
+    const elapsed = observed(latest) - observed(baseline);
+    const priorElapsed = observed(priorLatest) - observed(priorBaseline);
+    const clockGap = Math.max(
+      Math.abs(seconds(baseline.time) - seconds(priorBaseline.time)),
+      Math.abs(seconds(latest.time) - seconds(priorLatest.time)),
+      Math.abs(elapsed - priorElapsed),
+    );
+    return clockGap <= timeTolerance
+      ? { baseline, latest, priorBaseline, priorLatest, days, elapsed, priorElapsed } : null;
+  }
 
+  function calendarComparison(dates, period, start, latest) {
+    if (period === 'all') return { code: 'cumulative', reason: '全期間は累計を表示します。' };
+    const name = comparisonNames[period];
     const previousStart = periodStart(period, start - 1);
-    const previousEnd = previousStart + end.date - start;
-    if (previousEnd >= start) return { reason: '前期間に同じ経過日数がないため比較できません。' };
-    const baseline = rows.get(previousStart - 1);
-    const latest = rows.get(previousEnd);
-    const expected = `${iso(previousStart - 1)} → ${iso(previousEnd)}`;
-    if (!baseline || !latest) return { reason: `前期間の観測日 ${expected} の記録が揃っていません。` };
-    const currentBaseline = rows.get(start - 1);
-    if ([baseline, latest, currentBaseline, end].some(row => !row.time) ||
-        Math.abs(seconds(baseline.time) - seconds(currentBaseline.time)) > 10800 ||
-        Math.abs(seconds(latest.time) - seconds(end.time)) > 10800 ||
-        Math.abs((observed(end) - observed(currentBaseline)) - (observed(latest) - observed(baseline))) > 10800) {
-      return { reason: `前期間 ${stamp(baseline)} → ${stamp(latest)}。対応する取得時刻または観測時間の差が3時間以内と確認できないため比較不可。` };
+    const previousEnd = previousStart + latest.date - start;
+    if (previousEnd >= start) return {
+      code: 'differentLength', reason: `${name}は比較不可。前期間に同じ経過日数がありません。`,
+    };
+
+    const missing = [start - 1, previousStart - 1, previousEnd].filter(date => !dates.has(date));
+    if (missing.length) return {
+      code: 'missingBoundary', reason: `${name}は比較不可。${missing.map(iso).join('、')} の境界記録がありません。`,
+    };
+
+    const baseline = dates.get(start - 1);
+    const priorBaseline = dates.get(previousStart - 1);
+    const priorLatest = dates.get(previousEnd);
+    const pair = pairedWindows(baseline, latest, priorBaseline, priorLatest);
+    if (!pair) return {
+      code: 'clock', reason: `${name}は比較不可。前期間 ${stamp(priorBaseline)} → ${stamp(priorLatest)}。対応する取得時刻と観測時間の差を3時間以内と確認できません。`,
+    };
+    if ([baseline, latest, priorBaseline, priorLatest].some(row => row.views == null)) return {
+      code: 'missingViews', reason: `${name}は比較不可。比較区間の端にビューの記録がありません。`,
+    };
+    return { code: 'calendar', name, ...pair };
+  }
+
+  function commonComparison(dates, period, start, latest) {
+    const previousStart = periodStart(period, start - 1);
+    const offset = start - previousStart;
+    const end = Math.min(latest.date, start - 1 + offset);
+    const aligned = [...dates.values()].filter(row => row.date >= start - 1 && row.date <= end
+      && row.views != null && dates.get(row.date - offset)?.views != null);
+    let best = null;
+    // Both calendars use the same offsets from their respective period starts.
+    for (let index = aligned.length - 1; index > 0; index--) {
+      const currentEnd = aligned[index];
+      for (let from = 0; from < index; from++) {
+        const currentStart = aligned[from];
+        if (best && currentEnd.date - currentStart.date <= best.days) break;
+        const pair = pairedWindows(currentStart, currentEnd, dates.get(currentStart.date - offset), dates.get(currentEnd.date - offset));
+        if (pair) {
+          best = pair;
+          break;
+        }
+      }
     }
-    return { baseline, latest };
+    return best && { ...best, code: 'common', name: '観測可能な共通期間の比較' };
+  }
+
+  function rollingComparison(dates, period) {
+    const windows = period === 'weekly' ? [7] : [30, 7];
+    const observedDates = [...dates.values()].reverse();
+    const earliest = period === 'yearly' ? periodStart(period, observedDates[0].date) : -Infinity;
+    for (const latest of observedDates) {
+      if (latest.views == null) continue;
+      for (const days of windows) {
+        const baseline = dates.get(latest.date - days);
+        const before = dates.get(latest.date - days * 2);
+        if (baseline?.views == null || before?.views == null) continue;
+        if (before.date < earliest) continue;
+        const pair = pairedWindows(baseline, latest, before, baseline);
+        if (pair) return { ...pair, code: 'rolling', name: `${days}日間とその前の${days}日間のローリング比較` };
+      }
+    }
+    return null;
+  }
+
+  function comparePeriods(dates, period) {
+    const latest = [...dates.values()].at(-1);
+    if (!latest) return { calendar: { code: 'noData' }, alternative: null };
+    const start = period === 'all' ? null : periodStart(period, latest.date);
+    const calendar = calendarComparison(dates, period, start, latest);
+    const common = start != null && calendar.code !== 'calendar' ? commonComparison(dates, period, start, latest) : null;
+    const alternative = calendar.code === 'calendar' ? null : common || rollingComparison(dates, period);
+    return { calendar, alternative };
   }
 
   function articleMetadata(state) {
@@ -214,17 +292,27 @@ const DashboardAnalysis = (() => {
     const start = all ? null : periodStart(period, latest.date);
     const exact = all ? null : dates.get(start - 1);
     const baseline = all ? null : exact || [...dates.values()].find(row => row.date >= start && row.date < latest.date);
-    const previous = comparison(dates, period, start, latest);
+    const { calendar, alternative } = comparePeriods(dates, period);
+    const first = dates.values().next().value;
     const metadata = articleMetadata(state);
     const articles = all || baseline ? articleRows(state, baseline, latest, all, metadata) : { rows: [], perArticle: {} };
     const current = all || baseline ? valuesFor(baseline, latest, articles) : {};
-    const previousValues = previous.latest
-      ? valuesFor(previous.baseline, previous.latest, articleRows(state, previous.baseline, previous.latest, false, metadata)) : {};
+    const windowData = (from, to) => {
+      const articles = articleRows(state, from, to, false, metadata);
+      return { values: valuesFor(from, to, articles), articleCount: articles.articleCount, minimumPosts: articles.minimumPosts };
+    };
+    const previousValues = calendar.code === 'calendar' ? windowData(calendar.priorBaseline, calendar.priorLatest).values : {};
     if (current.posts == null || previousValues.posts == null) {
       for (const key of perPost) previousValues[key] = null;
     }
+    const comparison = alternative && {
+      ...alternative,
+      currentData: windowData(alternative.baseline, alternative.latest),
+      previousData: windowData(alternative.priorBaseline, alternative.priorLatest),
+    };
+    const trackedGrowth = all && first !== latest ? valuesFor(first, latest, { perArticle: {} }) : null;
     return {
-      dates, period, label, all, start, exact, baseline, latest, previous, current, previousValues,
+      dates, period, label, all, start, exact, baseline, latest, first, calendar, comparison, current, previousValues, trackedGrowth,
       rows: articles.rows, minimumPosts: articles.minimumPosts, articleCount: articles.articleCount,
       cohorts: all ? [] : aggregate(articles.rows, 'group'), categories: aggregate(articles.rows, 'category'),
     };
@@ -267,8 +355,8 @@ const DashboardAnalysis = (() => {
     const delta = difference(current.views, previousValues.views);
     const headline = all ? `現在の記事に累計 ${shown(current.views)} ビュー`
       : delta == null ? `観測範囲で ${signed(current.views)} ビュー`
-      : delta === 0 ? 'ビューは前期間と同じ'
-      : `ビューは前期間より ${shown(Math.abs(delta))} ${delta > 0 ? '増加' : '減少'}`;
+      : delta === 0 ? `ビューは${comparisonNames[period]}で変化なし`
+      : `ビューは${comparisonNames[period]}で ${shown(Math.abs(delta))} ${delta > 0 ? '増加' : '減少'}`;
     const evidence = [`${all ? '累計' : '今回'} ${shown(current.views)} ビュー`];
     if (delta != null) evidence.push(`前期間 ${shown(previousValues.views)} ビュー`);
     if (current.likeRate != null) evidence.push(`スキ率 ${shown(current.likeRate)}%`);
@@ -281,35 +369,36 @@ const DashboardAnalysis = (() => {
     if (period === 'weekly' && largest?.name === '既存記事') next = 'ビューが伸びた既存記事を1本選び、関連する次の記事への導線を確認しましょう。次の週も同じ曜日までの増分を見ます。';
     if (period === 'monthly' && primary) next = `「${primary.name}」の記事で、ビューとスキの両方が伸びた記事を確認しましょう。次の月は形式やテーマを一つずつ試すと違いを追いやすくなります。`;
     if (period === 'yearly') next = '観測できた範囲で伸びた記事とカテゴリを振り返り、次の四半期に続けるテーマを選びましょう。';
-    if (all) next = '累計ランキングから長く読まれている記事を選び、関連する記事へのリンクを点検しましょう。直近の変化は週・月で確認できます。';
+    if (all) next = '累計ランキングから長く読まれている記事を選び、関連する記事へのリンクを点検しましょう。観測開始後の増減と、補助比較で最近の変化を確認できます。';
     return [headline, evidence.join(' ／ ') + '。', next];
   }
 
   function metricCard(analysis, entry) {
     const [key, label, formula, reading] = entry;
-    const { all, current, latest, previousValues, minimumPosts } = analysis;
+    const { all, current, latest, calendar, previousValues, minimumPosts } = analysis;
     const value = current[key];
     const measurement = value == null && key === 'posts' && minimumPosts != null
       ? `${shown(minimumPosts)} 本以上`
       : value == null ? '比較不可'
       : (all || percent.has(key) || perPost.has(key) || key === 'posts' ? shown(value) : signed(value)) + (percent.has(key) ? '%' : '');
-    let detail = all ? '累計・期末' : `前期間比 ${changeText(key, value, previousValues[key])}`;
+    let detail = all ? '累計・期末' : '';
+    if (calendar.code === 'calendar') detail = `${calendar.name} ${changeText(key, value, previousValues[key])}`;
     if (!all && previousValues[key] != null) {
       detail += ` ／ 前期間 ${shown(previousValues[key])}${percent.has(key) ? '%' : ''}`;
     }
-    if (key === 'followers' && !all) detail += ` ／ 期末 ${shown(latest.followers)} 人`;
-    if (key === 'posts' && !all && current.articles != null) detail += ` ／ 台帳の登録数 ${signed(current.articles)} 本`;
+    if (key === 'followers' && !all) detail = [detail, `期末 ${shown(latest.followers)} 人`].filter(Boolean).join(' ／ ');
+    if (key === 'posts' && !all && current.articles != null) detail = [detail, `台帳の登録数 ${signed(current.articles)} 本`].filter(Boolean).join(' ／ ');
     if (all && key === 'posts') detail = '最新の記事台帳にある本数';
     if (all && percent.has(key)) detail = '累計値で計算';
     if (perPost.has(key) && value != null) {
-      detail = `${shown(minimumPosts)} 本で計算${all ? '（累計）' : ' ／ ' + detail}`;
+      detail = [`${shown(minimumPosts)} 本で計算${all ? '（累計）' : ''}`, detail].filter(Boolean).join(' ／ ');
     }
     const metricLabel = all && perPost.has(key) ? label.replace('新規投稿', '記事') : label;
     const calculation = all && perPost.has(key) ? '取得できた記事の指標合計 ÷ 対象記事数。'
       : all && key === 'posts' ? '最新の記事台帳に含まれる重複のない記事数。' : formula;
     const guidance = all && perPost.has(key) ? '記事の公開からの経過日数により、1本あたりの値は変わります。' : reading;
     return `<article class="ops-metric">
-      <h3>${metricLabel}</h3><div class="ops-value">${measurement}</div><p>${detail}</p>
+      <h3>${metricLabel}</h3><div class="ops-value">${measurement}</div>${detail ? `<p>${detail}</p>` : ''}
       <details><summary>指標の読み方</summary><p>${calculation} ${guidance}</p></details>
     </article>`;
   }
@@ -323,30 +412,101 @@ const DashboardAnalysis = (() => {
     </table></div></section>`;
   }
 
+  function observedGrowth({ first, latest, trackedGrowth }) {
+    if (!trackedGrowth) return '';
+    const keys = ['views', 'likes', 'comments', 'followers'];
+    const values = metrics.filter(([key]) => keys.includes(key))
+      .map(([key, label]) => `${label} ${signed(trackedGrowth[key])}`);
+    return `<section class="ops-card"><h2>観測開始後の増減</h2>
+      <p>${timeRange(first, latest)}（JST、日付差 ${latest.date - first.date}日）</p>
+      <p>${values.join(' ／ ')}</p>
+      <p class="ops-muted">最新の累計から、取得履歴の最初に記録した累計を引いています。</p>
+    </section>`;
+  }
+
+  function alternativeComparison({ comparison, latest, period }) {
+    const { name, baseline, priorBaseline, priorLatest, days, elapsed, priorElapsed, currentData, previousData } = comparison;
+    const end = comparison.latest;
+    const keys = ['views', 'likes', 'comments', 'followers', 'posts', 'likeRate', 'commentRate'];
+    const values = currentData.values;
+    const previous = previousData.values;
+    const views = changeText('views', values.views, previous.views);
+    const currentChange = difference(values.views, previous.views);
+    const reactionChange = difference(values.likeRate, previous.likeRate);
+    let next = '同じ長さの区間で、ビューに大きな差はありません。スキ率も見ながら、次の投稿で変える要素を一つ選びましょう。';
+    if (currentChange > 0) next = '比較区間ではビューが増えています。両区間の公開本数とスキ率を確認し、次の投稿で再度試す要素を一つ選びましょう。';
+    if (currentChange < 0) next = '比較区間ではビューが減っています。公開本数や記事のテーマを確認し、次の投稿でタイトルか導線の一方を見直しましょう。';
+    if (currentChange > 0 && reactionChange < 0) next = 'ビューが増え、スキ率は低下しました。次の投稿ではタイトルと本文の期待が揃っているかを確かめ、公開後の同じ日数で反応を見ましょう。';
+    const format = (data, key) => {
+      const value = data.values[key];
+      if (key === 'posts' && value == null && data.minimumPosts != null) return `${shown(data.minimumPosts)}本以上`;
+      return value == null ? '—' : shown(value) + (percent.has(key) ? '%' : '');
+    };
+    const rows = metrics.filter(([key]) => keys.includes(key)).map(([key, label]) => {
+      const diff = changeText(key, values[key], previous[key]);
+      return `<tr><th scope="row">${key === 'followers' ? 'フォロワー純増' : label}</th>
+        <td>${format(currentData, key)}</td><td>${format(previousData, key)}</td><td>${diff}</td></tr>`;
+    });
+    const lag = latest.date - end.date;
+    const label = comparison.code === 'common' ? '共通期間' : 'ローリング';
+    return `<section class="ops-card ops-alternative" id="opsAlternative" data-method="${comparison.code}">
+      <p class="ops-eyebrow">補助比較 <span>${label}</span></p>
+      <h2>${name}</h2>
+      <p>ビュー ${shown(values.views)} 対 ${shown(previous.views)} ／ 差 ${views}</p>
+      <p class="ops-muted">${days}日ずつ（日付差）。${lag ? `比較区間の終了は最新記録の${lag}日前です。` : '比較区間は最新記録までです。'}
+        ${period === 'yearly' && comparison.code === 'rolling' ? '同じ年の中の推移です。' : ''}</p>
+      <dl class="ops-windows">
+        <div><dt>新しい区間</dt><dd>${timeRange(baseline, end)}（JST）</dd><dd>観測時間 ${durationText(elapsed)}</dd></div>
+        <div><dt>その前の区間</dt><dd>${timeRange(priorBaseline, priorLatest)}（JST）</dd><dd>観測時間 ${durationText(priorElapsed)}</dd></div>
+      </dl>
+      <details><summary>指標別の実測値と計算根拠</summary>
+        <div class="ops-scroll ops-comparison-table"><table>
+          <thead><tr><th scope="col">指標</th><th scope="col">新しい区間</th><th scope="col">その前の区間</th><th scope="col">差</th></tr></thead>
+          <tbody>${rows.join('')}</tbody>
+        </table></div>
+        <p>各区間の増分は終了記録 − 開始記録。増減率は区間の増分差 ÷ その前の区間の増分 × 100。スキ率・コメント率の変化はポイント差です。</p>
+        <p>記事スナップショットの期末対象は新しい区間 ${shown(currentData.articleCount)} 本、その前の区間 ${shown(previousData.articleCount)} 本です。
+          投稿数は対象内で両端の記録と公開日時を照合できる範囲を示し、未確認の公開日時があれば下限を表示します。カテゴリ・新旧記事の内訳は選択中の期間の実績です。</p>
+      </details>
+      <div class="ops-next"><h3>比較から試すこと</h3><p>${next}</p></div>
+    </section>`;
+  }
+
+  function unavailableComparison({ period }) {
+    const lengths = period === 'weekly' ? '7日' : '7日または30日';
+    const scope = period === 'yearly' ? '同じ年の中で、' : '';
+    return `<section class="ops-card"><h2>補助比較も比較不可</h2>
+      <p>${scope}${lengths}ずつの連続した2区間を作れる3つの境界記録と、3時間以内にそろった取得時刻が必要です。${period === 'all' ? '' : '暦期間の比較には上の観測条件に記載した境界も必要です。'}</p>
+    </section>`;
+  }
+
   function render(target, analysis) {
-    const { all, label, latest, baseline, exact, previous, current, cohorts, categories, articleCount, rows } = analysis;
+    const { all, label, latest, baseline, exact, calendar, comparison, current, cohorts, categories, articleCount, rows } = analysis;
     if (!latest) {
       target.innerHTML = '<h2>運営の振り返り</h2><p>日次集計を読み込むと、ここに期間の所見が表示されます。</p>';
       return;
     }
     const [headline, evidence, next] = summary(analysis);
     const window = all ? `累計の取得時点 ${stamp(latest)}`
-      : baseline ? `${stamp(baseline)} → ${stamp(latest)}` : `最新記録 ${stamp(latest)}`;
+      : baseline ? timeRange(baseline, latest) : `最新記録 ${stamp(latest)}`;
     const nextStart = periodStart(analysis.period, latest.date + 1);
     const status = all ? '累計' : !exact ? '一部期間' : nextStart > latest.date ? '集計最終日' : '集計途中';
-    const comparisonLabel = previous.latest ? `前期間の観測 ${stamp(previous.baseline)} → ${stamp(previous.latest)}` : previous.reason;
+    const comparisonLabel = calendar.code === 'calendar'
+      ? `${calendar.name}の観測 ${stamp(calendar.priorBaseline)} → ${stamp(calendar.priorLatest)}（${calendar.days}日間）` : calendar.reason;
     const displayed = categories.reduce((sum, group) => sum + group.views, 0);
     const coverage = rows.filter(row => row.views != null).length;
     const unexplained = difference(current.views, displayed);
     target.innerHTML = `<div class="ops-hero">
-      <p class="ops-eyebrow">${label}の運営分析 <span>${status}</span> <a href="#noteMarket">市場動向</a></p>
+      <p class="ops-eyebrow">${label}の運営分析 <span>${status}</span> <a href="#noteMarket">市場動向</a>${comparison ? ' <a href="#opsAlternative">補助比較</a>' : ''}</p>
       <h2>${headline}</h2><p>${evidence}</p>
       <div class="ops-next"><h3>次の行動</h3><p>${esc(next)}</p></div>
       <details class="ops-observation" open><summary>観測条件</summary><p>${window}（JST）</p><p>${comparisonLabel}</p>
         <p>${all ? '最新の記録に含まれる記事の累計です。下の推移は観測できた日付を示します。'
-          : '取得時点の差を使用。日付の揃った前期間のみ、取得時刻と観測時間の差が3時間以内なら比較します。'}</p>
+          : '終了時点から開始時点を引いた実測増分です。比較の対応時刻と観測時間の差は3時間以内です。'}</p>
       </details>
     </div>
+    ${all ? observedGrowth(analysis) : ''}
+    ${comparison ? alternativeComparison(analysis) : calendar.code !== 'calendar' ? unavailableComparison(analysis) : ''}
     <section class="ops-card"><h2>${all ? '累計の指標' : '期間の指標'}</h2>
       <div class="ops-metrics">${metrics.map(entry => metricCard(analysis, entry)).join('')}</div>
     </section>
@@ -358,7 +518,7 @@ const DashboardAnalysis = (() => {
     </section>`;
   }
 
-  return { build, trend, render };
+  return { build, comparePeriods, snapshots, trend, render };
 })();
 
 async function loadNoteMarket() {
