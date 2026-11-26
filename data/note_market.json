@@ -1,0 +1,104 @@
+{
+  "definitions": {
+    "members": {"label": "会員登録者数", "unit": "万人", "basis": "四半期末までの累計会員登録者数。"},
+    "creators": {"label": "累計ユニーククリエイター数", "unit": "万人", "basis": "四半期末までにコンテンツを一度でも投稿したクリエイターの累計。"},
+    "content": {"label": "公開コンテンツ数", "unit": "万件", "basis": "四半期末時点でnote上に公開されているコンテンツの累計。"},
+    "buyers": {"label": "月間購読者数", "unit": "万人", "basis": "四半期内の月平均課金アカウント数。非ログインで購入したゲストを含む。"},
+    "gmv": {"label": "流通総額（GMV）", "unit": "億円", "basis": "四半期のnote上の有料取引総額（税込）。note株式会社の売上高とは定義が異なる。"},
+    "subscriptionShare": {"label": "サブスク比率", "unit": "%", "basis": "定期購読マガジンとメンバーシップの流通総額 ÷ 同じ四半期の流通総額 × 100。"},
+    "arppu": {"label": "購読者1人あたり月間購入額", "unit": "円", "basis": "四半期の購読者1人あたりの平均月間購入額（ARPPU）。"},
+    "topSellerAverage": {"label": "売上上位1,000人の平均年間売上", "unit": "万円", "basis": "対象期間に売上が多かった上位1,000人に限った、1人あたりの年間売上。"},
+    "paidArticleSalesGrowth": {"label": "有料記事の売上の前年同月比", "unit": "%", "basis": "対象月の有料記事売上の前年同月からの増減率。"},
+    "paidArticleSellerGrowth": {"label": "有料記事で売上があった人の前年同月比", "unit": "%", "basis": "対象月に有料記事で収益を得たクリエイター数の前年同月からの増減率。"}
+  },
+  "records": [
+    {
+      "id": "fy26-q3",
+      "kind": "quarterly",
+      "title": "2026年11月期 第3四半期",
+      "period": "2026-06-01〜2026-08-31",
+      "publishedAt": "2026-10-06",
+      "sources": [{"label": "決算説明資料 pp.16・18・19", "url": "https://contents.xj-storage.jp/xcontents/AS05592/6d2bc4c8/66e2/450e/b2ce/44e13568428f/140120261006546608.pdf"}],
+      "metrics": {
+        "members": {"value": 1313.8, "yoy": 24.9},
+        "creators": {"value": 262.1, "yoy": 38.9},
+        "content": {"value": 8993.6, "yoy": 40.4},
+        "buyers": {"value": 80.7, "yoy": 20.7},
+        "gmv": {"value": 65.53, "yoy": 18.3},
+        "subscriptionShare": {"value": 29.4},
+        "arppu": {"value": 2708}
+      }
+    },
+    {
+      "id": "fy26-q3-qa",
+      "title": "2026年11月期 第3四半期の補足開示",
+      "period": "2026-06-01〜2026-08-31",
+      "publishedAt": "2026-11-12",
+      "sources": [
+        {"label": "note IR 質疑応答", "url": "https://note.com/note_ir/n/nbd816bdfc51b"},
+        {"label": "同日付の適時開示 PDF", "url": "https://tdnet-pdf.kabutan.jp/20261112/140120261112574967.pdf"}
+      ],
+      "metrics": {"gmv": {"value": 65.53, "yoy": 18.3}, "subscriptionShare": {"value": 29.4}},
+      "note": "10月6日発表と同じ四半期への補足。noteは、供給の増加に読者・購読者の伸びが追いついていないとの見方を示しています。"
+    },
+    {
+      "id": "fy26-q2",
+      "kind": "quarterly",
+      "title": "2026年11月期 第2四半期",
+      "period": "2026-03-01〜2026-05-31",
+      "publishedAt": "2026-07-07",
+      "sources": [
+        {"label": "決算説明資料", "url": "https://tdnet-pdf.kabutan.jp/20260707/140120260707589041.pdf"},
+        {"label": "決算短信", "url": "https://tdnet-pdf.kabutan.jp/20260707/140120260707588920.pdf"}
+      ],
+      "metrics": {
+        "members": {"value": 1248},
+        "creators": {"value": 241, "yoy": 38.7},
+        "content": {"value": 8209, "yoy": 39.2},
+        "buyers": {"value": 77.5},
+        "gmv": {"value": 64.84, "yoy": 24.6},
+        "arppu": {"value": 2789}
+      }
+    },
+    {
+      "id": "fy25-q3",
+      "kind": "quarterly",
+      "title": "2025年11月期 第3四半期（前年同期）",
+      "period": "2025-06-01〜2025-08-31",
+      "publishedAt": "2026-10-06",
+      "sources": [{"label": "2026年11月期第3四半期 決算説明資料の推移グラフ pp.16・18・19", "url": "https://contents.xj-storage.jp/xcontents/AS05592/6d2bc4c8/66e2/450e/b2ce/44e13568428f/140120261006546608.pdf"}],
+      "metrics": {
+        "members": {"value": 1052},
+        "creators": {"value": 188.7},
+        "content": {"value": 6407.5},
+        "buyers": {"value": 66.8},
+        "gmv": {"value": 55.37},
+        "arppu": {"value": 2761}
+      }
+    },
+    {
+      "id": "paid-article-2025-11",
+      "title": "有料記事の市場調査",
+      "period": "2025-11-01〜2025-11-30",
+      "publishedAt": "2026-01-07",
+      "sources": [{"label": "note株式会社 有料記事の統計分析", "url": "https://note.jp/n/n8522197d1ced"}],
+      "metrics": {"paidArticleSalesGrowth": {"value": 26.8}, "paidArticleSellerGrowth": {"value": 42.0}}
+    },
+    {
+      "id": "fy25-top-sellers",
+      "title": "2025年11月期 売上上位1,000人の調査",
+      "period": "2024-12-01〜2025-11-30",
+      "publishedAt": "2026-01-07",
+      "sources": [{"label": "note株式会社 有料記事の統計分析", "url": "https://note.jp/n/n8522197d1ced"}],
+      "metrics": {"topSellerAverage": {"value": 1515}}
+    },
+    {
+      "id": "anniversary-top-sellers",
+      "title": "11周年時点 売上上位1,000人の調査",
+      "period": "2024-04-01〜2025-03-31",
+      "publishedAt": "2025-04-08",
+      "sources": [{"label": "note公式 11周年の公開データ", "url": "https://note.com/info/n/nbdc8496a3aac"}],
+      "metrics": {"topSellerAverage": {"value": 1332}}
+    }
+  ]
+}
