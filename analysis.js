@@ -349,28 +349,124 @@ const DashboardAnalysis = (() => {
   }
 
   function summary(analysis) {
-    const { all, current, previousValues, categories, cohorts, latest, period } = analysis;
-    if (current.views == null) return ['この期間のビューは比較不可', '対象期間の両端に取得したビューが必要です。', 'まず日次記録の観測範囲を確認してください。'];
+    const { all, current, previousValues, comparison, calendar, trackedGrowth } = analysis;
+    if (current.views == null) {
+      return {
+        headline: 'この範囲のビューを計算する記録が不足しています',
+        note: '期間増分を確認するには、開始と終了の両方にビューの記録が必要です。',
+      };
+    }
+    if (all) return {
+      headline: `最新記録は累計 ${shown(current.views)} ビュー`,
+      change: trackedGrowth?.views == null ? '' : `最初の取得以降は ${signed(trackedGrowth.views)} ビュー。`,
+      evidence: [current.articles == null ? '' : `最新記録にある記事 ${shown(current.articles)} 本。`,
+        comparison ? '最近の伸びは補助比較にあります。' : '最近の伸びを比べる境界記録が不足しています。'].filter(Boolean).join(''),
+      note: '累計が多い記事ほど、公開から長く観測されている場合があります。最近の伸びは期間の増分で確認してください。',
+    };
+    if (calendar.code === 'calendar') {
+      const views = difference(current.views, previousValues.views);
+      const rate = difference(current.likeRate, previousValues.likeRate);
+      const direction = value => value === 0 ? '横ばい' : value > 0 ? '増加' : '減少';
+      return {
+        headline: `ビューは${calendar.name}で${direction(views)}${rate ? `、スキ率は${direction(rate)}` : ''}`,
+        change: `ビュー ${changeText('views', current.views, previousValues.views)}${rate == null ? '' : `、スキ率 ${signed(rate)}ポイント`}。`,
+        evidence: `ビュー ${shown(current.views)} 対 ${shown(previousValues.views)}、スキ ${shown(current.likes)} 対 ${shown(previousValues.likes)}${rate == null ? '' : `、スキ率 ${shown(current.likeRate)}% 対 ${shown(previousValues.likeRate)}%`}。`,
+        note: 'スキ率は各区間のスキ増分をビュー増分で割った値です。公開本数や記事の構成が異なると、率も変わります。',
+      };
+    }
 
-    const delta = difference(current.views, previousValues.views);
-    const headline = all ? `現在の記事に累計 ${shown(current.views)} ビュー`
-      : delta == null ? `観測範囲で ${signed(current.views)} ビュー`
-      : delta === 0 ? `ビューは${comparisonNames[period]}で変化なし`
-      : `ビューは${comparisonNames[period]}で ${shown(Math.abs(delta))} ${delta > 0 ? '増加' : '減少'}`;
-    const evidence = [`${all ? '累計' : '今回'} ${shown(current.views)} ビュー`];
-    if (delta != null) evidence.push(`前期間 ${shown(previousValues.views)} ビュー`);
-    if (current.likeRate != null) evidence.push(`スキ率 ${shown(current.likeRate)}%`);
-    if (current.followers != null) evidence.push(`フォロワー${all ? ' ' : '純増 '}${all ? shown(latest.followers) : signed(current.followers)} 人`);
-    const largest = cohorts.find(group => group.views > 0);
-    const primary = categories.find(group => group.name !== '分類未確定' && group.views > 0);
-    if (largest) evidence.push(`記事別で最も大きいのは${largest.name}の ${shown(largest.views)} ビュー`);
+    const isYear = analysis.period === 'yearly';
+    const name = comparison?.code === 'common' ? '共通観測期間' : 'ローリング比較';
+    const views = comparison?.currentData.values.views;
+    const previous = comparison?.previousData.values.views;
+    return {
+      headline: `${analysis.exact ? '期間の実績' : '取得記録がある範囲'}で ${signed(current.views)} ビュー`,
+      change: comparison ? `${name}（各${comparison.days}日）のビュー差は ${changeText('views', views, previous)}。` : '',
+      evidence: comparison
+        ? `補助比較の新しい区間は ${shown(views)} ビュー、その前の区間は ${shown(previous)} ビュー。`
+        : `観測期間のビュー ${shown(current.views)}、スキ ${shown(current.likes)}、コメント ${shown(current.comments)}。`,
+      note: isYear && !analysis.exact ? '年初からの実績を集計できる境界がありません。同じ年の中の補助比較は、実測が揃う短い区間を対象にします。'
+        : comparison ? `補助比較は日数と取得時刻が揃う区間に限ります。${analysis.label}の実績は見出しの値を参照してください。`
+        : '比較に必要な実測値は観測条件で確認できます。',
+    };
+  }
 
-    let next = '記事ランキングで読まれた記事を選び、公開後の経過日数が近い記事の反応を見比べましょう。';
-    if (period === 'weekly' && largest?.name === '既存記事') next = 'ビューが伸びた既存記事を1本選び、関連する次の記事への導線を確認しましょう。次の週も同じ曜日までの増分を見ます。';
-    if (period === 'monthly' && primary) next = `「${primary.name}」の記事で、ビューとスキの両方が伸びた記事を確認しましょう。次の月は形式やテーマを一つずつ試すと違いを追いやすくなります。`;
-    if (period === 'yearly') next = '観測できた範囲で伸びた記事とカテゴリを振り返り、次の四半期に続けるテーマを選びましょう。';
-    if (all) next = '累計ランキングから長く読まれている記事を選び、関連する記事へのリンクを点検しましょう。観測開始後の増減と、補助比較で最近の変化を確認できます。';
-    return [headline, evidence.join(' ／ ') + '。', next];
+  function nextAction(analysis) {
+    const { period, rows, categories, cohorts, current, baseline, latest } = analysis;
+    const span = baseline ? timeRange(baseline, latest) : stamp(latest);
+    const check = {
+      headline: '追加で確認すること',
+      evidence: `${span}（JST）の公開記事とビューを結びつける記録が不足しています。`,
+      section: '記事ランキング', link: '#opsRanking',
+      action: '記事の公開日時と、比較区間の始めと終わりの記録を確認してください。',
+      review: '公開後7日など同じ経過日数で、対象記事のビューとスキを再確認します。',
+    };
+    if (current.views == null) return check;
+
+    const ranked = rows.filter(row => row.views > 0).sort((a, b) => b.views - a.views);
+    const top = ranked[0];
+    if (!top) return check;
+    const plan = { headline: '次に試すこと', section: '記事ランキング', link: '#opsRanking' };
+    if (period === 'weekly') {
+      const article = ranked.find(row => row.group === '既存記事');
+      const existing = cohorts.find(row => row.name === '既存記事');
+      if (!article || !existing) return check;
+      return { ...plan, article,
+        evidence: `${span}（JST）、既存記事は ${shown(existing.views)} ビュー増。対象記事は ${shown(article.views)} ビュー増。`,
+        action: 'この既存記事の末尾を開き、読者が続けて読みたい関連記事へのリンクを1本点検します。必要なら1本だけ追加します。',
+        review: '変更したら、リンク先の記事で変更前後の同じ7日間のビュー増分を確認します。リンク経由の閲覧数は集計していません。',
+      };
+    }
+    if (period === 'all') return { ...plan, article: top,
+      evidence: `${span}（JST）、最新の累計ランキングで対象記事は ${shown(top.views)} ビューで最多です。`,
+      action: 'この記事を読者の入口候補として開き、最初に案内しているリンクを1本確認します。内容が古ければ同じテーマの現行記事に差し替えます。',
+      review: '差し替えた記事の前後7日間のビュー増分を確認します。入口記事の累計は、最近の閲覧やリンク効果の測定には使えません。',
+    };
+
+    const category = categories.find(row => row.name !== '分類未確定' && row.views > 0);
+    if (!category) return check;
+    const candidates = ranked.filter(row => row.category === category.name);
+    if (period === 'monthly') {
+      const article = candidates.find(row => row.group === '新規記事' && row.comments > 0);
+      if (!article) return check;
+      return { ...plan, article,
+        evidence: `${span}（JST）、「${category.name}」${shown(category.count)}本で ${shown(category.views)} ビュー増。対象の新規記事は ${shown(article.views)} ビュー・${shown(article.comments)} コメント増。`,
+        action: `対象記事の末尾と読者のコメントを見て、次の「${category.name}」の記事では答えやすい問いを末尾に一つ置きます。`,
+        review: '公開後7日（D7）のビュー、コメント数、コメント率を、同じカテゴリでD7が記録されている記事と比べます。対象記事全期間のコメント数は目標値にしません。',
+      };
+    }
+    return { ...plan, article: candidates[0], secondArticle: candidates[1],
+      evidence: `${span}（JST）、「${category.name}」${shown(category.count)}本で ${shown(category.views)} ビュー増。表示した記事から、このテーマの入口を探します。`,
+      action: `対象記事のタイトルと冒頭を読み、次の「${category.name}」の記事1本で、読者に伝えるテーマを冒頭1段落で明示する形を試します。`,
+      review: '公開後7日（D7）のビューとスキ率を、同じカテゴリでD7が記録されている記事と比べます。分類未確定の記事や公開本数の差がカテゴリ合計に影響します。',
+    };
+  }
+
+  function articleLink(article) {
+    if (!article) return '';
+    const title = esc(article.title);
+    return /^https:\/\/note\.com\//.test(article.url || '')
+      ? `<a href="${esc(article.url)}" target="_blank" rel="noopener noreferrer">${title}</a>` : title;
+  }
+
+  function actionCard(plan) {
+    const targets = [plan.article, plan.secondArticle].filter(Boolean).map(articleLink);
+    return `<section class="ops-next" aria-label="${plan.headline}">
+      <h3>${plan.headline}</h3>
+      <p><strong>根拠</strong> ${esc(plan.evidence)}</p>
+      <p><strong>見る場所</strong> <a href="${plan.link}">${plan.section}</a>${targets.length ? ` ／ ${targets.join(' ／ ')}` : ''}</p>
+      <p><strong>やること</strong> ${esc(plan.action)}</p>
+      <p><strong>次回の確認</strong> ${esc(plan.review)}</p>
+    </section>`;
+  }
+
+  function unavailableMetric(key, values) {
+    if (key === 'posts') return '公開日時と記事別記録が揃う範囲で集計します。';
+    if (perPost.has(key)) return '対象の投稿数か、記事別の実測値が不足しています。';
+    if (percent.has(key)) return values.views == null || values.views <= 0
+      ? '分母に使うビューが未取得か、増分が0以下です。'
+      : `${key === 'likeRate' ? 'スキ' : 'コメント'}の有効な記録が不足しています。`;
+    return 'この指標を計算できる取得記録が揃っていません。';
   }
 
   function metricCard(analysis, entry) {
@@ -379,10 +475,14 @@ const DashboardAnalysis = (() => {
     const value = current[key];
     const measurement = value == null && key === 'posts' && minimumPosts != null
       ? `${shown(minimumPosts)} 本以上`
-      : value == null ? '比較不可'
+      : value == null ? '未集計'
       : (all || percent.has(key) || perPost.has(key) || key === 'posts' ? shown(value) : signed(value)) + (percent.has(key) ? '%' : '');
     let detail = all ? '累計・期末' : '';
-    if (calendar.code === 'calendar') detail = `${calendar.name} ${changeText(key, value, previousValues[key])}`;
+    if (calendar.code === 'calendar') {
+      detail = `${calendar.name} ${changeText(key, value, previousValues[key])}`;
+      if (value != null && previousValues[key] == null) detail += `。${unavailableMetric(key, previousValues)}`;
+    }
+    if (value == null) detail = [detail, unavailableMetric(key, current)].filter(Boolean).join(' ');
     if (!all && previousValues[key] != null) {
       detail += ` ／ 前期間 ${shown(previousValues[key])}${percent.has(key) ? '%' : ''}`;
     }
@@ -397,9 +497,12 @@ const DashboardAnalysis = (() => {
     const calculation = all && perPost.has(key) ? '取得できた記事の指標合計 ÷ 対象記事数。'
       : all && key === 'posts' ? '最新の記事台帳に含まれる重複のない記事数。' : formula;
     const guidance = all && perPost.has(key) ? '記事の公開からの経過日数により、1本あたりの値は変わります。' : reading;
+    const location = percent.has(key) ? 'ビューや反応の実数と並べて見ます。'
+      : key === 'posts' || perPost.has(key) ? '対象本数と公開後の経過日数を先に確認します。'
+      : '上の観測条件で、数字が対象とする取得日時を確認します。';
     return `<article class="ops-metric">
       <h3>${metricLabel}</h3><div class="ops-value">${measurement}</div>${detail ? `<p>${detail}</p>` : ''}
-      <details><summary>指標の読み方</summary><p>${calculation} ${guidance}</p></details>
+      <details><summary>指標の読み方</summary><p>${location} ${calculation} ${guidance}</p></details>
     </article>`;
   }
 
@@ -431,12 +534,7 @@ const DashboardAnalysis = (() => {
     const values = currentData.values;
     const previous = previousData.values;
     const views = changeText('views', values.views, previous.views);
-    const currentChange = difference(values.views, previous.views);
-    const reactionChange = difference(values.likeRate, previous.likeRate);
-    let next = '同じ長さの区間で、ビューに大きな差はありません。スキ率も見ながら、次の投稿で変える要素を一つ選びましょう。';
-    if (currentChange > 0) next = '比較区間ではビューが増えています。両区間の公開本数とスキ率を確認し、次の投稿で再度試す要素を一つ選びましょう。';
-    if (currentChange < 0) next = '比較区間ではビューが減っています。公開本数や記事のテーマを確認し、次の投稿でタイトルか導線の一方を見直しましょう。';
-    if (currentChange > 0 && reactionChange < 0) next = 'ビューが増え、スキ率は低下しました。次の投稿ではタイトルと本文の期待が揃っているかを確かめ、公開後の同じ日数で反応を見ましょう。';
+    const rateGap = difference(values.likeRate, previous.likeRate);
     const format = (data, key) => {
       const value = data.values[key];
       if (key === 'posts' && value == null && data.minimumPosts != null) return `${shown(data.minimumPosts)}本以上`;
@@ -452,7 +550,7 @@ const DashboardAnalysis = (() => {
     return `<section class="ops-card ops-alternative" id="opsAlternative" data-method="${comparison.code}">
       <p class="ops-eyebrow">補助比較 <span>${label}</span></p>
       <h2>${name}</h2>
-      <p>ビュー ${shown(values.views)} 対 ${shown(previous.views)} ／ 差 ${views}</p>
+      <p>ビュー ${shown(values.views)} 対 ${shown(previous.views)} ／ 差 ${views}${rateGap == null ? '' : ` ／ スキ率 ${signed(rateGap)}ポイント`}</p>
       <p class="ops-muted">${days}日ずつ（日付差）。${lag ? `比較区間の終了は最新記録の${lag}日前です。` : '比較区間は最新記録までです。'}
         ${period === 'yearly' && comparison.code === 'rolling' ? '同じ年の中の推移です。' : ''}</p>
       <dl class="ops-windows">
@@ -468,7 +566,6 @@ const DashboardAnalysis = (() => {
         <p>記事スナップショットの期末対象は新しい区間 ${shown(currentData.articleCount)} 本、その前の区間 ${shown(previousData.articleCount)} 本です。
           投稿数は対象内で両端の記録と公開日時を照合できる範囲を示し、未確認の公開日時があれば下限を表示します。カテゴリ・新旧記事の内訳は選択中の期間の実績です。</p>
       </details>
-      <div class="ops-next"><h3>比較から試すこと</h3><p>${next}</p></div>
     </section>`;
   }
 
@@ -486,7 +583,7 @@ const DashboardAnalysis = (() => {
       target.innerHTML = '<h2>運営の振り返り</h2><p>日次集計を読み込むと、ここに期間の所見が表示されます。</p>';
       return;
     }
-    const [headline, evidence, next] = summary(analysis);
+    const { headline, change, evidence, note } = summary(analysis);
     const window = all ? `累計の取得時点 ${stamp(latest)}`
       : baseline ? timeRange(baseline, latest) : `最新記録 ${stamp(latest)}`;
     const nextStart = periodStart(analysis.period, latest.date + 1);
@@ -498,9 +595,13 @@ const DashboardAnalysis = (() => {
     const unexplained = difference(current.views, displayed);
     target.innerHTML = `<div class="ops-hero">
       <p class="ops-eyebrow">${label}の運営分析 <span>${status}</span> <a href="#noteMarket">市場動向</a>${comparison ? ' <a href="#opsAlternative">補助比較</a>' : ''}</p>
-      <h2>${headline}</h2><p>${evidence}</p>
-      <div class="ops-next"><h3>次の行動</h3><p>${esc(next)}</p></div>
-      <details class="ops-observation" open><summary>観測条件</summary><p>${window}（JST）</p><p>${comparisonLabel}</p>
+      <h2>${headline}</h2>
+      ${change ? `<p><strong>変化</strong> ${change}</p>` : ''}
+      ${evidence ? `<p><strong>実測</strong> ${evidence}</p>` : ''}
+      ${note ? `<p class="ops-muted">${note}</p>` : ''}
+      ${actionCard(nextAction(analysis))}
+      <details class="ops-observation"><summary>${calendar.code === 'calendar' || all ? '取得日時と計算方法' : '取得日時と暦期間を比較できない理由'}</summary>
+        <p>${window}（JST）</p><p>${comparisonLabel}</p>
         <p>${all ? '最新の記録に含まれる記事の累計です。下の推移は観測できた日付を示します。'
           : '終了時点から開始時点を引いた実測増分です。比較の対応時刻と観測時間の差は3時間以内です。'}</p>
       </details>

@@ -8,7 +8,8 @@ const root = path.join(__dirname, '..');
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const context = vm.createContext({});
 vm.runInContext(html.slice(html.indexOf('function parseCSV('), html.indexOf('function parseAndStore(')), context);
-const { build, comparePeriods, snapshots, trend } = vm.runInContext(fs.readFileSync(path.join(root, 'analysis.js'), 'utf8') + '\nDashboardAnalysis', context);
+vm.runInContext(html.slice(html.indexOf('function esc('), html.indexOf('function statusClass(')), context);
+const { build, comparePeriods, snapshots, trend, render } = vm.runInContext(fs.readFileSync(path.join(root, 'analysis.js'), 'utf8') + '\nDashboardAnalysis', context);
 
 const snapshot = (date, views, likes, time = '05:00:00') => ({ date, views, likes, time });
 const source = (dailySummary, extra) => ({ dailySummary, articles: [], followers: [], publicationAge: [], articleClassification: [], ...extra });
@@ -194,6 +195,36 @@ test('published historical coverage is reproducible for the Issue #7 source revi
     }
     assert.deepEqual(counts, expectedCounts);
   }
+});
+
+test('weekly action points to an observed existing article and explains how to measure the change', () => {
+  const state = source([
+    snapshot('2026-11-15', 10, 2), snapshot('2026-11-19', 100, 15),
+    snapshot('2026-11-22', 140, 25), snapshot('2026-11-26', 200, 40),
+  ], {
+    articles: [
+      { key: 'existing', date: '2026-11-22', read_count: '70' },
+      { key: 'existing', date: '2026-11-26', read_count: '102', title: '<既存記事>' },
+    ],
+    publicationAge: [{ key: 'existing', published_at: '2026-11-01T19:00:00+09:00',
+      note_url: 'https://note.com/u/n/existing', latest_date: '2026-11-26' }],
+  });
+  const target = {};
+  render(target, build(state, 'weekly'));
+  assert.match(target.innerHTML, /前週比で減少、スキ率は増加/);
+  assert.match(target.innerHTML, /既存記事は 32 ビュー増/);
+  assert.match(target.innerHTML, /href="https:\/\/note\.com\/u\/n\/existing"[^>]*>&lt;既存記事&gt;/);
+  assert.match(target.innerHTML, /変更前後の同じ7日間のビュー増分/);
+  assert.match(target.innerHTML, /href="#opsRanking"/);
+});
+
+test('without attributable article records the action asks for evidence and zero denominator is explained', () => {
+  const target = {};
+  const state = source([snapshot('2026-11-22', 100, 5), snapshot('2026-11-23', 100, 5)]);
+  render(target, build(state, 'weekly'));
+  assert.match(target.innerHTML, /追加で確認すること/);
+  assert.match(target.innerHTML, /分母に使うビューが未取得か、増分が0以下/);
+  assert.doesNotMatch(target.innerHTML, /次に試すこと/);
 });
 
 test('market disclosures use valid IDs, dates, values and primary-source links', () => {
