@@ -290,14 +290,14 @@ function renderActivityLog(){
     .ops .ops-eyebrow { color:var(--text-secondary); font-weight:700; margin:0 0 8px; display:flex; align-items:center; gap:8px; }
     .ops-eyebrow span { font-size:11px; border:1px solid var(--border); border-radius:5px; padding:0 6px; background:var(--surface); }
     .ops-next { margin:16px 0; padding:12px 14px; border-left:3px solid var(--note-green); background:var(--surface); border-radius:0 8px 8px 0; }
-    .ops-observation { color:var(--text-secondary); }
+    .ops-observation { color:var(--text-secondary); margin-top:12px; }
+    .ops-next p + p { margin-top:7px; }
     .ops-metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr)); gap:10px; }
     .ops-metric { min-width:0; background:var(--surface-2); border:1px solid var(--border); border-radius:8px; padding:12px; }
     .ops-metric>p,.ops-muted { color:var(--text-secondary); }
     .ops-value { font-size:23px; font-weight:750; font-variant-numeric:tabular-nums; line-height:1.25; }
     .ops-metric details { margin-top:7px; }
     .ops-alternative { border-left:4px solid var(--note-green); }
-    .ops-alternative .ops-next { background:var(--surface-2); margin:14px 0 0; }
     .ops-windows { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr)); gap:8px; margin:12px 0; }
     .ops-windows>div { background:var(--surface-2); padding:9px 12px; border-radius:7px; }
     .ops-windows dt { font-size:13px; font-weight:700; }
@@ -312,7 +312,7 @@ function renderActivityLog(){
     .ops-scroll th,.ops-scroll td { padding:7px 6px; border-bottom:1px solid var(--border); }
     .ops-scroll th { text-align:left; }
     .ops-scroll td { text-align:right; white-space:nowrap; font-size:12px; }
-    #noteMarket,#opsAlternative { scroll-margin-top:68px; }
+    #noteMarket,#opsAlternative,#opsRanking { scroll-margin-top:68px; }
     .ops-market-intro { margin:12px 0; }
     .ops-market-intro p { margin-bottom:7px; }
     .ops-disclosure { border-top:1px solid var(--border); padding:8px 0; }
@@ -409,7 +409,7 @@ function renderActivityLog(){
   </div>
 
   <!-- Article ranking table -->
-  <div class="card mb-4">
+  <div class="card mb-4" id="opsRanking">
     <div class="card-header">
       <span class="card-title">記事ランキング</span>
       <span class="card-sub" id="tablePeriodLabel"></span>
