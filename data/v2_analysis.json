@@ -1,60 +1,60 @@
 {
-  "generated_at": "2026-11-26T21:47:56Z",
+  "generated_at": "2026-11-27T21:31:11Z",
   "version": 1,
   "summary": {
-    "available_snapshot_days": 61,
+    "available_snapshot_days": 62,
     "comparison_type": "7_day",
     "period": {
-      "start": "2026-11-19",
-      "end": "2026-11-26"
+      "start": "2026-11-20",
+      "end": "2026-11-27"
     },
     "latest_totals": {
-      "impression_count": 1384118,
-      "page_view_count": 56547,
-      "like_count": 39337,
-      "comment_count": 6633
+      "impression_count": 1390529,
+      "page_view_count": 56803,
+      "like_count": 39477,
+      "comment_count": 6668
     },
     "current_period_growth": {
-      "impression_count": 53516,
-      "page_view_count": 1709,
-      "like_count": 1155,
-      "comment_count": 264
+      "impression_count": 52652,
+      "page_view_count": 1734,
+      "like_count": 1134,
+      "comment_count": 268
     },
     "rates": {
-      "pv_per_impression_percent": 3.19,
-      "like_per_pv_percent": 67.58,
-      "comment_per_pv_percent": 15.45
+      "pv_per_impression_percent": 3.29,
+      "like_per_pv_percent": 65.4,
+      "comment_per_pv_percent": 15.46
     },
     "previous_period_growth": {
-      "impression_count": 75265,
-      "page_view_count": 2033,
-      "like_count": 1274,
-      "comment_count": 270
+      "impression_count": 75492,
+      "page_view_count": 2070,
+      "like_count": 1293,
+      "comment_count": 280
     },
     "period_comparison": {
       "impression_count": {
-        "current": 53516,
-        "previous": 75265,
-        "difference": -21749,
-        "change_percent": -28.9
+        "current": 52652,
+        "previous": 75492,
+        "difference": -22840,
+        "change_percent": -30.3
       },
       "page_view_count": {
-        "current": 1709,
-        "previous": 2033,
-        "difference": -324,
-        "change_percent": -15.9
+        "current": 1734,
+        "previous": 2070,
+        "difference": -336,
+        "change_percent": -16.2
       },
       "like_count": {
-        "current": 1155,
-        "previous": 1274,
-        "difference": -119,
-        "change_percent": -9.3
+        "current": 1134,
+        "previous": 1293,
+        "difference": -159,
+        "change_percent": -12.3
       },
       "comment_count": {
-        "current": 264,
-        "previous": 270,
-        "difference": -6,
-        "change_percent": -2.2
+        "current": 268,
+        "previous": 280,
+        "difference": -12,
+        "change_percent": -4.3
       }
     }
   },
@@ -68,42 +68,20 @@
           "published_at": "2026-11-18T10:42:12.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 6760,
-            "page_view_count": 188,
-            "like_count": 93,
-            "comment_count": 43
+            "impression_count": 6661,
+            "page_view_count": 113,
+            "like_count": 64,
+            "comment_count": 22
           },
           "latest_totals": {
-            "impression_count": 10385,
-            "page_view_count": 418,
-            "like_count": 278,
+            "impression_count": 11160,
+            "page_view_count": 428,
+            "like_count": 283,
             "comment_count": 89
-          }
-        },
-        {
-          "note_key": "n64ec8f6150b4",
-          "title": "✨ハッピーライティングマラソンお題#71｜「なぜか惹かれる」と感じているものはありますか？",
-          "published_at": "2026-11-04T11:02:56.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
-          },
-          "growth": {
-            "impression_count": 4563,
-            "page_view_count": 10,
-            "like_count": 14,
-            "comment_count": 0
-          },
-          "latest_totals": {
-            "impression_count": 23716,
-            "page_view_count": 323,
-            "like_count": 268,
-            "comment_count": 47
           }
         },
         {
@@ -113,41 +91,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-21",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 4561,
-            "page_view_count": 221,
-            "like_count": 161,
-            "comment_count": 43
+            "impression_count": 4935,
+            "page_view_count": 236,
+            "like_count": 163,
+            "comment_count": 46
           },
           "latest_totals": {
-            "impression_count": 5803,
-            "page_view_count": 287,
-            "like_count": 230,
-            "comment_count": 47
+            "impression_count": 6177,
+            "page_view_count": 302,
+            "like_count": 232,
+            "comment_count": 50
           }
         },
         {
-          "note_key": "na73a32abd491",
-          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨｜2026年11月",
-          "published_at": "2026-11-08T10:56:55.000Z",
+          "note_key": "n64ec8f6150b4",
+          "title": "✨ハッピーライティングマラソンお題#71｜「なぜか惹かれる」と感じているものはありますか？",
+          "published_at": "2026-11-04T11:02:56.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 3496,
-            "page_view_count": 89,
-            "like_count": 101,
-            "comment_count": 11
+            "impression_count": 3672,
+            "page_view_count": 5,
+            "like_count": 11,
+            "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 12511,
-            "page_view_count": 435,
-            "like_count": 424,
-            "comment_count": 45
+            "impression_count": 23881,
+            "page_view_count": 323,
+            "like_count": 269,
+            "comment_count": 47
           }
         },
         {
@@ -157,41 +135,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-20",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 3224,
-            "page_view_count": 174,
-            "like_count": 107,
-            "comment_count": 34
+            "impression_count": 3457,
+            "page_view_count": 181,
+            "like_count": 109,
+            "comment_count": 36
           },
           "latest_totals": {
-            "impression_count": 4325,
-            "page_view_count": 239,
-            "like_count": 181,
-            "comment_count": 39
-          }
-        },
-        {
-          "note_key": "nda77b1923f5b",
-          "title": "✨ハッピーライティングマラソンお題#73｜「最近、やってみてよかった」と思ったことは何ですか？",
-          "published_at": "2026-11-17T10:53:47.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
-          },
-          "growth": {
-            "impression_count": 3124,
-            "page_view_count": 42,
-            "like_count": 42,
-            "comment_count": 4
-          },
-          "latest_totals": {
-            "impression_count": 6371,
-            "page_view_count": 221,
-            "like_count": 195,
-            "comment_count": 43
+            "impression_count": 4558,
+            "page_view_count": 246,
+            "like_count": 183,
+            "comment_count": 41
           }
         },
         {
@@ -201,63 +157,41 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-23",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 3001,
-            "page_view_count": 261,
-            "like_count": 133,
-            "comment_count": 65
+            "impression_count": 3414,
+            "page_view_count": 291,
+            "like_count": 142,
+            "comment_count": 67
           },
           "latest_totals": {
-            "impression_count": 4670,
-            "page_view_count": 351,
-            "like_count": 211,
-            "comment_count": 72
+            "impression_count": 5083,
+            "page_view_count": 381,
+            "like_count": 220,
+            "comment_count": 74
           }
         },
         {
-          "note_key": "n4a5a519ed19f",
-          "title": "✨ 魔法のガラスドーム｜あなたのキャラクターで、小さな四季の世界を作ってみませんか？",
-          "published_at": "2026-11-06T10:10:00.000Z",
+          "note_key": "na73a32abd491",
+          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨｜2026年11月",
+          "published_at": "2026-11-08T10:56:55.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 2956,
-            "page_view_count": 138,
-            "like_count": 19,
-            "comment_count": 4
+            "impression_count": 3265,
+            "page_view_count": 92,
+            "like_count": 92,
+            "comment_count": 14
           },
           "latest_totals": {
-            "impression_count": 21627,
-            "page_view_count": 810,
-            "like_count": 320,
-            "comment_count": 109
-          }
-        },
-        {
-          "note_key": "n118ce03d0927",
-          "title": "🌱 スキのタネ研究所だより Vol.011",
-          "published_at": "2026-11-16T10:56:22.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
-          },
-          "growth": {
-            "impression_count": 2690,
-            "page_view_count": 25,
-            "like_count": 27,
-            "comment_count": 2
-          },
-          "latest_totals": {
-            "impression_count": 7242,
-            "page_view_count": 225,
-            "like_count": 200,
-            "comment_count": 38
+            "impression_count": 12949,
+            "page_view_count": 447,
+            "like_count": 436,
+            "comment_count": 48
           }
         },
         {
@@ -267,19 +201,85 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-25",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 2099,
-            "page_view_count": 99,
-            "like_count": 77,
-            "comment_count": 28
+            "impression_count": 2916,
+            "page_view_count": 174,
+            "like_count": 101,
+            "comment_count": 46
           },
           "latest_totals": {
-            "impression_count": 3490,
-            "page_view_count": 155,
-            "like_count": 146,
-            "comment_count": 31
+            "impression_count": 4307,
+            "page_view_count": 230,
+            "like_count": 170,
+            "comment_count": 49
+          }
+        },
+        {
+          "note_key": "nda77b1923f5b",
+          "title": "✨ハッピーライティングマラソンお題#73｜「最近、やってみてよかった」と思ったことは何ですか？",
+          "published_at": "2026-11-17T10:53:47.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-20",
+            "end": "2026-11-27"
+          },
+          "growth": {
+            "impression_count": 2904,
+            "page_view_count": 31,
+            "like_count": 33,
+            "comment_count": 2
+          },
+          "latest_totals": {
+            "impression_count": 6590,
+            "page_view_count": 224,
+            "like_count": 196,
+            "comment_count": 43
+          }
+        },
+        {
+          "note_key": "n4a5a519ed19f",
+          "title": "✨ 魔法のガラスドーム｜あなたのキャラクターで、小さな四季の世界を作ってみませんか？",
+          "published_at": "2026-11-06T10:10:00.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-20",
+            "end": "2026-11-27"
+          },
+          "growth": {
+            "impression_count": 2549,
+            "page_view_count": 139,
+            "like_count": 19,
+            "comment_count": 5
+          },
+          "latest_totals": {
+            "impression_count": 21745,
+            "page_view_count": 824,
+            "like_count": 321,
+            "comment_count": 111
+          }
+        },
+        {
+          "note_key": "n118ce03d0927",
+          "title": "🌱 スキのタネ研究所だより Vol.011",
+          "published_at": "2026-11-16T10:56:22.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-20",
+            "end": "2026-11-27"
+          },
+          "growth": {
+            "impression_count": 2461,
+            "page_view_count": 21,
+            "like_count": 26,
+            "comment_count": 2
+          },
+          "latest_totals": {
+            "impression_count": 7475,
+            "page_view_count": 226,
+            "like_count": 202,
+            "comment_count": 38
           }
         }
       ],
@@ -291,19 +291,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-23",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 3001,
-            "page_view_count": 261,
-            "like_count": 133,
-            "comment_count": 65
+            "impression_count": 3414,
+            "page_view_count": 291,
+            "like_count": 142,
+            "comment_count": 67
           },
           "latest_totals": {
-            "impression_count": 4670,
-            "page_view_count": 351,
-            "like_count": 211,
-            "comment_count": 72
+            "impression_count": 5083,
+            "page_view_count": 381,
+            "like_count": 220,
+            "comment_count": 74
           }
         },
         {
@@ -313,41 +313,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-21",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 4561,
-            "page_view_count": 221,
-            "like_count": 161,
-            "comment_count": 43
+            "impression_count": 4935,
+            "page_view_count": 236,
+            "like_count": 163,
+            "comment_count": 46
           },
           "latest_totals": {
-            "impression_count": 5803,
-            "page_view_count": 287,
-            "like_count": 230,
-            "comment_count": 47
-          }
-        },
-        {
-          "note_key": "n120530a2b957",
-          "title": "🍂秋といえば食べ物ばっかり！？🤣 8本作って挑戦した 7秒の物語｜スキ動画コンテスト秋の陣",
-          "published_at": "2026-11-18T10:42:12.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
-          },
-          "growth": {
-            "impression_count": 6760,
-            "page_view_count": 188,
-            "like_count": 93,
-            "comment_count": 43
-          },
-          "latest_totals": {
-            "impression_count": 10385,
-            "page_view_count": 418,
-            "like_count": 278,
-            "comment_count": 89
+            "impression_count": 6177,
+            "page_view_count": 302,
+            "like_count": 232,
+            "comment_count": 50
           }
         },
         {
@@ -357,41 +335,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-20",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 3224,
-            "page_view_count": 174,
-            "like_count": 107,
-            "comment_count": 34
+            "impression_count": 3457,
+            "page_view_count": 181,
+            "like_count": 109,
+            "comment_count": 36
           },
           "latest_totals": {
-            "impression_count": 4325,
-            "page_view_count": 239,
-            "like_count": 181,
-            "comment_count": 39
-          }
-        },
-        {
-          "note_key": "n4a5a519ed19f",
-          "title": "✨ 魔法のガラスドーム｜あなたのキャラクターで、小さな四季の世界を作ってみませんか？",
-          "published_at": "2026-11-06T10:10:00.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
-          },
-          "growth": {
-            "impression_count": 2956,
-            "page_view_count": 138,
-            "like_count": 19,
-            "comment_count": 4
-          },
-          "latest_totals": {
-            "impression_count": 21627,
-            "page_view_count": 810,
-            "like_count": 320,
-            "comment_count": 109
+            "impression_count": 4558,
+            "page_view_count": 246,
+            "like_count": 183,
+            "comment_count": 41
           }
         },
         {
@@ -401,19 +357,63 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-25",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 2099,
-            "page_view_count": 99,
-            "like_count": 77,
-            "comment_count": 28
+            "impression_count": 2916,
+            "page_view_count": 174,
+            "like_count": 101,
+            "comment_count": 46
           },
           "latest_totals": {
-            "impression_count": 3490,
-            "page_view_count": 155,
-            "like_count": 146,
-            "comment_count": 31
+            "impression_count": 4307,
+            "page_view_count": 230,
+            "like_count": 170,
+            "comment_count": 49
+          }
+        },
+        {
+          "note_key": "n4a5a519ed19f",
+          "title": "✨ 魔法のガラスドーム｜あなたのキャラクターで、小さな四季の世界を作ってみませんか？",
+          "published_at": "2026-11-06T10:10:00.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-20",
+            "end": "2026-11-27"
+          },
+          "growth": {
+            "impression_count": 2549,
+            "page_view_count": 139,
+            "like_count": 19,
+            "comment_count": 5
+          },
+          "latest_totals": {
+            "impression_count": 21745,
+            "page_view_count": 824,
+            "like_count": 321,
+            "comment_count": 111
+          }
+        },
+        {
+          "note_key": "n120530a2b957",
+          "title": "🍂秋といえば食べ物ばっかり！？🤣 8本作って挑戦した 7秒の物語｜スキ動画コンテスト秋の陣",
+          "published_at": "2026-11-18T10:42:12.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-20",
+            "end": "2026-11-27"
+          },
+          "growth": {
+            "impression_count": 6661,
+            "page_view_count": 113,
+            "like_count": 64,
+            "comment_count": 22
+          },
+          "latest_totals": {
+            "impression_count": 11160,
+            "page_view_count": 428,
+            "like_count": 283,
+            "comment_count": 89
           }
         },
         {
@@ -422,20 +422,20 @@
           "published_at": "2026-11-08T10:56:55.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 3496,
-            "page_view_count": 89,
-            "like_count": 101,
-            "comment_count": 11
+            "impression_count": 3265,
+            "page_view_count": 92,
+            "like_count": 92,
+            "comment_count": 14
           },
           "latest_totals": {
-            "impression_count": 12511,
-            "page_view_count": 435,
-            "like_count": 424,
-            "comment_count": 45
+            "impression_count": 12949,
+            "page_view_count": 447,
+            "like_count": 436,
+            "comment_count": 48
           }
         },
         {
@@ -444,20 +444,42 @@
           "published_at": "2026-11-17T10:53:47.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 3124,
-            "page_view_count": 42,
-            "like_count": 42,
-            "comment_count": 4
+            "impression_count": 2904,
+            "page_view_count": 31,
+            "like_count": 33,
+            "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 6371,
-            "page_view_count": 221,
-            "like_count": 195,
+            "impression_count": 6590,
+            "page_view_count": 224,
+            "like_count": 196,
             "comment_count": 43
+          }
+        },
+        {
+          "note_key": "n4775e8e4608a",
+          "title": "✨ 活動休止前の最後の一歩❣️素敵なプレゼントを受け取って🎁",
+          "published_at": "2026-11-14T10:33:35.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-20",
+            "end": "2026-11-27"
+          },
+          "growth": {
+            "impression_count": 877,
+            "page_view_count": 23,
+            "like_count": 6,
+            "comment_count": 3
+          },
+          "latest_totals": {
+            "impression_count": 5873,
+            "page_view_count": 291,
+            "like_count": 176,
+            "comment_count": 34
           }
         },
         {
@@ -466,42 +488,20 @@
           "published_at": "2026-11-13T10:40:17.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 1945,
-            "page_view_count": 25,
-            "like_count": 8,
-            "comment_count": 4
+            "impression_count": 1645,
+            "page_view_count": 21,
+            "like_count": 7,
+            "comment_count": 3
           },
           "latest_totals": {
-            "impression_count": 8361,
-            "page_view_count": 265,
-            "like_count": 160,
+            "impression_count": 8516,
+            "page_view_count": 268,
+            "like_count": 163,
             "comment_count": 43
-          }
-        },
-        {
-          "note_key": "n118ce03d0927",
-          "title": "🌱 スキのタネ研究所だより Vol.011",
-          "published_at": "2026-11-16T10:56:22.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
-          },
-          "growth": {
-            "impression_count": 2690,
-            "page_view_count": 25,
-            "like_count": 27,
-            "comment_count": 2
-          },
-          "latest_totals": {
-            "impression_count": 7242,
-            "page_view_count": 225,
-            "like_count": 200,
-            "comment_count": 38
           }
         }
       ],
@@ -513,19 +513,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-21",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 4561,
-            "page_view_count": 221,
-            "like_count": 161,
-            "comment_count": 43
+            "impression_count": 4935,
+            "page_view_count": 236,
+            "like_count": 163,
+            "comment_count": 46
           },
           "latest_totals": {
-            "impression_count": 5803,
-            "page_view_count": 287,
-            "like_count": 230,
-            "comment_count": 47
+            "impression_count": 6177,
+            "page_view_count": 302,
+            "like_count": 232,
+            "comment_count": 50
           }
         },
         {
@@ -535,19 +535,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-23",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 3001,
-            "page_view_count": 261,
-            "like_count": 133,
-            "comment_count": 65
+            "impression_count": 3414,
+            "page_view_count": 291,
+            "like_count": 142,
+            "comment_count": 67
           },
           "latest_totals": {
-            "impression_count": 4670,
-            "page_view_count": 351,
-            "like_count": 211,
-            "comment_count": 72
+            "impression_count": 5083,
+            "page_view_count": 381,
+            "like_count": 220,
+            "comment_count": 74
           }
         },
         {
@@ -557,63 +557,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-20",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 3224,
-            "page_view_count": 174,
-            "like_count": 107,
-            "comment_count": 34
+            "impression_count": 3457,
+            "page_view_count": 181,
+            "like_count": 109,
+            "comment_count": 36
           },
           "latest_totals": {
-            "impression_count": 4325,
-            "page_view_count": 239,
-            "like_count": 181,
-            "comment_count": 39
-          }
-        },
-        {
-          "note_key": "na73a32abd491",
-          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨｜2026年11月",
-          "published_at": "2026-11-08T10:56:55.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
-          },
-          "growth": {
-            "impression_count": 3496,
-            "page_view_count": 89,
-            "like_count": 101,
-            "comment_count": 11
-          },
-          "latest_totals": {
-            "impression_count": 12511,
-            "page_view_count": 435,
-            "like_count": 424,
-            "comment_count": 45
-          }
-        },
-        {
-          "note_key": "n120530a2b957",
-          "title": "🍂秋といえば食べ物ばっかり！？🤣 8本作って挑戦した 7秒の物語｜スキ動画コンテスト秋の陣",
-          "published_at": "2026-11-18T10:42:12.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
-          },
-          "growth": {
-            "impression_count": 6760,
-            "page_view_count": 188,
-            "like_count": 93,
-            "comment_count": 43
-          },
-          "latest_totals": {
-            "impression_count": 10385,
-            "page_view_count": 418,
-            "like_count": 278,
-            "comment_count": 89
+            "impression_count": 4558,
+            "page_view_count": 246,
+            "like_count": 183,
+            "comment_count": 41
           }
         },
         {
@@ -623,19 +579,63 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-25",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 2099,
-            "page_view_count": 99,
-            "like_count": 77,
-            "comment_count": 28
+            "impression_count": 2916,
+            "page_view_count": 174,
+            "like_count": 101,
+            "comment_count": 46
           },
           "latest_totals": {
-            "impression_count": 3490,
-            "page_view_count": 155,
-            "like_count": 146,
-            "comment_count": 31
+            "impression_count": 4307,
+            "page_view_count": 230,
+            "like_count": 170,
+            "comment_count": 49
+          }
+        },
+        {
+          "note_key": "na73a32abd491",
+          "title": "🌱はじめての方へ🌱｜このnoteの歩き方✨｜2026年11月",
+          "published_at": "2026-11-08T10:56:55.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-20",
+            "end": "2026-11-27"
+          },
+          "growth": {
+            "impression_count": 3265,
+            "page_view_count": 92,
+            "like_count": 92,
+            "comment_count": 14
+          },
+          "latest_totals": {
+            "impression_count": 12949,
+            "page_view_count": 447,
+            "like_count": 436,
+            "comment_count": 48
+          }
+        },
+        {
+          "note_key": "n120530a2b957",
+          "title": "🍂秋といえば食べ物ばっかり！？🤣 8本作って挑戦した 7秒の物語｜スキ動画コンテスト秋の陣",
+          "published_at": "2026-11-18T10:42:12.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-20",
+            "end": "2026-11-27"
+          },
+          "growth": {
+            "impression_count": 6661,
+            "page_view_count": 113,
+            "like_count": 64,
+            "comment_count": 22
+          },
+          "latest_totals": {
+            "impression_count": 11160,
+            "page_view_count": 428,
+            "like_count": 283,
+            "comment_count": 89
           }
         },
         {
@@ -644,19 +644,19 @@
           "published_at": "2026-11-17T10:53:47.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 3124,
-            "page_view_count": 42,
-            "like_count": 42,
-            "comment_count": 4
+            "impression_count": 2904,
+            "page_view_count": 31,
+            "like_count": 33,
+            "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 6371,
-            "page_view_count": 221,
-            "like_count": 195,
+            "impression_count": 6590,
+            "page_view_count": 224,
+            "like_count": 196,
             "comment_count": 43
           }
         },
@@ -666,19 +666,19 @@
           "published_at": "2026-11-16T10:56:22.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 2690,
-            "page_view_count": 25,
-            "like_count": 27,
+            "impression_count": 2461,
+            "page_view_count": 21,
+            "like_count": 26,
             "comment_count": 2
           },
           "latest_totals": {
-            "impression_count": 7242,
-            "page_view_count": 225,
-            "like_count": 200,
+            "impression_count": 7475,
+            "page_view_count": 226,
+            "like_count": 202,
             "comment_count": 38
           }
         },
@@ -688,20 +688,20 @@
           "published_at": "2026-11-06T10:10:00.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 2956,
-            "page_view_count": 138,
+            "impression_count": 2549,
+            "page_view_count": 139,
             "like_count": 19,
-            "comment_count": 4
+            "comment_count": 5
           },
           "latest_totals": {
-            "impression_count": 21627,
-            "page_view_count": 810,
-            "like_count": 320,
-            "comment_count": 109
+            "impression_count": 21745,
+            "page_view_count": 824,
+            "like_count": 321,
+            "comment_count": 111
           }
         },
         {
@@ -710,19 +710,19 @@
           "published_at": "2026-11-15T10:30:32.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 1256,
-            "page_view_count": 19,
-            "like_count": 15,
-            "comment_count": 1
+            "impression_count": 1154,
+            "page_view_count": 16,
+            "like_count": 16,
+            "comment_count": 0
           },
           "latest_totals": {
-            "impression_count": 5708,
-            "page_view_count": 191,
-            "like_count": 166,
+            "impression_count": 5804,
+            "page_view_count": 192,
+            "like_count": 167,
             "comment_count": 33
           }
         }
@@ -735,41 +735,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-23",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 3001,
-            "page_view_count": 261,
-            "like_count": 133,
-            "comment_count": 65
+            "impression_count": 3414,
+            "page_view_count": 291,
+            "like_count": 142,
+            "comment_count": 67
           },
           "latest_totals": {
-            "impression_count": 4670,
-            "page_view_count": 351,
-            "like_count": 211,
-            "comment_count": 72
-          }
-        },
-        {
-          "note_key": "n120530a2b957",
-          "title": "🍂秋といえば食べ物ばっかり！？🤣 8本作って挑戦した 7秒の物語｜スキ動画コンテスト秋の陣",
-          "published_at": "2026-11-18T10:42:12.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
-          },
-          "growth": {
-            "impression_count": 6760,
-            "page_view_count": 188,
-            "like_count": 93,
-            "comment_count": 43
-          },
-          "latest_totals": {
-            "impression_count": 10385,
-            "page_view_count": 418,
-            "like_count": 278,
-            "comment_count": 89
+            "impression_count": 5083,
+            "page_view_count": 381,
+            "like_count": 220,
+            "comment_count": 74
           }
         },
         {
@@ -779,41 +757,19 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-21",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 4561,
-            "page_view_count": 221,
-            "like_count": 161,
-            "comment_count": 43
+            "impression_count": 4935,
+            "page_view_count": 236,
+            "like_count": 163,
+            "comment_count": 46
           },
           "latest_totals": {
-            "impression_count": 5803,
-            "page_view_count": 287,
-            "like_count": 230,
-            "comment_count": 47
-          }
-        },
-        {
-          "note_key": "n8fb3cec9e0db",
-          "title": "ガラスの中で🧴好きがつながった✨赤柴さんのボトルジオラマで四季を旅してみた🌸",
-          "published_at": "2026-11-20T10:07:39.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-20",
-            "end": "2026-11-26"
-          },
-          "growth": {
-            "impression_count": 3224,
-            "page_view_count": 174,
-            "like_count": 107,
-            "comment_count": 34
-          },
-          "latest_totals": {
-            "impression_count": 4325,
-            "page_view_count": 239,
-            "like_count": 181,
-            "comment_count": 39
+            "impression_count": 6177,
+            "page_view_count": 302,
+            "like_count": 232,
+            "comment_count": 50
           }
         },
         {
@@ -823,19 +779,63 @@
           "status": "PUBLISHED",
           "period": {
             "start": "2026-11-25",
-            "end": "2026-11-26"
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 2099,
-            "page_view_count": 99,
-            "like_count": 77,
-            "comment_count": 28
+            "impression_count": 2916,
+            "page_view_count": 174,
+            "like_count": 101,
+            "comment_count": 46
           },
           "latest_totals": {
-            "impression_count": 3490,
-            "page_view_count": 155,
-            "like_count": 146,
-            "comment_count": 31
+            "impression_count": 4307,
+            "page_view_count": 230,
+            "like_count": 170,
+            "comment_count": 49
+          }
+        },
+        {
+          "note_key": "n8fb3cec9e0db",
+          "title": "ガラスの中で🧴好きがつながった✨赤柴さんのボトルジオラマで四季を旅してみた🌸",
+          "published_at": "2026-11-20T10:07:39.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-20",
+            "end": "2026-11-27"
+          },
+          "growth": {
+            "impression_count": 3457,
+            "page_view_count": 181,
+            "like_count": 109,
+            "comment_count": 36
+          },
+          "latest_totals": {
+            "impression_count": 4558,
+            "page_view_count": 246,
+            "like_count": 183,
+            "comment_count": 41
+          }
+        },
+        {
+          "note_key": "n120530a2b957",
+          "title": "🍂秋といえば食べ物ばっかり！？🤣 8本作って挑戦した 7秒の物語｜スキ動画コンテスト秋の陣",
+          "published_at": "2026-11-18T10:42:12.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-20",
+            "end": "2026-11-27"
+          },
+          "growth": {
+            "impression_count": 6661,
+            "page_view_count": 113,
+            "like_count": 64,
+            "comment_count": 22
+          },
+          "latest_totals": {
+            "impression_count": 11160,
+            "page_view_count": 428,
+            "like_count": 283,
+            "comment_count": 89
           }
         },
         {
@@ -844,20 +844,20 @@
           "published_at": "2026-11-08T10:56:55.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 3496,
-            "page_view_count": 89,
-            "like_count": 101,
-            "comment_count": 11
+            "impression_count": 3265,
+            "page_view_count": 92,
+            "like_count": 92,
+            "comment_count": 14
           },
           "latest_totals": {
-            "impression_count": 12511,
-            "page_view_count": 435,
-            "like_count": 424,
-            "comment_count": 45
+            "impression_count": 12949,
+            "page_view_count": 447,
+            "like_count": 436,
+            "comment_count": 48
           }
         },
         {
@@ -866,20 +866,20 @@
           "published_at": "2026-11-06T10:10:00.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 2956,
-            "page_view_count": 138,
+            "impression_count": 2549,
+            "page_view_count": 139,
             "like_count": 19,
-            "comment_count": 4
+            "comment_count": 5
           },
           "latest_totals": {
-            "impression_count": 21627,
-            "page_view_count": 810,
-            "like_count": 320,
-            "comment_count": 109
+            "impression_count": 21745,
+            "page_view_count": 824,
+            "like_count": 321,
+            "comment_count": 111
           }
         },
         {
@@ -888,41 +888,19 @@
           "published_at": "2026-11-13T10:40:17.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 1945,
-            "page_view_count": 25,
-            "like_count": 8,
-            "comment_count": 4
+            "impression_count": 1645,
+            "page_view_count": 21,
+            "like_count": 7,
+            "comment_count": 3
           },
           "latest_totals": {
-            "impression_count": 8361,
-            "page_view_count": 265,
-            "like_count": 160,
-            "comment_count": 43
-          }
-        },
-        {
-          "note_key": "nda77b1923f5b",
-          "title": "✨ハッピーライティングマラソンお題#73｜「最近、やってみてよかった」と思ったことは何ですか？",
-          "published_at": "2026-11-17T10:53:47.000Z",
-          "status": "PUBLISHED",
-          "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
-          },
-          "growth": {
-            "impression_count": 3124,
-            "page_view_count": 42,
-            "like_count": 42,
-            "comment_count": 4
-          },
-          "latest_totals": {
-            "impression_count": 6371,
-            "page_view_count": 221,
-            "like_count": 195,
+            "impression_count": 8516,
+            "page_view_count": 268,
+            "like_count": 163,
             "comment_count": 43
           }
         },
@@ -932,20 +910,42 @@
           "published_at": "2026-11-14T10:33:35.000Z",
           "status": "PUBLISHED",
           "period": {
-            "start": "2026-11-19",
-            "end": "2026-11-26"
+            "start": "2026-11-20",
+            "end": "2026-11-27"
           },
           "growth": {
-            "impression_count": 1097,
+            "impression_count": 877,
             "page_view_count": 23,
-            "like_count": 8,
+            "like_count": 6,
             "comment_count": 3
           },
           "latest_totals": {
-            "impression_count": 5821,
-            "page_view_count": 290,
-            "like_count": 175,
+            "impression_count": 5873,
+            "page_view_count": 291,
+            "like_count": 176,
             "comment_count": 34
+          }
+        },
+        {
+          "note_key": "n8573001cd0ab",
+          "title": "写本模写、できたよーーーー！！金箔失敗からの怒涛の２週間💦",
+          "published_at": "2026-10-24T10:51:05.000Z",
+          "status": "PUBLISHED",
+          "period": {
+            "start": "2026-11-20",
+            "end": "2026-11-27"
+          },
+          "growth": {
+            "impression_count": 220,
+            "page_view_count": 7,
+            "like_count": 1,
+            "comment_count": 2
+          },
+          "latest_totals": {
+            "impression_count": 7091,
+            "page_view_count": 369,
+            "like_count": 209,
+            "comment_count": 65
           }
         }
       ]
@@ -954,20 +954,20 @@
   "insights": [
     {
       "type": "period_summary",
-      "text": "期間中にインプレッション +53,516、PV +1,709、スキ +1,155、コメント +264。"
+      "text": "期間中にインプレッション +52,652、PV +1,734、スキ +1,134、コメント +268。"
     },
     {
       "type": "week_comparison",
-      "text": "PVの増加量は前の7日間と比べて15.9%減少。"
+      "text": "PVの増加量は前の7日間と比べて16.2%減少。"
     },
     {
       "type": "impression_comparison",
-      "text": "インプレッションの増加量は前の7日間と比べて28.9%減少。"
+      "text": "インプレッションの増加量は前の7日間と比べて30.3%減少。"
     },
     {
       "type": "top_article",
       "note_key": "n8e6202081799",
-      "text": "期間中もっともPVが伸びた記事は「✨ 魔法のガラスドーム美術館へようこそ！15人の作家による61作品の世界🪄」で +261PV。"
+      "text": "期間中もっともPVが伸びた記事は「✨ 魔法のガラスドーム美術館へようこそ！15人の作家による61作品の世界🪄」で +291PV。"
     }
   ]
 }
